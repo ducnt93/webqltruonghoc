@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Data.Common;
 using QLTHPT1.BusinessObjects;
+ 
 
 namespace QLTHPT1.DataAccess
 {
@@ -26,19 +27,16 @@ namespace QLTHPT1.DataAccess
 		{
 			KHOILOP obj = new KHOILOP();
 			obj.MaKhoi = (int) myReader["MaKhoi"];
+            obj.MaNamHoc = (int)myReader["MaNamHoc"];
 			obj.TenKhoi = (string) myReader["TenKhoi"];
-			obj.MaHocKy = (int) myReader["MaHocKy"];
+            
+            
 			return obj;
 		}
-
-		/// <summary>
-		/// Get KHOILOP by makhoi
-		/// </summary>
-		/// <param name="makhoi">MaKhoi</param>
-		/// <returns>KHOILOP</returns>
+     
 		public KHOILOP GetByMaKhoi(int makhoi)
-		{
-			using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_KHOILOP_GetByMaKhoi", Data.CreateParameter("MaKhoi", makhoi)))
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_KHOILOP_GetByMaKhoi", Data.CreateParameter("MaNamHoc", makhoi)))
 			{
 				if (reader.Read())
 				{
@@ -47,9 +45,9 @@ namespace QLTHPT1.DataAccess
 				return null;
 			}
 		}
-        public List<KHOILOP> GetByMaHocKy(int mahk)
+        public List<KHOILOP> GetByMaNam(int manh)
         {
-            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_KHOILOP_GetByMaKy", Data.CreateParameter("MaHocKy", mahk)))
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_KHOILOP_GetByMaNamHoc", Data.CreateParameter("MaNamHoc", manh)))
             {
                 List<KHOILOP> list = new List<KHOILOP>();
                 while (reader.Read())
@@ -59,13 +57,11 @@ namespace QLTHPT1.DataAccess
                 return list;
             }
         }
-		/// <summary>
-		/// Get all of KHOILOP
-		/// </summary>
-		/// <returns>List<<KHOILOP>></returns>
+
+      
 		public List<KHOILOP> GetList()
 		{
-			using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_KHOILOP_Get"))
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "[sproc_KHOILOP_Get]"))
 			{
 				List<KHOILOP> list = new List<KHOILOP>();
 				while (reader.Read())
@@ -139,7 +135,7 @@ namespace QLTHPT1.DataAccess
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_KHOILOP_Add"
 							,parameterItemID
 							,Data.CreateParameter("TenKhoi", obj.TenKhoi)
-							,Data.CreateParameter("MaHocKy", obj.MaHocKy)
+                            , Data.CreateParameter("MaNamHoc", obj.MaNamHoc)
 			);
 			return (int)parameterItemID.Value;
 		}
@@ -154,7 +150,7 @@ namespace QLTHPT1.DataAccess
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_KHOILOP_Update"
 							,Data.CreateParameter("MaKhoi", obj.MaKhoi)
 							,Data.CreateParameter("TenKhoi", obj.TenKhoi)
-							,Data.CreateParameter("MaHocKy", obj.MaHocKy)
+                            , Data.CreateParameter("MaNamHoc", obj.MaNamHoc)
 			);
 		}
 

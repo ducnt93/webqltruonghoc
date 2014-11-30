@@ -11,11 +11,14 @@
 
         .auto-style3 {
         }
+        .auto-style4 {
+            height: 19px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2>Thông tin chi tiết của sinh viên:</h2>
-    <asp:FormView ID="fvChitietHS" runat="server" Width="649px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" DataKeyNames="MaHocSinh">
+    <asp:FormView ID="fvChitietHS" runat="server" Width="649px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" DataKeyNames="MaHocSinh" OnDataBound="fvChitietHS_DataBound">
         <EditRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
         <FooterStyle BackColor="#CCCC99" />
         <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -33,15 +36,14 @@
                     <td class="auto-style3">Mã học sinh:
                         <asp:Label ID="lblMaHS" runat="server" Text='<%# Eval("MaHocSinh") %>'></asp:Label>
                     </td>
-                    <td>Lớp:
-                        <asp:Label ID="lblLop" runat="server" Text='<%# Eval("MaLop") %>'></asp:Label>
+                    <td>&nbsp;<asp:Label ID="lblLop" runat="server" Text='<%# Eval("MaLop") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">Tên học sinh:
+                    <td class="auto-style4">Tên học sinh:
                         <asp:Label ID="lblTenHS" runat="server" Text='<%# Eval("TenHocSinh") %>'></asp:Label>
                     </td>
-                    <td>Giới tính:
+                    <td class="auto-style4">Giới tính:
                         <asp:Label ID="lblGioiTinh" runat="server" Text='<%# Eval("GioiTinh") %>'></asp:Label>
                     </td>
                 </tr>

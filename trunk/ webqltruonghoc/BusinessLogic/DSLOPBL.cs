@@ -26,15 +26,31 @@ namespace QLTHPT1.BusinessLogic
 		/// </summary>
 		/// <param name="malop">MaLop</param>
 		/// <returns>DSLOP</returns>
-		public DSLOP GetByMaLop(int malop)
+		public List<DSLOP> GetByMaLop(int malop)
 		{
 			return objDSLOPDA.GetByMaLop(malop);
 		}
-
+        public List<DSLOP> GetByMaLop1(int malop)
+        {
+            return objDSLOPDA.GetByMaLop1(malop);
+        }
 
         public List<DSLOP> GetByMaKhoi(int makhoi)
         {
             return objDSLOPDA.GetByMaKhoi(makhoi);
+        }
+        public List<DSLOP> GetByMaKhoiXem(int makhoi)
+        {
+            return objDSLOPDA.GetByMaKhoiXem(makhoi);
+        }
+
+        public List<DSLOP> GetByMaKhoiKtra(int makhoi,string tenlop)
+        {
+            return objDSLOPDA.GetByMaKhoiKtra(makhoi,tenlop);
+        }
+        public List<DSLOP> GetByMaKhoiGV(int makhoi,string magv)
+        {
+            return objDSLOPDA.GetByMaKhoiGV(makhoi, magv);
         }
 
 		/// <summary>

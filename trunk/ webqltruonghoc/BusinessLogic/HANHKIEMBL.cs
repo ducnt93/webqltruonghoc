@@ -36,10 +36,15 @@ namespace QLTHPT1.BusinessLogic
 			return (List<HANHKIEM>) ServerCache.Get(cacheName);
 		}
 
-		/// <summary>
-		/// Get DataSet of HANHKIEM
-		/// </summary>
-		/// <returns>DataSet</returns>
+        public List<HANHKIEM> GetListByMaLopHK(int malop, int mahk)
+        {
+            return objHANHKIEMDA.GetListByMaLopHK(malop, mahk);
+        }
+	
+        public List<HANHKIEM> GetListByMaHSHK(string mahs, int mahk)
+        {
+            return objHANHKIEMDA.GetListByMaHSHK(mahs, mahk);
+        }
 		public DataSet GetDataSet()
 		{
 			string cacheName = "dsHANHKIEM";
@@ -90,7 +95,16 @@ namespace QLTHPT1.BusinessLogic
 			ServerCache.Remove("HANHKIEM", true);
 			return objHANHKIEMDA.Add(obj_hanhkiem);
 		}
+        public int Update(HANHKIEM obj_hanhkiem)
+        {
+            ServerCache.Remove("HANHKIEM", true);
+            return objHANHKIEMDA.Update(obj_hanhkiem);
+        }
 
+        public void Delete(string mahs)
+        {
+            objHANHKIEMDA.Delete(mahs);
+        }
 //No key Found
 		#endregion
 	}

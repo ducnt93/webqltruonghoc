@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{57BE616B-2AB1-4C6B-8DE5-C8BE328CEEAD}</ProjectGuid>
+    <ProjectGuid>{F87E25BC-85DA-406A-A629-8D3B32D2BEE1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QLTHPT1.BusinessObjects</RootNamespace>
@@ -70,11 +70,12 @@
     <Compile Include="MONHOC.cs" />
     <Compile Include="NAMHOC.cs" />
     <Compile Include="NHATRUONG.cs" />
+    <Compile Include="PHANCONG.cs" />
+    <Compile Include="PHANLOP.cs" />
     <Compile Include="QUANTRI.cs" />
     <Compile Include="THOIKHOABIEU.cs" />
     <Compile Include="TINTUC.cs" />
     <Compile Include="TOBOMON.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -87,6 +88,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,7 +11,7 @@ namespace QLTHPT
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            PlaceHolder1.Controls.Add(LoadControl("~/UcControl/IndexControls/tintuctomtat.ascx"));
         }
     }
 }

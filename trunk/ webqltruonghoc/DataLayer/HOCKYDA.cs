@@ -27,7 +27,7 @@ namespace QLTHPT1.DataAccess
 			HOCKY obj = new HOCKY();
 			obj.MaHK = (int) myReader["MaHK"];
 			obj.TenHK = (string) myReader["TenHK"];
-			obj.MaNamHoc = (int) myReader["MaNamHoc"];
+		
 			obj.TuNgay = (DateTime) myReader["TuNgay"];
 			obj.DenNgay = (DateTime) myReader["DenNgay"];
             
@@ -57,7 +57,7 @@ namespace QLTHPT1.DataAccess
 		/// <returns>List<<HOCKY>></returns>
 		public List<HOCKY> GetList()
 		{
-			using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_HOCKY_GetList"))
+			using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_HOCKY_Get"))
 			{
 				List<HOCKY> list = new List<HOCKY>();
 				while (reader.Read())
@@ -131,7 +131,7 @@ namespace QLTHPT1.DataAccess
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_HOCKY_Add"
 							,parameterItemID
 							,Data.CreateParameter("TenHK", obj.TenHK)
-							,Data.CreateParameter("MaNamHoc", obj.MaNamHoc)
+							
 							,Data.CreateParameter("TuNgay", obj.TuNgay)
 							,Data.CreateParameter("DenNgay", obj.DenNgay)
 			);
@@ -148,7 +148,7 @@ namespace QLTHPT1.DataAccess
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_HOCKY_Update"
 							,Data.CreateParameter("MaHK", obj.MaHK)
 							,Data.CreateParameter("TenHK", obj.TenHK)
-							,Data.CreateParameter("MaNamHoc", obj.MaNamHoc)
+							//,Data.CreateParameter("MaNamHoc", obj.MaNamHoc)
 							,Data.CreateParameter("TuNgay", obj.TuNgay)
 							,Data.CreateParameter("DenNgay", obj.DenNgay)
 			);

@@ -5,8 +5,15 @@ namespace QLTHPT1.BusinessObjects
 	public class KYLUAT
 	{
 		#region ***** Fields & Properties ***** 
-		private string _KhoiHoc;
-		public string KhoiHoc
+		private int _KhoiHoc;
+        private string _tenHocSinh;
+
+        public string TenHocSinh
+        {
+            get { return _tenHocSinh; }
+            set { _tenHocSinh = value; }
+        }
+		public int KhoiHoc
 		{ 
 			get 
 			{ 
@@ -17,8 +24,8 @@ namespace QLTHPT1.BusinessObjects
 				_KhoiHoc = value;
 			}
 		}
-		private string _Lop;
-		public string Lop
+		private int _Lop;
+		public int Lop
 		{ 
 			get 
 			{ 
@@ -29,16 +36,16 @@ namespace QLTHPT1.BusinessObjects
 				_Lop = value;
 			}
 		}
-		private string _TenHocSinh;
-		public string TenHocSinh
+		private string _HocSinh;
+		public string HocSinh
 		{ 
 			get 
 			{ 
-				return _TenHocSinh;
+				return _HocSinh;
 			}
 			set 
 			{ 
-				_TenHocSinh = value;
+				_HocSinh = value;
 			}
 		}
 		private string _HinhThucKyLuat;
@@ -53,8 +60,8 @@ namespace QLTHPT1.BusinessObjects
 				_HinhThucKyLuat = value;
 			}
 		}
-		private string _NgayKyLuat;
-		public string NgayKyLuat
+		private DateTime _NgayKyLuat;
+		public DateTime NgayKyLuat
 		{ 
 			get 
 			{ 
@@ -77,20 +84,33 @@ namespace QLTHPT1.BusinessObjects
 				_NoiDung = value;
 			}
 		}
+		private string _NamHoc;
+		public string NamHoc
+		{ 
+			get 
+			{ 
+				return _NamHoc;
+			}
+			set 
+			{ 
+				_NamHoc = value;
+			}
+		}
 		#endregion
 
 		#region ***** Init Methods ***** 
 		public KYLUAT()
 		{
 		}
-		public KYLUAT(string khoihoc, string lop, string tenhocsinh, string hinhthuckyluat, string ngaykyluat, string noidung)
+		public KYLUAT(int khoihoc, int lop, string hocsinh, string hinhthuckyluat, DateTime ngaykyluat, string noidung, string namhoc)
 		{
 			this.KhoiHoc = khoihoc;
 			this.Lop = lop;
-			this.TenHocSinh = tenhocsinh;
+			this.HocSinh = hocsinh;
 			this.HinhThucKyLuat = hinhthuckyluat;
 			this.NgayKyLuat = ngaykyluat;
 			this.NoiDung = noidung;
+			this.NamHoc = namhoc;
 		}
 		#endregion
 	}

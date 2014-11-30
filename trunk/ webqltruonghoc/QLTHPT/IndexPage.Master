@@ -4,26 +4,123 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="App_Themes/1399936405_54321.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="Site-Exit" content="revealTrans(Duration=3.0,Transition=23)"/>
+    <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.GradientWipe(duration=.5)">
    <title>Website Template</title>
 	<meta charset="utf-8" />
    <link href="App_Themes/IndexPage/style.css" rel="stylesheet" />
 	<meta name="viewport" content="width=960"  />   
 <link rel='stylesheet'  href="App_Themes/IndexPage/diapo.css" type='text/css' media='all' /> 
-<script type='text/javascript' src="App_Themes/IndexPage/scripts/jquery.min.js"></script>
+    <script type='text/javascript' src="App_Themes/IndexPage/scripts/jquery.min.js"></script>
 <!--[if !IE]><!--><script type='text/javascript' src="App_Themes/IndexPage/scripts/jquery.mobile-1.0rc2.customized.min.js"></script><!--<![endif]-->
 <script type='text/javascript' src="App_Themes/IndexPage/scripts/jquery.easing.1.3.js"></script> 
 <script type='text/javascript' src="App_Themes/IndexPage/scripts/jquery.hoverIntent.minified.js"></script> 
 <script type='text/javascript' src="App_Themes/IndexPage/scripts/diapo.js"></script> 
+ <%--   <script src="App_Themes/IndexPage/scripts/jquery-2.1.0.min.js"></script>--%>
+   <%-- <script src="App_Themes/IndexPage/scripts/jquery-2.1.0.js"></script>--%>
+     <style type="text/css">
+         /*#top {
+             width: 50px;
+             height: 50px;
+             position: fixed;
+             bottom: 10px;
+             right: 10px;
+             text-indent: -99999px;
+             cursor: pointer;
+             background: url(back-to-top1.png) no-repeat 0 0;*/
+         /*}*/
+        #pagewrap {
+            margin: 0 auto;
+            width: 600px;
+            padding-left: 150px;
+            position: relative;
+        }
+        /*Back to top button*/
+        #back-top {
+            position: fixed;
+            bottom: -7px;
+            margin-left: 810px;
+        }
 
-<script>
-    $(function () {
-        $('.pix_diapo').diapo();
-    });
+            #back-top a {
+                width: 70px;
+                display: block;
+                text-align: center;
+                font: 11px/100% Arial, Helvetica, sans-serif;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #bbb;
+                /* background color transition */
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                transition: 1s;
+            }
 
-</script>
+                #back-top a:hover {
+                    color: #000;
+                }
+            /* arrow icon (span tag) */
+            #back-top span {
+                width: 64px;
+                height: 64px;
+                display: block;
+                margin-bottom: 7px;
+                background: url(back-to-top1.png) no-repeat center center;
+                /* rounded corners */
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                border-radius: 15px;
+                /* background color transition */
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                transition: 1s;
+            }
+
+            #back-top a:hover span {
+                background-color: #777;
+            }
+    
+     </style>
+<%--     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>--%>
+    <script>
+        $(function () {
+            $('.pix_diapo').diapo();
+        });
+        $(document).ready(function () {
+
+            // hide #back-top first
+            $("#back-top").hide();
+
+            // fade in #back-top
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+                // scroll body to 0px on click
+                $('#back-top a').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
+                    return false;
+                });
+            });
+
+        });
+
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
+          <div id="pagewrap">
+            <p id="back-top">
+                <a href="#top"><span></span>Back to Top</a>
+            </p>
+        </div>
   <div id="background">
 		<div id="page">
 			<div id="body">
@@ -80,57 +177,56 @@
 						</div>
 					</div>
 				</div>
-				<div class="featured">
-					<ul>
-						<li>
-							<h2>Thống kê lượt truy cập: </h2>
-							<img src="App_Themes/Master/images/developers.jpg" width="280" alt="" style="height: 78px" />
-							<p>
-								Các thông tin về thay đổi chức năng của phần mềm.
-                                <br />
-                                <br />
-                                <br /><br />
-                                Mọi cập nhật mới nhất của phần mềm.
+				<div class="featured">                       
+
+				</div>
+                <div id="trungpq">
+                 <div id="trai_">
+                            <h2>Lượt truy cập: </h2>
+							<img src="App_Themes/IndexPage/images/truycap.jpg" width:"200px" alt="" style="height: 164px; width: 272px;" />
+							<p class="p" style="font-size:15px; font-style:oblique;">
+								Số lượt truy cập: <%= Application["DaTruyCap"].ToString() %>
 							</p>
-						</li>
-						<li>
-							<h2> <a href="LienHe.aspx">Trợ giúp sử dụng phần mềm.</a> </h2>
-							<img src="App_Themes/Master/images/golf-court.jpg" width="280" height="140" alt="" />
+                            <p class="p" style="font-size:15px; font-style:oblique;">
+								Đang online: <%= Application["DangTruyCap"].ToString() %>
+                                <br />
+							</p>
+                        </div>
+                        <div id="giua_">
+                            <h2> <a href="LienHe.aspx">Trợ giúp sử dụng phần mềm.</a> </h2>
+							<img src="App_Themes/nhatruong/images/hotro.jpg" alt="" style="height: 167px; width: 273px" />
 							<p>
 								Hướng dẫn chi tiết về việc sử dụng phần mềm.
                                 <br />
-                                Bấm <a href="#"> vào đây </a> để tải tài liệu hướng dẫn về máy của mình.
+                                Bấm <a href="#"> vào đây </a> để tải tài liệu hướng dẫn về máy.
 							</p>
-						</li>
-						<li>
-							<h2> <a href="index.html">Thông tin nhà trường</a> </h2>
-							<img src="App_Themes/Master/images/trees.jpg" width="280" height="140" alt=""/>
+                        </div>
+                        <div id="phai_">
+                            <h2> <a href="TTNhaTruong.aspx">Thông tin nhà trường</a> </h2>
+							<img src="App_Themes/nhatruong/images/anhtruong.JPG" alt="" style="width: 273px; height: 167px"/>
 							<p>
 								Địa chỉ: Quốc lộ 32 Nhổn - Từ Liêm - Hà Nội.
                                 <br />
                                 Số điện thoại: 0432256855.
 							</p>
-						</li>
-					</ul>
-				</div>
+                        </div>
+                    </div>
 			</div>
 			<div id="footer">
 				<div class="section">
-					<h2>Thư viện ảnh của trường</h2>
-					<ul>
-						<li class="first">
-							<a href="index.html"><img src="App_Themes/Master/images/tree1.jpg" width="90" height="90" alt=""/></a> <a href="index.html"><img src="App_Themes/Master/images/tree2.jpg" width="90" height="90" alt=""></a> <a href="index.html"/><img src="App_Themes/Master/images/tree3.jpg" width="90" height="90" alt=""></a> <a href="index.html"/><img src="App_Themes/Master/images/tree4.jpg" width="90" height="90" alt=""/></a> <a href="index.html"><img src="App_Themes/Master/images/tree5.jpg" width="90" height="90" alt=""     /></a> <a href="index.html"><img src="App_Themes/Master/images/tree6.jpg" width="90" height="90" alt="" /></a>
-						</li>
-						<li>
-							<h1>Nhóm phát triển</h1>
-							<p>
-								Website được phát triển bởi Nhóm 3 trường Bách khoa - Aptech. <br /> Địa chỉ: Số xx - Hoàng Quôc Việt - Cầu Giấy - Hà Nội.
-							</p>
-						</li>
-						
-					</ul>
+                    <ul>
+                        <li>
+                            <h1>Nhóm phát triển</h1>
+                            <p>
+                        Website được phát triển bởi Nhóm 2 trường Bách khoa - Aptech.
+                                <br />
+                                Địa chỉ: Số xx - Hoàng Quôc Việt - Cầu Giấy - Hà Nội.
+                                    </p>
+                        </li>
+
+                    </ul>
 				</div>
-				<div class="footnote"> <span>&copy; 2014 <a href="Default.aspx">Trường THPT Cầu Diễn</a></div>
+				<div class="footnote"> <span>&copy; 2014 <a href="Default.aspx">Trường THPT Cầu</a> Giấy</div>
 			</div>
 		</div>
 	</div>

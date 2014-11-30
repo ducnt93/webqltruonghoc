@@ -26,7 +26,7 @@ namespace QLTHPT1.DataAccess
 		{
 			HOCSINH obj = new HOCSINH();
 			obj.MaHocSinh = (string) myReader["MaHocSinh"];
-			obj.MaLop = (int) myReader["MaLop"];
+			//obj.MaLop = (int) myReader["MaLop"];
 			obj.TenHocSinh = (string) myReader["TenHocSinh"];
 			obj.Email = (string) myReader["Email"];
 			obj.GioiTinh = (string) myReader["GioiTinh"];
@@ -42,12 +42,27 @@ namespace QLTHPT1.DataAccess
 			obj.NgayVaoDoan = (DateTime) myReader["NgayVaoDoan"];
 			obj.TrangThai = (string) myReader["TrangThai"];
 			obj.SoDienThoaiNha = (string) myReader["SoDienThoaiNha"];
+            obj.MaNamHoc = (int)myReader["MaNamHoc"];
 			return obj;
 		}
 
-        public List<HOCSINH> GetByMaLop(int malop)
+        public List<HOCSINH> GetByMaNamHoc(int manam)
         {
-            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_HOCSINH_GetByMaLop", Data.CreateParameter("MaLop", malop)))
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_HOCSINH_GetByMaNamHoc", Data.CreateParameter("MaNamHoc", manam )))
+            {
+                List<HOCSINH> list = new List<HOCSINH>();
+                while (reader.Read())
+                {
+                    list.Add(Populate(reader));
+                }
+                return list;
+            }
+        }
+
+       
+        public List<HOCSINH> GetTenByMaHS(string mahs)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_HOCSINH_GetTenByMaHS", Data.CreateParameter("MaHocSinh", mahs)))
             {
                 List<HOCSINH> list = new List<HOCSINH>();
                 while (reader.Read())
@@ -74,6 +89,19 @@ namespace QLTHPT1.DataAccess
 				return list;
 			}
 		}
+
+        public List<HOCSINH> GetByMaHocSinhByLop(string mahocsinh, int malop)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_HOCSINH_GetByMaHocSinh", Data.CreateParameter("MaHocSinh", mahocsinh)))
+            {
+                List<HOCSINH> list = new List<HOCSINH>();
+                if (reader.Read())
+                {
+                    list.Add(Populate(reader));
+                }
+                return list;
+            }
+        }
 
 		/// <summary>
 		/// Get all of HOCSINH
@@ -150,11 +178,10 @@ namespace QLTHPT1.DataAccess
 		/// <returns>key of table</returns>
 		public int Add(HOCSINH obj)
 		{
-			DbParameter parameterItemID = Data.CreateParameter("MaHocSinh", obj.MaHocSinh);
+			//DbParameter parameterItemID = Data.CreateParameter("MaHocSinh", obj.MaHocSinh);
 			//parameterItemID.Direction = ParameterDirection.Output;
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_HOCSINH_Add"
-							,parameterItemID
-							,Data.CreateParameter("MaLop", obj.MaLop)
+                            ,Data.CreateParameter("MaHocSinh", obj.MaHocSinh)
 							,Data.CreateParameter("TenHocSinh", obj.TenHocSinh)
 							,Data.CreateParameter("Email", obj.Email)
 							,Data.CreateParameter("GioiTinh", obj.GioiTinh)
@@ -170,6 +197,7 @@ namespace QLTHPT1.DataAccess
 							,Data.CreateParameter("NgayVaoDoan", obj.NgayVaoDoan)
 							,Data.CreateParameter("TrangThai", obj.TrangThai)
 							,Data.CreateParameter("SoDienThoaiNha", obj.SoDienThoaiNha)
+                            , Data.CreateParameter("MaNamHoc", obj.MaNamHoc)
 			);
 			return 0;
 		}
@@ -183,7 +211,7 @@ namespace QLTHPT1.DataAccess
 		{
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_HOCSINH_Update"
 							,Data.CreateParameter("MaHocSinh", obj.MaHocSinh)
-							,Data.CreateParameter("MaLop", obj.MaLop)
+							
 							,Data.CreateParameter("TenHocSinh", obj.TenHocSinh)
 							,Data.CreateParameter("Email", obj.Email)
 							,Data.CreateParameter("GioiTinh", obj.GioiTinh)
@@ -199,6 +227,7 @@ namespace QLTHPT1.DataAccess
 							,Data.CreateParameter("NgayVaoDoan", obj.NgayVaoDoan)
 							,Data.CreateParameter("TrangThai", obj.TrangThai)
 							,Data.CreateParameter("SoDienThoaiNha", obj.SoDienThoaiNha)
+                             , Data.CreateParameter("MaNamHoc", obj.MaNamHoc)
 			);
 		}
 

@@ -1,19 +1,9 @@
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.dll
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.pdb
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.dll
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.pdb
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.dll
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.pdb
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.dll
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.pdb
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.csprojResolveAssemblyReference.cache
-G:\Project QLTHPT\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.dll
-G:\Project QLTHPT\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.pdb
-G:\Project QLTHPT\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.dll
-G:\Project QLTHPT\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.pdb
-G:\Project QLTHPT\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.csprojResolveAssemblyReference.cache
-E:\Project\Project QLTHPT\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.dll
-E:\Project\Project QLTHPT\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.pdb
-E:\Project\Project QLTHPT\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.dll
-E:\Project\Project QLTHPT\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.pdb
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.csprojResolveAssemblyReference.cache
+E:\Project\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.dll
+E:\Project\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.pdb
+E:\Project\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.dll
+E:\Project\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.pdb
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.dll
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.pdb
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.dll
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.pdb

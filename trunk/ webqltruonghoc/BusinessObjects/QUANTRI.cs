@@ -5,8 +5,21 @@ namespace QLTHPT1.BusinessObjects
 	public class QUANTRI
 	{
 		#region ***** Fields & Properties ***** 
-		private string _MaND;
-		public string MaND
+		private int _MaND;
+        private bool _ChuNhiem;
+        private int _MaMon;
+
+        public int MaMon
+        {
+            get { return _MaMon; }
+            set { _MaMon = value; }
+        }
+        public bool ChuNhiem
+        {
+            get { return _ChuNhiem; }
+            set { _ChuNhiem = value; }
+        }
+		public int MaND
 		{ 
 			get 
 			{ 
@@ -15,18 +28,6 @@ namespace QLTHPT1.BusinessObjects
 			set 
 			{ 
 				_MaND = value;
-			}
-		}
-		private string _MaLoaiND;
-		public string MaLoaiND
-		{ 
-			get 
-			{ 
-				return _MaLoaiND;
-			}
-			set 
-			{ 
-				_MaLoaiND = value;
 			}
 		}
 		private string _TenDNhap;
@@ -39,18 +40,6 @@ namespace QLTHPT1.BusinessObjects
 			set 
 			{ 
 				_TenDNhap = value;
-			}
-		}
-		private string _TenNguoiDung;
-		public string TenNguoiDung
-		{ 
-			get 
-			{ 
-				return _TenNguoiDung;
-			}
-			set 
-			{ 
-				_TenNguoiDung = value;
 			}
 		}
 		private string _MatKhau;
@@ -77,22 +66,39 @@ namespace QLTHPT1.BusinessObjects
 				_TrangThai = value;
 			}
 		}
+        private string _MaGiaoVien, _TenGiaoVien, _MaLoaiND;
+
+        public string MaGiaoVien
+        {
+            get { return _MaGiaoVien; }
+            set { _MaGiaoVien = value; }
+        }
+
+        public string TenGiaoVien
+        {
+            get { return _TenGiaoVien; }
+            set { _TenGiaoVien = value; }
+        }
+
+        public string MaLoaiND
+        {
+            get { return _MaLoaiND; }
+            set { _MaLoaiND = value; }
+        }
 		#endregion
 
 		#region ***** Init Methods ***** 
 		public QUANTRI()
 		{
 		}
-		public QUANTRI(string mand)
+		public QUANTRI(int mand)
 		{
 			this.MaND = mand;
 		}
-		public QUANTRI(string mand, string maloaind, string tendnhap, string tennguoidung, string matkhau, bool trangthai)
+		public QUANTRI(int mand, string tendnhap, string matkhau, bool trangthai)
 		{
 			this.MaND = mand;
-			this.MaLoaiND = maloaind;
 			this.TenDNhap = tendnhap;
-			this.TenNguoiDung = tennguoidung;
 			this.MatKhau = matkhau;
 			this.TrangThai = trangthai;
 		}

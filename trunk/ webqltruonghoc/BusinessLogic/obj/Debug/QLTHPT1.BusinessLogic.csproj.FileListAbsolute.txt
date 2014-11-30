@@ -1,36 +1,18 @@
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.dll
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.pdb
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.dll
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.dll
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.pdb
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.pdb
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.csprojResolveAssemblyReference.cache
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.dll
-C:\Users\Administrator\Desktop\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.pdb
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.dll
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.pdb
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.dll
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.dll
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.pdb
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.pdb
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.csprojResolveAssemblyReference.cache
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.dll
-C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.pdb
-G:\Project QLTHPT\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.csprojResolveAssemblyReference.cache
-G:\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.dll
-G:\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.pdb
-G:\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.dll
-G:\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.dll
-G:\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.pdb
-G:\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.pdb
-G:\Project QLTHPT\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.dll
-G:\Project QLTHPT\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.pdb
-E:\Project\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.dll
-E:\Project\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.pdb
-E:\Project\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.dll
-E:\Project\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.dll
-E:\Project\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.pdb
-E:\Project\Project QLTHPT\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.pdb
-E:\Project\Project QLTHPT\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.csprojResolveAssemblyReference.cache
-E:\Project\Project QLTHPT\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.dll
-E:\Project\Project QLTHPT\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.pdb
+E:\Project\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.csprojResolveAssemblyReference.cache
+E:\Project\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.dll
+E:\Project\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.pdb
+E:\Project\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.dll
+E:\Project\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.dll
+E:\Project\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.pdb
+E:\Project\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.pdb
+E:\Project\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.dll
+E:\Project\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.pdb
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.dll
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.pdb
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.dll
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.dll
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.pdb
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.pdb
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.dll
+C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.pdb

@@ -26,7 +26,6 @@ namespace QLTHPT1.DataAccess
 		{
 			TOBOMON obj = new TOBOMON();
 			obj.MaTo = (int) myReader["MaTo"];
-			obj.MaLoaiND = (string) myReader["MaLoaiND"];
 			obj.TenToBoMon = (string) myReader["TenToBoMon"];
 			obj.MoTa = (string) myReader["MoTa"];
 			return obj;
@@ -128,7 +127,7 @@ namespace QLTHPT1.DataAccess
 			//parameterItemID.Direction = ParameterDirection.Output;
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_TOBOMON_Add"
 							,parameterItemID
-							,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
+							//,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
 							,Data.CreateParameter("TenToBoMon", obj.TenToBoMon)
 							,Data.CreateParameter("MoTa", obj.MoTa)
 			);
@@ -144,7 +143,7 @@ namespace QLTHPT1.DataAccess
 		{
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_TOBOMON_Update"
 							,Data.CreateParameter("MaTo", obj.MaTo)
-							,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
+						//	,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
 							,Data.CreateParameter("TenToBoMon", obj.TenToBoMon)
 							,Data.CreateParameter("MoTa", obj.MoTa)
 			);

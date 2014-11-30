@@ -29,28 +29,65 @@ namespace QLTHPT1.DataAccess
 			obj.TenLop = (string) myReader["TenLop"];
 			obj.MaKhoi = (int) myReader["MaKhoi"];
 			obj.SiSo = (int) myReader["SiSo"];
-			obj.MaGiaoVien = (string) myReader["MaGiaoVien"];
+			//obj.MaGiaoVien = (string) myReader["MaGiaoVien"];
 			obj.MoTaKhac = (string) myReader["MoTaKhac"];
 			return obj;
 		}
+        public DSLOP Populate2(IDataReader myReader)
+        {
+            DSLOP obj = new DSLOP();
+            obj.MaLop = (int)myReader["MaLop"];
+            obj.TenLop = (string)myReader["TenLop"];         
+            return obj;
+        }
+        public DSLOP Populate3(IDataReader myReader)
+        {
+            DSLOP obj = new DSLOP();
+            obj.MaLop = (int)myReader["MaLop"];
+            obj.TenLop = (string)myReader["TenLop"];
+            obj.SiSo = (int)myReader["SiSo"];
+            obj.TenKhoi = (string)myReader["TenKhoi"];
+            obj.MoTaKhac = (string)myReader["MoTaKhac"];
+            return obj;
+        }
+        public DSLOP Populate1(IDataReader myReader)
+        {
+            DSLOP obj = new DSLOP();
+           
+            obj.TenLop = (string)myReader["TenLop"];
+            
+            return obj;
+        }
 
-		/// <summary>
+        /// <summary>
 		/// Get DSLOP by malop
 		/// </summary>
 		/// <param name="malop">MaLop</param>
 		/// <returns>DSLOP</returns>
-		public DSLOP GetByMaLop(int malop)
+		public List<DSLOP> GetByMaLop(int malop)
 		{
 			using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_DSLOP_GetByMaLop", Data.CreateParameter("MaLop", malop)))
 			{
-				if (reader.Read())
+                List<DSLOP> list = new List<DSLOP>();
+				while (reader.Read())
 				{
-					return Populate(reader);
+					list.Add( Populate(reader));
 				}
-				return null;
+				return list;
 			}
 		}
-
+        public List<DSLOP> GetByMaLop1(int malop)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_DSLOP_GetByMaLop1", Data.CreateParameter("MaLop", malop)))
+            {
+                List<DSLOP> list = new List<DSLOP>();
+                while (reader.Read())
+                {
+                    list.Add( Populate1(reader));
+                }
+                return list;
+            }
+        }
 		/// <summary>
 		/// Get all of DSLOP
 		/// </summary>
@@ -73,6 +110,47 @@ namespace QLTHPT1.DataAccess
             using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_DSLOP_GetByMaKhoi", Data.CreateParameter("MaKhoi", makhoi)))
             {
                 
+                List<DSLOP> list = new List<DSLOP>();
+                while (reader.Read())
+                {
+                    list.Add(Populate(reader));
+                }
+                return list;
+            }
+        }
+
+        public List<DSLOP> GetByMaKhoiXem(int makhoi)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_DSLOP_GetByMaKhoiXem", Data.CreateParameter("MaKhoi", makhoi)))
+            {
+
+                List<DSLOP> list = new List<DSLOP>();
+                while (reader.Read())
+                {
+                    list.Add(Populate3(reader));
+                }
+                return list;
+            }
+        }
+
+        public List<DSLOP> GetByMaKhoiKtra(int makhoi,string tenlop)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_DSLOP_GetByMaKhoiKtra", Data.CreateParameter("MaKhoi", makhoi),Data.CreateParameter("TenLop",tenlop)))
+            {
+
+                List<DSLOP> list = new List<DSLOP>();
+                while (reader.Read())
+                {
+                    list.Add(Populate2(reader));
+                }
+                return list;
+            }
+        }
+        public List<DSLOP> GetByMaKhoiGV(int makhoi,string maGv)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_DSLOP_GetByMaKhoiGV", Data.CreateParameter("MaKhoi", makhoi), Data.CreateParameter("MaGiaoVien", maGv)))
+            {
+
                 List<DSLOP> list = new List<DSLOP>();
                 while (reader.Read())
                 {
@@ -146,7 +224,7 @@ namespace QLTHPT1.DataAccess
 							,Data.CreateParameter("TenLop", obj.TenLop)
 							,Data.CreateParameter("MaKhoi", obj.MaKhoi)
 							,Data.CreateParameter("SiSo", obj.SiSo)
-							,Data.CreateParameter("MaGiaoVien", obj.MaGiaoVien)
+						
 							,Data.CreateParameter("MoTaKhac", obj.MoTaKhac)
 			);
 			return (int)parameterItemID.Value;
@@ -164,7 +242,7 @@ namespace QLTHPT1.DataAccess
 							,Data.CreateParameter("TenLop", obj.TenLop)
 							,Data.CreateParameter("MaKhoi", obj.MaKhoi)
 							,Data.CreateParameter("SiSo", obj.SiSo)
-							,Data.CreateParameter("MaGiaoVien", obj.MaGiaoVien)
+							
 							,Data.CreateParameter("MoTaKhac", obj.MoTaKhac)
 			);
 		}

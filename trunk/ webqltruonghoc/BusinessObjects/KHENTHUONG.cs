@@ -5,32 +5,39 @@ namespace QLTHPT1.BusinessObjects
 	public class KHENTHUONG
 	{
 		#region ***** Fields & Properties ***** 
-		private string _TenKhoi;
-		public string TenKhoi
+		private int _KhoiHoc;
+        private string _tenHocSinh;
+
+        public string TenHocSinh
+        {
+            get { return _tenHocSinh; }
+            set { _tenHocSinh = value; }
+        }
+		public int KhoiHoc
 		{ 
 			get 
 			{ 
-				return _TenKhoi;
+				return _KhoiHoc;
 			}
 			set 
 			{ 
-				_TenKhoi = value;
+				_KhoiHoc = value;
 			}
 		}
-		private string _TenHocSinh;
-		public string TenHocSinh
+		private string _HocSinh;
+		public string HocSinh
 		{ 
 			get 
 			{ 
-				return _TenHocSinh;
+				return _HocSinh;
 			}
 			set 
 			{ 
-				_TenHocSinh = value;
+				_HocSinh = value;
 			}
 		}
-		private string _Lop;
-		public string Lop
+		private int _Lop;
+		public int Lop
 		{ 
 			get 
 			{ 
@@ -51,18 +58,6 @@ namespace QLTHPT1.BusinessObjects
 			set 
 			{ 
 				_HinhThucKhen = value;
-			}
-		}
-		private string _NoiKhenThuong;
-		public string NoiKhenThuong
-		{ 
-			get 
-			{ 
-				return _NoiKhenThuong;
-			}
-			set 
-			{ 
-				_NoiKhenThuong = value;
 			}
 		}
 		private DateTime _NgayKhen;
@@ -95,13 +90,12 @@ namespace QLTHPT1.BusinessObjects
 		public KHENTHUONG()
 		{
 		}
-		public KHENTHUONG(string tenkhoi, string tenhocsinh, string lop, string hinhthuckhen, string noikhenthuong, DateTime ngaykhen, string noidungkhen)
+		public KHENTHUONG(int khoihoc, string hocsinh, int lop, string hinhthuckhen, DateTime ngaykhen, string noidungkhen)
 		{
-			this.TenKhoi = tenkhoi;
-			this.TenHocSinh = tenhocsinh;
+			this.KhoiHoc = khoihoc;
+			this.HocSinh = hocsinh;
 			this.Lop = lop;
 			this.HinhThucKhen = hinhthuckhen;
-			this.NoiKhenThuong = noikhenthuong;
 			this.NgayKhen = ngaykhen;
 			this.NoiDungKhen = noidungkhen;
 		}

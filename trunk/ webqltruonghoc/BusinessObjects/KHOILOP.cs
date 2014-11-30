@@ -17,6 +17,18 @@ namespace QLTHPT1.BusinessObjects
 				_MaKhoi = value;
 			}
 		}
+		private int _MaNamHoc;
+		public int MaNamHoc
+		{ 
+			get 
+			{ 
+				return _MaNamHoc;
+			}
+			set 
+			{ 
+				_MaNamHoc = value;
+			}
+		}
 		private string _TenKhoi;
 		public string TenKhoi
 		{ 
@@ -29,18 +41,6 @@ namespace QLTHPT1.BusinessObjects
 				_TenKhoi = value;
 			}
 		}
-		private int _MaHocKy;
-		public int MaHocKy
-		{ 
-			get 
-			{ 
-				return _MaHocKy;
-			}
-			set 
-			{ 
-				_MaHocKy = value;
-			}
-		}
 		#endregion
 
 		#region ***** Init Methods ***** 
@@ -51,11 +51,11 @@ namespace QLTHPT1.BusinessObjects
 		{
 			this.MaKhoi = makhoi;
 		}
-		public KHOILOP(int makhoi, string tenkhoi, int mahocky)
+		public KHOILOP(int makhoi, int manamhoc, string tenkhoi)
 		{
 			this.MaKhoi = makhoi;
+			this.MaNamHoc = manamhoc;
 			this.TenKhoi = tenkhoi;
-			this.MaHocKy = mahocky;
 		}
 		#endregion
 	}

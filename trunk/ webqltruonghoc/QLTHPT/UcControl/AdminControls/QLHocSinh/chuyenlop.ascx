@@ -1,7 +1,24 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="chuyenlop.ascx.cs" Inherits="QLTHPT.UcControl.AdminControls.QLHocSinh.chuyenlop" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 <style type="text/css">
+    .drop
+     {
+         width:200px;
+         height:32px;
+     }
+     .textbox
+     {
+          width:200px;
+         height:32px;
+     }
+       .tdTieuDe
+    {
+        font-size:22px;
+        font-style:italic oblique;
+        font-stretch:ultra-condensed;
+        background-color:azure;
 
+    }
     .abc {
         width: 18px;
         height:18px;
@@ -10,79 +27,122 @@
     }
      .auto-style1 {
         width: 100%;
+        height: 89px;
     }
     .auto-style2 {
     }
     .auto-style4 {
-        width: 405px;
-        height: 30px;
+        width: 101px;
+        height: 44px;
     }
     .auto-style5 {
-        height: 30px;
+        height: 44px;
     }
-    .auto-style3 {
-        width: 405px;
+     .auto-style6 {
+        width: 277px;
+    }
+    .auto-style8 {
+        width: 263px;
+        height: 44px;
+    }
+    .auto-style9 {
+        width: 263px;
+    }
+    .auto-style10 {
+        width: 101px;
+    }
+     .auto-style11 {
+        width: 394px;
+    }
+    .auto-style12 {
+        width: 310px;
+    }
+     .img {
+        width: 32px;
+        height:32px;
+        display:inline-block;
+        padding:5px 60px 5px 60px;
+    
     }
      </style>
 <div>
     <h2>Danh sách học sinh chuyển lớp</h2>
     <br />
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <br />
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <asp:ImageButton ID="imgThemMoi" runat="server" Height="32px" ImageUrl="~/App_Themes/admin/images/add.png" OnClick="imgThemMoi_Click" ToolTip="Thêm mới một năm học" Width="32px" />
+                        <asp:ImageButton ID="imgThemMoi" runat="server" Height="32px" ImageUrl="~/App_Themes/admin/images/add.png" OnClick="imgThemMoi_Click" ToolTip="Thêm mới một năm học" Width="32px" />
+            <br/>
             <asp:Label ID="lblErr" runat="server" ForeColor="#CC0000"></asp:Label>
             <br />
             <br />
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style4">Chọn năm:<asp:DropDownList ID="drNamHoc" runat="server" AutoPostBack="True" Height="30px" OnSelectedIndexChanged="drNamHoc_SelectedIndexChanged" Width="202px">
-                        </asp:DropDownList>
-                    </td>
-                    <td class="auto-style5">Chọn kỳ:<asp:DropDownList ID="drKyHoc" runat="server" AutoPostBack="True" Height="35px" OnSelectedIndexChanged="drKyHoc0_SelectedIndexChanged" Width="209px">
-                        </asp:DropDownList>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">Chọn khối:
-                        <asp:DropDownList ID="drKhoi" runat="server" AutoPostBack="True" Height="41px" OnSelectedIndexChanged="drKhoi_SelectedIndexChanged1" Width="193px">
-                        </asp:DropDownList>
-                    </td>
-                    <td>Chọn lớp:<asp:DropDownList ID="drLop" runat="server" AutoPostBack="True" Height="36px" OnSelectedIndexChanged="drLop_SelectedIndexChanged1" Width="200px">
-                        </asp:DropDownList>
-                    </td>
-                </tr>
-            </table>
             <asp:Panel ID="Panel1" runat="server">
                 <h3>Thêm mới học sinh chuyển lớp:</h3>
                 <table class="auto-style1">
                     <tr>
-                        <td class="auto-style2" colspan="2">Học sinh:<asp:DropDownList ID="drHocSinh" runat="server" Height="32px" Width="156px">
+                        <td class="auto-style4">Chọn năm:</td>
+                        <td class="auto-style8">
+                            <asp:DropDownList ID="drNamHoc" runat="server" AutoPostBack="True" CssClass="drop" OnSelectedIndexChanged="drNamHoc_SelectedIndexChanged">
+                            </asp:DropDownList>
+                        </td>
+                        <td class="auto-style5">Chọn khối: </td>
+                        <td class="auto-style5">
+                            <asp:DropDownList ID="drKhoi" runat="server" AutoPostBack="True" CssClass="drop" OnSelectedIndexChanged="drKhoi_SelectedIndexChanged1">
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style12">Lớp:</td>
+                        <td class="auto-style11">
+                            <asp:DropDownList ID="drLop" runat="server" AutoPostBack="True" CssClass="drop" OnSelectedIndexChanged="drLop_SelectedIndexChanged1">
+                            </asp:DropDownList>
+                        </td>
+                        <td class="auto-style2">Học sinh:</td>
+                        <td class="auto-style2">
+                            <asp:DropDownList ID="drHocSinh" runat="server" CssClass="drop">
                             </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style2">Từ lớp:
-                            <asp:TextBox ID="txtTulop" runat="server"></asp:TextBox>
+                        <td class="auto-style12">Từ lớp:
+                            </td>
+                        <td class="auto-style11">
+                            <asp:DropDownList ID="drTuLop" runat="server" CssClass="drop">
+                            </asp:DropDownList>
                         </td>
-                        <td>Đến lớp:<asp:TextBox ID="txtDenlop" runat="server"></asp:TextBox>
+                        <td>Đến lớp:</td>
+                        <td>
+                            <asp:DropDownList ID="drDenLop" runat="server" CssClass="drop">
+                            </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style2">Ngày chuyển:<asp:TextBox ID="txtNgaychuyen" runat="server"></asp:TextBox>
+                        <td class="auto-style12">Ngày chuyển:</td>
+                        <td class="auto-style11">
+                            <asp:TextBox ID="txtNgaychuyen" runat="server" CssClass="textbox"></asp:TextBox>
+                            <asp:CalendarExtender ID="txtNgaychuyen_CalendarExtender0" runat="server" TargetControlID="txtNgaychuyen">
+                            </asp:CalendarExtender>
                             <asp:CalendarExtender ID="txtNgaychuyen_CalendarExtender" runat="server" TargetControlID="txtNgaychuyen">
                             </asp:CalendarExtender>
+                            <asp:RequiredFieldValidator ID="vldNgayChuyen" runat="server" ControlToValidate="txtNgaychuyen" Display="Dynamic" ErrorMessage="Bạn cần phải nhập " ForeColor="Red">*</asp:RequiredFieldValidator>
                         </td>
-                        <td>Chuyển bảng điểm:
-                            <asp:CheckBox ID="ckChuyenDiem" runat="server" OnCheckedChanged="Unnamed1_CheckedChanged" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style2" colspan="2">Lý do chuyển:<asp:TextBox ID="txtLydo" runat="server" Height="72px" TextMode="MultiLine" Width="528px"></asp:TextBox>
+                        <td colspan="2">Chuyển bảng điểm:
+                            <asp:CheckBox ID="ckChuyenDiem" runat="server" />
                         </td>
                     </tr>
                     <tr>
+                        <td class="auto-style6">&nbsp;</td>
+                        <td class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lý do chuyển:</td>
                         <td class="auto-style2" colspan="2">
+                            <asp:TextBox ID="txtLydo" runat="server" Height="72px" TextMode="MultiLine" Width="400px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style2" colspan="4">
                             <asp:ImageButton ID="imgLuu" runat="server" CssClass="img" ImageUrl="~/App_Themes/admin/images/save_32x32.png" OnClick="imgLuu_Click" ToolTip="Lưu lại" />
                             <asp:ImageButton ID="imgCancel0" runat="server" CssClass="img" ImageUrl="~/App_Themes/admin/images/Delete_32x32.png" OnClick="imgCancel_Click" ToolTip="Hủy" />
                         </td>
@@ -118,7 +178,7 @@
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:ImageButton ID="imgEdit" runat="server" CommandName="edit" ImageUrl="~/App_Themes/admin/images/edit.png" CssClass="abc" ToolTip="Sửa" />
-                            <asp:ImageButton ID="imgDel" runat="server" CommandName="delete" ImageUrl="~/App_Themes/admin/images/Delete.png" OnClick="imgDel_Click" OnClientClick="javascript: return confirm('Bạn có muốn xóa không? ')" CssClass="abc" ToolTip="Xóa" />
+                            <asp:ImageButton ID="imgDel" runat="server" CommandName="delete" ImageUrl="~/App_Themes/admin/images/Delete.png" OnClientClick="javascript: return confirm('Bạn có muốn xóa không? ')" CssClass="abc" ToolTip="Xóa" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

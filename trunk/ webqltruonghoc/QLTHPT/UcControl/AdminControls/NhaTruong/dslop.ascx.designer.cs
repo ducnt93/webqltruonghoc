@@ -40,15 +40,6 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.DropDownList drNamHoc;
         
         /// <summary>
-        /// drHocKy control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drHocKy;
-        
-        /// <summary>
         /// drKhoi control.
         /// </summary>
         /// <remarks>
@@ -94,15 +85,6 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.Label lblErr;
         
         /// <summary>
-        /// gvLop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvLop;
-        
-        /// <summary>
         /// Panel1 control.
         /// </summary>
         /// <remarks>
@@ -112,13 +94,22 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// txtMaLop control.
+        /// lblErr1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaLop;
+        protected global::System.Web.UI.WebControls.Label lblErr1;
+        
+        /// <summary>
+        /// lblMaLop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMaLop;
         
         /// <summary>
         /// txtTenLop control.
@@ -130,6 +121,15 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.TextBox txtTenLop;
         
         /// <summary>
+        /// lblErrTenLop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrTenLop;
+        
+        /// <summary>
         /// txtSiso control.
         /// </summary>
         /// <remarks>
@@ -139,22 +139,22 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.TextBox txtSiso;
         
         /// <summary>
-        /// drChuNhiem control.
+        /// txtSiso_FilteredTextBoxExtender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drChuNhiem;
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender txtSiso_FilteredTextBoxExtender;
         
         /// <summary>
-        /// drKhoiLop control.
+        /// lblErrSiSo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drKhoiLop;
+        protected global::System.Web.UI.WebControls.Label lblErrSiSo;
         
         /// <summary>
         /// txtMoTa control.
@@ -166,6 +166,15 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.TextBox txtMoTa;
         
         /// <summary>
+        /// drKhoiLop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drKhoiLop;
+        
+        /// <summary>
         /// imgLuu control.
         /// </summary>
         /// <remarks>
@@ -175,12 +184,39 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.ImageButton imgLuu;
         
         /// <summary>
-        /// imgCancel0 control.
+        /// imgLuuSua control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgCancel0;
+        protected global::System.Web.UI.WebControls.ImageButton imgLuuSua;
+        
+        /// <summary>
+        /// imgCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton imgCancel;
+        
+        /// <summary>
+        /// btnExxport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExxport;
+        
+        /// <summary>
+        /// gvLop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvLop;
     }
 }

@@ -31,15 +31,6 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// drNamHoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drNamHoc;
-        
-        /// <summary>
         /// ImageButton1 control.
         /// </summary>
         /// <remarks>
@@ -76,13 +67,13 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.TextBox txtTenHK0;
         
         /// <summary>
-        /// drMaNamHoc control.
+        /// lblErrTenHK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drMaNamHoc;
+        protected global::System.Web.UI.WebControls.Label lblErrTenHK;
         
         /// <summary>
         /// txtTuNgay0 control.
@@ -112,6 +103,15 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::AjaxControlToolkit.CalendarExtender txtTuNgay0_CalendarExtender;
         
         /// <summary>
+        /// lblErrTuNgay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrTuNgay;
+        
+        /// <summary>
         /// txtDenNgay0 control.
         /// </summary>
         /// <remarks>
@@ -137,6 +137,15 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.CalendarExtender txtDenNgay0_CalendarExtender;
+        
+        /// <summary>
+        /// lblErrDenNgay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrDenNgay;
         
         /// <summary>
         /// imgSave control.

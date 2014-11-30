@@ -12,6 +12,7 @@ namespace QLTHPT
     {
         HOCSINH obj = new HOCSINH();
         HOCSINHBL hsBus = new HOCSINHBL();
+        DSLOPBL dslopBus = new DSLOPBL();
         protected void Page_Load(object sender, EventArgs e)
         {
            if(!IsPostBack)
@@ -25,6 +26,18 @@ namespace QLTHPT
             string id= Request.QueryString["id"];
             fvChitietHS.DataSource = hsBus.GetByMaHocSinh(id);
             fvChitietHS.DataBind();
+        }
+
+        protected void fvChitietHS_DataBound(object sender, EventArgs e)
+        {
+            Label lblLop = ((Label)fvChitietHS.FindControl("lblLop"));
+            List<DSLOP> list = new List<DSLOP>();
+            list = dslopBus.GetByMaLop1(Convert.ToInt32(lblLop.Text));
+            foreach (var item in list)
+            {
+              lblLop.Text =   item.TenLop;
+            }
+          
         }
     }
 }

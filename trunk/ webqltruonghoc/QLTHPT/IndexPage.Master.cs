@@ -13,6 +13,7 @@ namespace QLTHPT
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           // Page.ViewStateMode = ViewStateMode.Disabled;
             if(!IsPostBack)
             {
                 LoadPicture();

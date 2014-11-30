@@ -26,18 +26,20 @@ namespace QLTHPT1.DataAccess
 		{
 			LOAINGUOIDUNG obj = new LOAINGUOIDUNG();
 			obj.MaLoaiND = (string) myReader["MaLoaiND"];
+			obj.MaND = (int) myReader["MaND"];
+			obj.MaGiaoVien = (string) myReader["MaGiaoVien"];
 			obj.TenLoaiND = (string) myReader["TenLoaiND"];
 			return obj;
 		}
 
 		/// <summary>
-		/// Get LOAINGUOIDUNG by maloaind
+		/// Get LOAINGUOIDUNG by mand
 		/// </summary>
-		/// <param name="maloaind">MaLoaiND</param>
+		/// <param name="mand">MaND</param>
 		/// <returns>LOAINGUOIDUNG</returns>
-		public LOAINGUOIDUNG GetByMaLoaiND(string maloaind)
+		public LOAINGUOIDUNG GetByMaND(int mand)
 		{
-			using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_LOAINGUOIDUNG_GetByMaLoaiND", Data.CreateParameter("MaLoaiND", maloaind)))
+			using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_LOAINGUOIDUNG_GetByMaND", Data.CreateParameter("MaND", mand)))
 			{
 				if (reader.Read())
 				{
@@ -122,10 +124,12 @@ namespace QLTHPT1.DataAccess
 		/// <returns>key of table</returns>
 		public int Add(LOAINGUOIDUNG obj)
 		{
-			DbParameter parameterItemID = Data.CreateParameter("MaLoaiND", obj.MaLoaiND);
+			DbParameter parameterItemID = Data.CreateParameter("MaND", obj.MaND);
 			//parameterItemID.Direction = ParameterDirection.Output;
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_LOAINGUOIDUNG_Add"
+							,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
 							,parameterItemID
+							,Data.CreateParameter("MaGiaoVien", obj.MaGiaoVien)
 							,Data.CreateParameter("TenLoaiND", obj.TenLoaiND)
 			);
 			return 0;
@@ -138,8 +142,10 @@ namespace QLTHPT1.DataAccess
 		/// <returns></returns>
 		public void Update(LOAINGUOIDUNG obj)
 		{
-			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_LOAINGUOIDUNG_Update"
+            SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure, "[sproc_LOAINGUOIDUNG_Update]"
 							,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
+							,Data.CreateParameter("MaND", obj.MaND)
+							,Data.CreateParameter("MaGiaoVien", obj.MaGiaoVien)
 							,Data.CreateParameter("TenLoaiND", obj.TenLoaiND)
 			);
 		}
@@ -147,11 +153,11 @@ namespace QLTHPT1.DataAccess
 		/// <summary>
 		/// Delete the specified LOAINGUOIDUNG
 		/// </summary>
-		/// <param name="maloaind">MaLoaiND</param>
+		/// <param name="mand">MaND</param>
 		/// <returns></returns>
-		public void Delete(string maloaind)
+		public void Delete(int mand)
 		{
-			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_LOAINGUOIDUNG_Delete", Data.CreateParameter("MaLoaiND", maloaind));
+			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_LOAINGUOIDUNG_Delete", Data.CreateParameter("MaND", mand));
 		}
 		#endregion
 	}

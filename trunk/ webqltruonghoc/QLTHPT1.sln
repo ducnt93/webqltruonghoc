@@ -2,13 +2,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLTHPT1.BusinessObjects", "BusinessObjects\QLTHPT1.BusinessObjects.csproj", "{57BE616B-2AB1-4C6B-8DE5-C8BE328CEEAD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLTHPT1.BusinessLogic", "BusinessLogic\QLTHPT1.BusinessLogic.csproj", "{0E929C15-19CC-4847-85B2-EC76FDAA9E48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLTHPT1.DataAccess", "DataLayer\QLTHPT1.DataAccess.csproj", "{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLTHPT1", "QLTHPT\QLTHPT1.csproj", "{3E6B6B23-395F-48D6-9396-2FE09D065FA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLTHPT1.BusinessObjects", "BusinessObjects\QLTHPT1.BusinessObjects.csproj", "{F87E25BC-85DA-406A-A629-8D3B32D2BEE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLTHPT1.DataAccess", "DataLayer\QLTHPT1.DataAccess.csproj", "{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,22 +16,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57BE616B-2AB1-4C6B-8DE5-C8BE328CEEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57BE616B-2AB1-4C6B-8DE5-C8BE328CEEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57BE616B-2AB1-4C6B-8DE5-C8BE328CEEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57BE616B-2AB1-4C6B-8DE5-C8BE328CEEAD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0E929C15-19CC-4847-85B2-EC76FDAA9E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0E929C15-19CC-4847-85B2-EC76FDAA9E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E929C15-19CC-4847-85B2-EC76FDAA9E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E929C15-19CC-4847-85B2-EC76FDAA9E48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E6B6B23-395F-48D6-9396-2FE09D065FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E6B6B23-395F-48D6-9396-2FE09D065FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E6B6B23-395F-48D6-9396-2FE09D065FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E6B6B23-395F-48D6-9396-2FE09D065FA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87E25BC-85DA-406A-A629-8D3B32D2BEE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87E25BC-85DA-406A-A629-8D3B32D2BEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87E25BC-85DA-406A-A629-8D3B32D2BEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87E25BC-85DA-406A-A629-8D3B32D2BEE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

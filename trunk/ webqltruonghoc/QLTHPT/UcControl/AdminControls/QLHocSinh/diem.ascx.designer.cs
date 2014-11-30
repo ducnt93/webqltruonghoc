@@ -22,33 +22,6 @@ namespace QLTHPT {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// drMon control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drMon;
-        
-        /// <summary>
-        /// TextBox1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
-        /// <summary>
-        /// btnTim control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTim;
-        
-        /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
@@ -58,31 +31,58 @@ namespace QLTHPT {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// imgThemMoi control.
+        /// drNamHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgThemMoi;
+        protected global::System.Web.UI.WebControls.DropDownList drNamHoc;
         
         /// <summary>
-        /// lblErr control.
+        /// drKyHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErr;
+        protected global::System.Web.UI.WebControls.DropDownList drKyHoc;
         
         /// <summary>
-        /// gvDiem control.
+        /// drKhoi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvDiem;
+        protected global::System.Web.UI.WebControls.DropDownList drKhoi;
+        
+        /// <summary>
+        /// drLopLoad1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drLopLoad1;
+        
+        /// <summary>
+        /// drMon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drMon;
+        
+        /// <summary>
+        /// btnHienthi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnHienthi;
         
         /// <summary>
         /// Panel1 control.
@@ -94,111 +94,120 @@ namespace QLTHPT {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// txtMHS control.
+        /// hpThemMoi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMHS;
+        protected global::System.Web.UI.WebControls.HyperLink hpThemMoi;
         
         /// <summary>
-        /// drMaMon control.
+        /// lblErr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drMaMon;
+        protected global::System.Web.UI.WebControls.Label lblErr;
         
         /// <summary>
-        /// txtDiem1 control.
+        /// btnFileMau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiem1;
+        protected global::System.Web.UI.WebControls.Button btnFileMau;
         
         /// <summary>
-        /// txt151 control.
+        /// fUploadDL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt151;
+        protected global::System.Web.UI.WebControls.FileUpload fUploadDL;
         
         /// <summary>
-        /// txtMieng2 control.
+        /// lblStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMieng2;
+        protected global::System.Web.UI.WebControls.Label lblStatus;
         
         /// <summary>
-        /// txt15p2 control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt15p2;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
         
         /// <summary>
-        /// txt1t1 control.
+        /// btnExport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt1t1;
+        protected global::System.Web.UI.WebControls.Button btnExport;
         
         /// <summary>
-        /// txt15p3 control.
+        /// lblHocKy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt15p3;
+        protected global::System.Web.UI.WebControls.Label lblHocKy;
         
         /// <summary>
-        /// txt1t2 control.
+        /// lblMonHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt1t2;
+        protected global::System.Web.UI.WebControls.Label lblMonHoc;
         
         /// <summary>
-        /// txtHocKy control.
+        /// lblLop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHocKy;
+        protected global::System.Web.UI.WebControls.Label lblLop;
         
         /// <summary>
-        /// imgLuu control.
+        /// txtTK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgLuu;
+        protected global::System.Web.UI.WebControls.TextBox txtTK;
         
         /// <summary>
-        /// imgCancel0 control.
+        /// btnTim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgCancel0;
+        protected global::System.Web.UI.WebControls.Button btnTim;
+        
+        /// <summary>
+        /// gvDiem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvDiem;
     }
 }

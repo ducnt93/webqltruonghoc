@@ -5,16 +5,23 @@ namespace QLTHPT1.BusinessObjects
 	public class HANHKIEM
 	{
 		#region ***** Fields & Properties ***** 
-		private string _TenHocSinh;
-		public string TenHocSinh
+		private string _MaHS;
+        private string _TenHocSinh;
+
+        public string TenHocSinh
+        {
+            get { return _TenHocSinh; }
+            set { _TenHocSinh = value; }
+        }
+		public string MaHS
 		{ 
 			get 
 			{ 
-				return _TenHocSinh;
+				return _MaHS;
 			}
 			set 
 			{ 
-				_TenHocSinh = value;
+				_MaHS = value;
 			}
 		}
 		private int _MaLop;
@@ -29,8 +36,8 @@ namespace QLTHPT1.BusinessObjects
 				_MaLop = value;
 			}
 		}
-		private string _MaHK;
-		public string MaHK
+		private int _MaHK;
+		public int MaHK
 		{ 
 			get 
 			{ 
@@ -41,8 +48,8 @@ namespace QLTHPT1.BusinessObjects
 				_MaHK = value;
 			}
 		}
-		private Byte _NgayNghiCoPhep;
-		public Byte NgayNghiCoPhep
+		private int _NgayNghiCoPhep;
+		public int NgayNghiCoPhep
 		{ 
 			get 
 			{ 
@@ -53,8 +60,8 @@ namespace QLTHPT1.BusinessObjects
 				_NgayNghiCoPhep = value;
 			}
 		}
-		private Byte _NgayNghiKoPhep;
-		public Byte NgayNghiKoPhep
+		private int _NgayNghiKoPhep;
+		public int NgayNghiKoPhep
 		{ 
 			get 
 			{ 
@@ -65,8 +72,8 @@ namespace QLTHPT1.BusinessObjects
 				_NgayNghiKoPhep = value;
 			}
 		}
-		private Byte _SoLanKyLuat;
-		public Byte SoLanKyLuat
+		private int _SoLanKyLuat;
+		public int SoLanKyLuat
 		{ 
 			get 
 			{ 
@@ -95,9 +102,9 @@ namespace QLTHPT1.BusinessObjects
 		public HANHKIEM()
 		{
 		}
-		public HANHKIEM(string tenhocsinh, int malop, string mahk, Byte ngaynghicophep, Byte ngaynghikophep, Byte solankyluat, string hanhkiem)
+		public HANHKIEM(string mahs, int malop, int mahk, Byte ngaynghicophep, Byte ngaynghikophep, Byte solankyluat, string hanhkiem)
 		{
-			this.TenHocSinh = tenhocsinh;
+			this.MaHS = mahs;
 			this.MaLop = malop;
 			this.MaHK = mahk;
 			this.NgayNghiCoPhep = ngaynghicophep;

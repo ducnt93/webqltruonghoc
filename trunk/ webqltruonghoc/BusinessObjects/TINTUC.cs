@@ -5,6 +5,18 @@ namespace QLTHPT1.BusinessObjects
 	public class TINTUC
 	{
 		#region ***** Fields & Properties ***** 
+		private int _MaTinTuc;
+		public int MaTinTuc
+		{ 
+			get 
+			{ 
+				return _MaTinTuc;
+			}
+			set 
+			{ 
+				_MaTinTuc = value;
+			}
+		}
 		private string _TieuDeTin;
 		public string TieuDeTin
 		{ 
@@ -59,8 +71,13 @@ namespace QLTHPT1.BusinessObjects
 		public TINTUC()
 		{
 		}
-		public TINTUC(string tieudetin, string noidungtin, string motangan, DateTime ngaydangtin)
+		public TINTUC(int matintuc)
 		{
+			this.MaTinTuc = matintuc;
+		}
+		public TINTUC(int matintuc, string tieudetin, string noidungtin, string motangan, DateTime ngaydangtin)
+		{
+			this.MaTinTuc = matintuc;
 			this.TieuDeTin = tieudetin;
 			this.NoiDungTin = noidungtin;
 			this.MotaNgan = motangan;

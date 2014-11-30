@@ -32,23 +32,12 @@ namespace QLTHPT1.DataAccess
 			obj.DiaChi = (string) myReader["DiaChi"];
 			obj.SoDienThoai = (string) myReader["SoDienThoai"];
 			obj.ChuNhiem = (bool) myReader["ChuNhiem"];
-			obj.MaTo = (int) myReader["MaTo"];
+			obj.MaMon = (int) myReader["MaMon"];
 			return obj;
 		}
 
 
-        public List<GIAOVIEN> GetByMaTo(int maTo)
-        {
-            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_GIAOVIEN_GetByMaTo", Data.CreateParameter("MaTo", maTo)))
-            {
-                List<GIAOVIEN> list = new List<GIAOVIEN>();
-                while (reader.Read())
-                {
-                    list.Add(Populate(reader));
-                }
-                return list;
-            }
-        }
+      
 		/// <summary>
 		/// Get GIAOVIEN by magiaovien
 		/// </summary>
@@ -151,7 +140,7 @@ namespace QLTHPT1.DataAccess
 							,Data.CreateParameter("DiaChi", obj.DiaChi)
 							,Data.CreateParameter("SoDienThoai", obj.SoDienThoai)
 							,Data.CreateParameter("ChuNhiem", obj.ChuNhiem)
-							,Data.CreateParameter("MaTo", obj.MaTo)
+							,Data.CreateParameter("MaMon", obj.MaMon)
 			);
 			return 0;
 		}
@@ -171,7 +160,7 @@ namespace QLTHPT1.DataAccess
 							,Data.CreateParameter("DiaChi", obj.DiaChi)
 							,Data.CreateParameter("SoDienThoai", obj.SoDienThoai)
 							,Data.CreateParameter("ChuNhiem", obj.ChuNhiem)
-							,Data.CreateParameter("MaTo", obj.MaTo)
+							,Data.CreateParameter("MaMon", obj.MaMon)
 			);
 		}
 

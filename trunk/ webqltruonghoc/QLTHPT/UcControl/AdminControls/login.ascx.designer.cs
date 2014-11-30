@@ -22,6 +22,15 @@ namespace QLTHPT.AdminControls {
         protected global::System.Web.UI.WebControls.TextBox txtuser;
         
         /// <summary>
+        /// vldten control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator vldten;
+        
+        /// <summary>
         /// txtpass control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace QLTHPT.AdminControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtpass;
+        
+        /// <summary>
+        /// vldpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator vldpass;
         
         /// <summary>
         /// bntLogin control.

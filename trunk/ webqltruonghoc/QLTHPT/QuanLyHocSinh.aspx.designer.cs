@@ -22,15 +22,6 @@ namespace QLTHPT {
         protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder1;
         
         /// <summary>
-        /// hpHocSinh control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hpHocSinh;
-        
-        /// <summary>
         /// hpDiem control.
         /// </summary>
         /// <remarks>
@@ -65,15 +56,6 @@ namespace QLTHPT {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hpKyLuat;
-        
-        /// <summary>
-        /// hpMonHoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hpMonHoc;
         
         /// <summary>
         /// hpThoiKhoaBieu control.

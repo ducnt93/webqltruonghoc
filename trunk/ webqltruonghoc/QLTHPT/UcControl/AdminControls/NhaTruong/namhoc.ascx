@@ -8,6 +8,17 @@
     .auto-style3 {
         height: 36px;
     }
+    .drop
+     {
+         width:200px;
+         height:32px;
+     }
+     .textbox
+     {
+          width:200px;
+         height:32px;
+     }
+
     .abc {
         width: 18px;
         height:18px;
@@ -22,6 +33,7 @@
     
     }
 </style>
+
 <div>
     <h2>Danh sách năm học:</h2>
 
@@ -47,7 +59,8 @@
                     <tr>
                         <td class="auto-style2">Thời gian:</td>
                         <td>
-                            <asp:TextBox ID="txtTenNH" runat="server" Width="205px"></asp:TextBox>
+                            <asp:TextBox ID="txtTenNH" runat="server" CssClass="textbox"></asp:TextBox>
+                            <asp:Label ID="lblErrNamHoc" runat="server" ForeColor="Red" Text="*Bạn không được để trống"></asp:Label>
                         </td>
                     </tr>
                     <tr>

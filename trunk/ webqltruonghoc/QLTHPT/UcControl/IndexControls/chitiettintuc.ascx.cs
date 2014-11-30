@@ -21,7 +21,9 @@ namespace QLTHPT.UcControl.IndexControls
 
         private void LoadTin()
         {
-            FormView1.DataSource = ttBus.
+            int id = int.Parse(Request.QueryString["id"].ToString());
+            FormView1.DataSource = ttBus.GetByMaTinTuc(id);
+            FormView1.DataBind();
         }
     }
 }

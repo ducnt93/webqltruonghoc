@@ -14,7 +14,7 @@ namespace QLTHPT
             switch (Request.QueryString["uc"])
             {
                 case "nguoidung":
-                    PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/QLNguoiDung/nguoidung.ascx"));
+                    PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/QLNguoiDung/quantri.ascx"));
                     break;
                 case "nhomnguoidung":
                     PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/QLNguoiDung/nhomnguoidung.ascx"));

@@ -25,21 +25,32 @@ namespace QLTHPT1.DataAccess
 		public QUANTRI Populate(IDataReader myReader)
 		{
 			QUANTRI obj = new QUANTRI();
-			obj.MaND = (string) myReader["MaND"];
-			obj.MaLoaiND = (string) myReader["MaLoaiND"];
+			obj.MaND = (int) myReader["MaND"];
 			obj.TenDNhap = (string) myReader["TenDNhap"];
-			obj.TenNguoiDung = (string) myReader["TenNguoiDung"];
 			obj.MatKhau = (string) myReader["MatKhau"];
 			obj.TrangThai = (bool) myReader["TrangThai"];
 			return obj;
 		}
-
+        public QUANTRI Populate1(IDataReader myReader)
+        {
+            QUANTRI obj = new QUANTRI();
+            obj.MaND = (int)myReader["MaND"];
+            obj.TenDNhap = (string)myReader["TenDNhap"];
+            obj.MatKhau = (string)myReader["MatKhau"];
+            obj.TrangThai = (bool)myReader["TrangThai"];
+            obj.MaGiaoVien = (string)myReader["MaGiaoVien"];
+            obj.TenGiaoVien = (string)myReader["TenGiaoVien"];
+            obj.MaLoaiND = (string)myReader["MaLoaiND"];
+            obj.ChuNhiem = (bool)myReader["ChuNhiem"];
+            obj.MaMon = (int)myReader["MaMon"];
+            return obj;
+        }
 		/// <summary>
 		/// Get QUANTRI by mand
 		/// </summary>
 		/// <param name="mand">MaND</param>
 		/// <returns>QUANTRI</returns>
-		public QUANTRI GetByMaND(string mand)
+		public QUANTRI GetByMaND(int mand)
 		{
 			using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_QUANTRI_GetByMaND", Data.CreateParameter("MaND", mand)))
 			{
@@ -67,7 +78,18 @@ namespace QLTHPT1.DataAccess
 				return list;
 			}
 		}
-
+        public List<QUANTRI> GetList1()
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_QUANTRI_GetTT"))
+            {
+                List<QUANTRI> list = new List<QUANTRI>();
+                while (reader.Read())
+                {
+                    list.Add(Populate1(reader));
+                }
+                return list;
+            }
+        }
 		/// <summary>
 		/// Get DataSet of QUANTRI
 		/// </summary>
@@ -126,13 +148,13 @@ namespace QLTHPT1.DataAccess
 		/// <returns>key of table</returns>
 		public int Add(QUANTRI obj)
 		{
-			DbParameter parameterItemID = Data.CreateParameter("MaND", obj.MaND);
+			
 			//parameterItemID.Direction = ParameterDirection.Output;
-			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_QUANTRI_Add"
-							,parameterItemID
-							,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
+            SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure, "sproc_QUANTRI_Add"
+                            ,Data.CreateParameter("MaND", obj.MaND)
+							//,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
 							,Data.CreateParameter("TenDNhap", obj.TenDNhap)
-							,Data.CreateParameter("TenNguoiDung", obj.TenNguoiDung)
+							//,Data.CreateParameter("TenNguoiDung", obj.TenNguoiDung)
 							,Data.CreateParameter("MatKhau", obj.MatKhau)
 							,Data.CreateParameter("TrangThai", obj.TrangThai)
 			);
@@ -146,11 +168,11 @@ namespace QLTHPT1.DataAccess
 		/// <returns></returns>
 		public void Update(QUANTRI obj)
 		{
-			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_QUANTRI_Update"
+            SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure, "sproc_QUANTRI_Update"
 							,Data.CreateParameter("MaND", obj.MaND)
-							,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
+							//,Data.CreateParameter("MaLoaiND", obj.MaLoaiND)
 							,Data.CreateParameter("TenDNhap", obj.TenDNhap)
-							,Data.CreateParameter("TenNguoiDung", obj.TenNguoiDung)
+							//,Data.CreateParameter("TenNguoiDung", obj.TenNguoiDung)
 							,Data.CreateParameter("MatKhau", obj.MatKhau)
 							,Data.CreateParameter("TrangThai", obj.TrangThai)
 			);

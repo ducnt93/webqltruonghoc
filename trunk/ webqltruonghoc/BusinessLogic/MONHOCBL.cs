@@ -11,7 +11,7 @@ namespace QLTHPT1.BusinessLogic
 {
 	public class MONHOCBL
 	{
-
+        MONHOCDA da = new MONHOCDA();
 		#region ***** Init Methods ***** 
 		MONHOCDA objMONHOCDA;
 		public MONHOCBL()
@@ -30,7 +30,14 @@ namespace QLTHPT1.BusinessLogic
 		{
 			return objMONHOCDA.GetByMaMonHoc(mamonhoc);
 		}
-
+        public List<MONHOC> GetByMaMon(int mamon)
+        {
+            return objMONHOCDA.GetListByMaMon(mamon);
+        }
+        public List<MONHOC> GetByMaTo(int mato)
+        {
+            return objMONHOCDA.GetByMaTo(mato);
+        }
 		/// <summary>
 		/// Get all of MONHOC
 		/// </summary>
@@ -122,5 +129,10 @@ namespace QLTHPT1.BusinessLogic
 			objMONHOCDA.Delete(mamonhoc);
 		}
 		#endregion
-	}
+
+        public DataTable GetAllMonHoc()
+        {
+            return da.GetAllMonHoc();
+        }
+    }
 }

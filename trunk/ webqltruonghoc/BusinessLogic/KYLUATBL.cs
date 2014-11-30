@@ -36,6 +36,10 @@ namespace QLTHPT1.BusinessLogic
 			return (List<KYLUAT>) ServerCache.Get(cacheName);
 		}
 
+        public List<KYLUAT> GetByLop(int lop)
+        {
+            return objKYLUATDA.GetByLop(lop);
+        }
 		/// <summary>
 		/// Get DataSet of KYLUAT
 		/// </summary>
@@ -90,6 +94,16 @@ namespace QLTHPT1.BusinessLogic
 			ServerCache.Remove("KYLUAT", true);
 			return objKYLUATDA.Add(obj_kyluat);
 		}
+
+        public void Update(KYLUAT obj_kyluat)
+        {
+            ServerCache.Remove("KYLUAT", true);
+             objKYLUATDA.Update(obj_kyluat);
+        }
+        public void Delete(string hocsinh )
+        {
+            objKYLUATDA.Delete(hocsinh);
+        }
 
 //No key Found
 		#endregion

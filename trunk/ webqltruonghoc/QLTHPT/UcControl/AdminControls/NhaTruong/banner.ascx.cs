@@ -14,8 +14,11 @@ namespace QLTHPT.UcControl.AdminControls.NhaTruong
         BANNERBL bannerBus = new BANNERBL();
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblErr.Text = "";
+            KtraThem(false);
             if (!IsPostBack)
             {
+                Panel1.Visible = false;
                 LoadBanner();
             }
         }
@@ -80,7 +83,7 @@ namespace QLTHPT.UcControl.AdminControls.NhaTruong
                 obj.MoTa= ((TextBox)(row.Cells[3].Controls[0])).Text;
 
                 gvBanner.EditIndex = -1;
-
+                bannerBus.Update(obj);
                 //Bind data to the GridView control.
                 LoadBanner();
             }
@@ -121,11 +124,19 @@ gvBanner.DataSource = bannerBus.GetList();
         {
             try
             {
-                obj.TenBanner = txtTen.Text;
-                obj.MoTa = txtMoTa.Text;
-                obj.Link = txtDuongdan.Text;
-                bannerBus.Add(obj);
-                LoadBanner();
+                if((txtTen.Text=="") || (txtDuongdan.Text==""))
+                {
+                    KtraThem(true);
+                }
+                else
+                {
+                    obj.TenBanner = txtTen.Text;
+                    obj.MoTa = txtMoTa.Text;
+                    obj.Link = txtDuongdan.Text;
+                    bannerBus.Add(obj);
+                    LoadBanner();
+                }
+               
             }
             catch (Exception ex)
             {
@@ -135,8 +146,24 @@ gvBanner.DataSource = bannerBus.GetList();
            
         }
 
+        private void KtraThem(bool p)
+        {
+            if(txtDuongdan.Text =="")
+            {
+                lblErrLink.Visible = p;
+            }
+            if(txtTen.Text=="")
+            {
+                lblErrTen.Visible = p;
+            }
+
+        }
+
         protected void imgCancel_Click(object sender, ImageClickEventArgs e)
         {
+            txtDuongdan.Text = "";
+            txtMoTa.Text = "";
+            txtTen.Text = "";
             Panel1.Visible = false;
             LoadBanner();
         }

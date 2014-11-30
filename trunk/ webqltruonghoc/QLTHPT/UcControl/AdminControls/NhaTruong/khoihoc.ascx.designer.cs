@@ -40,15 +40,6 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.DropDownList drNamHoc;
         
         /// <summary>
-        /// drHocKy control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drHocKy;
-        
-        /// <summary>
         /// txtTimLop control.
         /// </summary>
         /// <remarks>
@@ -103,13 +94,22 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.TextBox txtTenKhoi;
         
         /// <summary>
-        /// drDShocky control.
+        /// lblErrTenKhoi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drDShocky;
+        protected global::System.Web.UI.WebControls.Label lblErrTenKhoi;
+        
+        /// <summary>
+        /// drDSNamHoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drDSNamHoc;
         
         /// <summary>
         /// imgLuu control.
@@ -128,6 +128,24 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton imgCancel0;
+        
+        /// <summary>
+        /// Panel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel2;
+        
+        /// <summary>
+        /// lblNamHoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNamHoc;
         
         /// <summary>
         /// gvKhoi control.

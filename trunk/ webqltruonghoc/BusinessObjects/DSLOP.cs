@@ -6,6 +6,13 @@ namespace QLTHPT1.BusinessObjects
 	{
 		#region ***** Fields & Properties ***** 
 		private int _MaLop;
+        private string _tenKhoi;
+
+        public string TenKhoi
+        {
+            get { return _tenKhoi; }
+            set { _tenKhoi = value; }
+        }
 		public int MaLop
 		{ 
 			get 

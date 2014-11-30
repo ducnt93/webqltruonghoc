@@ -45,6 +45,10 @@ namespace QLTHPT1.BusinessLogic
 			return (List<THOIKHOABIEU>) ServerCache.Get(cacheName);
 		}
 
+        public List<THOIKHOABIEU> GetByMaLopVaHK(int malop,int mahk)
+        {
+            return objTHOIKHOABIEUDA.GetByMaLopVaHK(malop,mahk);
+        }
 		/// <summary>
 		/// Get DataSet of THOIKHOABIEU
 		/// </summary>
@@ -116,7 +120,7 @@ namespace QLTHPT1.BusinessLogic
 		/// </summary>
 		/// <param name="matkb">MaTKB</param>
 		/// <returns></returns>
-		public void Delete(string matkb)
+		public void Delete(int matkb)
 		{
 			ServerCache.Remove("THOIKHOABIEU", true);
 			objTHOIKHOABIEUDA.Delete(matkb);

@@ -31,6 +31,15 @@ namespace QLTHPT {
         protected global::System.Web.UI.WebControls.HyperLink hpGiaoVien;
         
         /// <summary>
+        /// hpPhanCong control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpPhanCong;
+        
+        /// <summary>
         /// hpToMon control.
         /// </summary>
         /// <remarks>
@@ -38,5 +47,14 @@ namespace QLTHPT {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hpToMon;
+        
+        /// <summary>
+        /// hpMonHoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpMonHoc;
     }
 }

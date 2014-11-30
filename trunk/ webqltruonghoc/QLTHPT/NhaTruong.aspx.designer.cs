@@ -49,6 +49,15 @@ namespace QLTHPT {
         protected global::System.Web.UI.WebControls.HyperLink hpKhoiHoc;
         
         /// <summary>
+        /// hpPhanLop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpPhanLop;
+        
+        /// <summary>
         /// hpDSLop control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace QLTHPT {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hpDSLop;
+        
+        /// <summary>
+        /// HyperLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
         
         /// <summary>
         /// hpTTTruong control.

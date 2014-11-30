@@ -6,6 +6,13 @@ namespace QLTHPT1.BusinessObjects
 	{
 		#region ***** Fields & Properties ***** 
 		private int _MaTo;
+        private string _MaLoaiND;
+
+        public string MaLoaiND
+        {
+            get { return _MaLoaiND; }
+            set { _MaLoaiND = value; }
+        }
 		public int MaTo
 		{ 
 			get 
@@ -15,18 +22,6 @@ namespace QLTHPT1.BusinessObjects
 			set 
 			{ 
 				_MaTo = value;
-			}
-		}
-		private string _MaLoaiND;
-		public string MaLoaiND
-		{ 
-			get 
-			{ 
-				return _MaLoaiND;
-			}
-			set 
-			{ 
-				_MaLoaiND = value;
 			}
 		}
 		private string _TenToBoMon;
@@ -63,10 +58,9 @@ namespace QLTHPT1.BusinessObjects
 		{
 			this.MaTo = mato;
 		}
-		public TOBOMON(int mato, string maloaind, string tentobomon, string mota)
+		public TOBOMON(int mato, string tentobomon, string mota)
 		{
 			this.MaTo = mato;
-			this.MaLoaiND = maloaind;
 			this.TenToBoMon = tentobomon;
 			this.MoTa = mota;
 		}

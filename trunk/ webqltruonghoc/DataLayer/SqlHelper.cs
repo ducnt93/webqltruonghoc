@@ -208,5 +208,87 @@ namespace QLTHPT1.DataAccess
         }
 
         #endregion
+
+        #region TrungPQ_Conn
+        public static string _connString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
+        public static DataTable SelectTableSP(string storedProcedure)
+        {
+            DataTable val = new DataTable();
+            SqlConnection sqlConn = new SqlConnection(_connString);
+            sqlConn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = sqlConn;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = storedProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(val);
+            da.Dispose();
+            cmd.Dispose();
+            sqlConn.Close();
+            sqlConn.Dispose();
+            return val;
+        }
+        public static DataTable SelectTableSP(string storedProcedure, library_Parameter[] param)
+        {
+
+            DataTable val = new DataTable();
+            SqlConnection sqlConn = new SqlConnection(_connString);
+            sqlConn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = sqlConn;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = storedProcedure;
+            for (int i = 0; i < param.Length; i++)
+                cmd.Parameters.Add(new SqlParameter(param[i].ParameterName, param[i].Value));
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(val);
+            da.Dispose();
+            cmd.Dispose();
+            sqlConn.Close();
+            sqlConn.Dispose();
+            return val;
+        }
+        public class library_Parameter
+        {
+            public library_Parameter()
+            { }
+            private object _val;
+            private string _paramterName;
+            private bool _nText = false;
+            public library_Parameter(string parameterName, object val)
+            {
+                _paramterName = parameterName;
+                _val = val;
+            }
+            public string ParameterName
+            {
+                get
+                {
+                    return _paramterName;
+                }
+                set
+                {
+                    _paramterName = value;
+                }
+            }
+            public object Value
+            {
+                get
+                {
+                    return _val;
+                }
+                set
+                {
+                    _val = value;
+                }
+            }
+            public bool NText
+            {
+                get { return _nText; }
+                set { _nText = value; }
+            }
+        }
+        #endregion
     }
 }

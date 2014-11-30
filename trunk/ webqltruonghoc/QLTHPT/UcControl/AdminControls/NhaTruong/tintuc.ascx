@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tintuc.ascx.cs" Inherits="QLTHPT.UcControl.AdminControls.NhaTruong.tintuc" %>
+
 <div>
 
    <h2> Quản lý tin tức của nhà trường:</h2>
