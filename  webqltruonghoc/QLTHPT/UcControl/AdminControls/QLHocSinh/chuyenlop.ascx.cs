@@ -10,19 +10,26 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
 {
     public partial class chuyenlop : System.Web.UI.UserControl
     {
-        CHUYENLOP cl = new CHUYENLOP();
+        CHUYENLOP obj = new CHUYENLOP();
         CHUYENLOPBL clBus = new CHUYENLOPBL();
         KHOILOPBL kBus = new KHOILOPBL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            Panel1.Visible = false;
+            if (!IsPostBack)
             {
+                Status(false);
                 LoadNamHoc();
             }
         }
 
-     
-            private void LoadNamHoc()
+        private void Status(bool p)
+        {       
+            vldNgayChuyen.EnableClientScript = p;
+        }
+
+
+        private void LoadNamHoc()
         {
             NAMHOCBL nhBus = new NAMHOCBL();
             drNamHoc.DataSource = nhBus.GetList();
@@ -31,7 +38,7 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
             drNamHoc.DataBind();
             drNamHoc.Items.Insert(0, "--Chọn năm học--");
         }
-        
+
 
         protected void ckAll_CheckedChanged(object sender, EventArgs e)
         {
@@ -107,30 +114,48 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
 
         protected void imgLuu_Click(object sender, ImageClickEventArgs e)
         {
+            try
+            {
+                Status(true);
+                if (drHocSinh.SelectedIndex == 0)
+                {
+                    lblErr.Text = "Chưa chọn học sinh để chuyển";
+                }
+                else
+                {
+                    if(ckChuyenDiem.Checked ==true)
+                    {
+                        obj.ChuyenBangDiem = true;
+                    }
+                    else
+                    {
+                        obj.ChuyenBangDiem = false;
+                    }
+                    obj.DenLop = drDenLop.SelectedValue;
+                    obj.TuLop = drTuLop.SelectedValue;
+                    obj.LyDoChuyen = txtLydo.Text;
+                    obj.MaHocSinh = drHocSinh.SelectedValue;
+                    clBus.Add(obj);
 
+                }
+            }
+            catch (Exception)
+            {
+
+                lblErr.Text = "Lỗi";
+            }
         }
-
-        protected void Unnamed1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void drKyHoc0_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadKhoi();
-        }
-
         private void LoadKhoi()
         {
             try
             {
-                if (drKyHoc.SelectedIndex == 0)
+                if (drNamHoc.SelectedIndex == 0)
                 {
                     LoadAllKhoi();
                 }
                 else
                 {
-                    drKhoi.DataSource = kBus.GetByMaHocKy(Convert.ToInt32(drKyHoc.SelectedValue));
+                    drKhoi.DataSource = kBus.GetByMaNam(Convert.ToInt32(drNamHoc.SelectedValue));
                     drKhoi.DataBind();
                 }
 
@@ -140,7 +165,7 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
 
                 lblErr.Text = ex.Message;
             }
-            
+
         }
 
         private void LoadAllKhoi()
@@ -151,7 +176,18 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
 
         protected void drKhoi_SelectedIndexChanged1(object sender, EventArgs e)
         {
+            LoadLop();
+        }
 
+        private void LoadLop()
+        {
+            string magv = Session["MaGiaoVien"].ToString();
+            DSLOPBL ds = new DSLOPBL();
+            drLop.DataSource = ds.GetByMaKhoiGV(int.Parse(drKhoi.SelectedValue), magv);
+            drLop.DataTextField = "TenLop";
+            drLop.DataValueField = "MaLop";
+            drLop.DataBind();
+            drLop.Items.Insert(0, "--Chọn lớp--");
         }
 
         protected void drLop_SelectedIndexChanged1(object sender, EventArgs e)
@@ -161,20 +197,38 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
 
         protected void drNamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadKyHoc();
+            LoadKhoi();
         }
 
-        private void LoadKyHoc()
-        {
-         
-            HOCKYBL hkBus = new HOCKYBL();
-            drKyHoc.DataSource = hkBus.GetByMaNamHoc(int.Parse(drNamHoc.SelectedValue));
-            drKyHoc.DataTextField = "TenHK";
-            drKyHoc.DataValueField = "MaHK";
-            drKyHoc.DataBind();
-            drKyHoc.Items.Insert(0, "--Chọn học kỳ--");
-        
 
+        protected void imgThemMoi_Click(object sender, ImageClickEventArgs e)
+        {
+            Panel1.Visible = true;
+            LoadHSByLop();
+            LoadLopThem();
+        }
+
+        private void LoadHSByLop()
+        {
+           
+        }
+
+        private void LoadLopThem()
+        {
+            string magv = Session["MaGiaoVien"].ToString();
+           //drTuLop
+            DSLOPBL ds = new DSLOPBL();
+            drTuLop.DataSource = ds.GetByMaKhoiGV(int.Parse(drKhoi.SelectedValue), magv);
+            drTuLop.DataTextField = "TenLop";
+            drTuLop.DataValueField = "MaLop";
+            drTuLop.DataBind();
+            drTuLop.Items.Insert(0, "--Chọn lớp--");
+            //drDenLop
+            drDenLop.DataSource = ds.GetByMaKhoiGV(int.Parse(drKhoi.SelectedValue), magv);
+            drDenLop.DataTextField = "TenLop";
+            drDenLop.DataValueField = "MaLop";
+            drDenLop.DataBind();
+            drDenLop.Items.Insert(0, "--Chọn lớp--");
         }
     }
 }

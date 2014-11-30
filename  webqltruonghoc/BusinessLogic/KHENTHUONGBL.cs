@@ -36,6 +36,10 @@ namespace QLTHPT1.BusinessLogic
 			return (List<KHENTHUONG>) ServerCache.Get(cacheName);
 		}
 
+        public List<KHENTHUONG> GetByLop(int lop)
+        {
+            return objKHENTHUONGDA.GetByLop(lop);
+        }
 		/// <summary>
 		/// Get DataSet of KHENTHUONG
 		/// </summary>
@@ -90,7 +94,16 @@ namespace QLTHPT1.BusinessLogic
 			ServerCache.Remove("KHENTHUONG", true);
 			return objKHENTHUONGDA.Add(obj_khenthuong);
 		}
+        public void Update(KHENTHUONG obj_khenthuong)
+        {
+            ServerCache.Remove("KHENTHUONG", true);
+             objKHENTHUONGDA.Update(obj_khenthuong);
+        }
 
+        public void Delete(string hocsinh )
+        {
+             objKHENTHUONGDA.Delete(hocsinh);
+        }
 //No key Found
 		#endregion
 	}

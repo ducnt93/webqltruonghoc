@@ -5,8 +5,8 @@ namespace QLTHPT1.BusinessObjects
 	public class MONHOC
 	{
 		#region ***** Fields & Properties ***** 
-		private string _MaMonHoc;
-		public string MaMonHoc
+		private int _MaMonHoc;
+		public int MaMonHoc
 		{ 
 			get 
 			{ 
@@ -17,16 +17,16 @@ namespace QLTHPT1.BusinessObjects
 				_MaMonHoc = value;
 			}
 		}
-		private string _MaGiaoVien;
-		public string MaGiaoVien
+		private int _MaTo;
+		public int MaTo
 		{ 
 			get 
 			{ 
-				return _MaGiaoVien;
+				return _MaTo;
 			}
 			set 
 			{ 
-				_MaGiaoVien = value;
+				_MaTo = value;
 			}
 		}
 		private string _TenMonHoc;
@@ -65,36 +65,23 @@ namespace QLTHPT1.BusinessObjects
 				_HeSo = value;
 			}
 		}
-		private int _TrangThai;
-		public int TrangThai
-		{ 
-			get 
-			{ 
-				return _TrangThai;
-			}
-			set 
-			{ 
-				_TrangThai = value;
-			}
-		}
 		#endregion
 
 		#region ***** Init Methods ***** 
 		public MONHOC()
 		{
 		}
-		public MONHOC(string mamonhoc)
+		public MONHOC(int mamonhoc)
 		{
 			this.MaMonHoc = mamonhoc;
 		}
-		public MONHOC(string mamonhoc, string magiaovien, string tenmonhoc, int sotiet, int heso, int trangthai)
+		public MONHOC(int mamonhoc, int mato, string tenmonhoc, int sotiet, int heso)
 		{
 			this.MaMonHoc = mamonhoc;
-			this.MaGiaoVien = magiaovien;
+			this.MaTo = mato;
 			this.TenMonHoc = tenmonhoc;
 			this.SoTiet = sotiet;
 			this.HeSo = heso;
-			this.TrangThai = trangthai;
 		}
 		#endregion
 	}

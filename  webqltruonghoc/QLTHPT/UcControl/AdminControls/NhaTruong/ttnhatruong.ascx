@@ -4,6 +4,17 @@
     .auto-style1 {
         width: 100%;
     }
+    .drop
+     {
+         width:200px;
+         height:32px;
+     }
+     .textbox
+     {
+          width:200px;
+         height:32px;
+     }
+
     .auto-style2 {
         height: 34px;
     }
@@ -29,9 +40,9 @@
                     <tr>
                         <td colspan="2">
                             <br />
-                            <asp:Image ID="Image1" runat="server" ImageUrl='<%# "~/App_Themes/nhatruong/images/" + Eval("AnhDaiDien") %>' />
+                            <asp:Image ID="Image1" runat="server" ImageUrl='<%# "~/App_Themes/nhatruong/images/" + Eval("AnhDaiDien") %>' Height="300px" Width="720px" />
                             <br />
-                            (Ảnh đại diện)<br /> </td>
+                            (Ảnh đại diện)<br /></td>
                     </tr>
                     <tr>
                         <td class="auto-style3">Mã nhà trường:

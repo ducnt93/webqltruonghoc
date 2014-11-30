@@ -26,10 +26,10 @@ namespace QLTHPT1.BusinessLogic
 		/// </summary>
 		/// <param name="maloaind">MaLoaiND</param>
 		/// <returns>LOAINGUOIDUNG</returns>
-		public LOAINGUOIDUNG GetByMaLoaiND(string maloaind)
-		{
-			return objLOAINGUOIDUNGDA.GetByMaLoaiND(maloaind);
-		}
+        //public LOAINGUOIDUNG GetByMaLoaiND(string maloaind)
+        //{
+        //    return objLOAINGUOIDUNGDA.GetByMaLoaiND(maloaind);
+        //}
 
 		/// <summary>
 		/// Get all of LOAINGUOIDUNG
@@ -116,7 +116,7 @@ namespace QLTHPT1.BusinessLogic
 		/// </summary>
 		/// <param name="maloaind">MaLoaiND</param>
 		/// <returns></returns>
-		public void Delete(string maloaind)
+		public void Delete(int maloaind)
 		{
 			ServerCache.Remove("LOAINGUOIDUNG", true);
 			objLOAINGUOIDUNGDA.Delete(maloaind);

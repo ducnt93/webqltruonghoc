@@ -21,6 +21,15 @@ namespace QLTHPT1.BusinessLogic
 		#endregion
 
 		#region ***** Get Methods ***** 
+		/// <summary>
+		/// Get TINTUC by matintuc
+		/// </summary>
+		/// <param name="matintuc">MaTinTuc</param>
+		/// <returns>TINTUC</returns>
+        public List<TINTUC> GetByMaTinTuc(int matintuc)
+		{
+			return objTINTUCDA.GetByMaTinTuc(matintuc);
+		}
 
 		/// <summary>
 		/// Get all of TINTUC
@@ -91,7 +100,27 @@ namespace QLTHPT1.BusinessLogic
 			return objTINTUCDA.Add(obj_tintuc);
 		}
 
-//No key Found
+		/// <summary>
+		/// updates the specified TINTUC
+		/// </summary>
+		/// <param name="obj_tintuc">TINTUC</param>
+		/// <returns></returns>
+		public void Update(TINTUC obj_tintuc)
+		{
+			ServerCache.Remove("TINTUC", true);
+			objTINTUCDA.Update(obj_tintuc);
+		}
+
+		/// <summary>
+		/// Delete the specified TINTUC
+		/// </summary>
+		/// <param name="matintuc">MaTinTuc</param>
+		/// <returns></returns>
+		public void Delete(int matintuc)
+		{
+			ServerCache.Remove("TINTUC", true);
+			objTINTUCDA.Delete(matintuc);
+		}
 		#endregion
 	}
 }

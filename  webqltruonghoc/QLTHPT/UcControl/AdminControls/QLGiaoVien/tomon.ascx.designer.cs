@@ -67,6 +67,15 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien {
         protected global::System.Web.UI.WebControls.TextBox txtTenTo;
         
         /// <summary>
+        /// lblErrTenTo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrTenTo;
+        
+        /// <summary>
         /// txtMoTa control.
         /// </summary>
         /// <remarks>
@@ -74,15 +83,6 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMoTa;
-        
-        /// <summary>
-        /// drLoaiND control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drLoaiND;
         
         /// <summary>
         /// imgSave control.

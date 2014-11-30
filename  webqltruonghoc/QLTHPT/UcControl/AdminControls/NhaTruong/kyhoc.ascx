@@ -9,6 +9,17 @@
 
     .auto-style2 {
     }
+    .drop
+     {
+         width:200px;
+         height:32px;
+     }
+     .textbox
+     {
+          width:200px;
+         height:32px;
+     }
+
      .abc {
         width: 18px;
         height:18px;
@@ -31,9 +42,6 @@
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
                 <br />
-                Chọn năm học :
-        <asp:DropDownList ID="drNamHoc" runat="server" AutoPostBack="True" Height="30px" OnSelectedIndexChanged="drNamHoc_SelectedIndexChanged" Width="193px">
-        </asp:DropDownList>
                 <br />
                 <br />
                           <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/App_Themes/admin/images/add.png" ToolTip="Thêm mới" Width="32px" OnClick="ImageButton1_Click" />
@@ -48,34 +56,30 @@
                         <tr>
                             <td class="auto-style2">Tên học kỳ: </td>
                             <td>
-                                <asp:TextBox ID="txtTenHK0" runat="server" Height="24px" Width="151px"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="auto-style2">Mã năm học:</td>
-                            <td>
-                                <asp:DropDownList ID="drMaNamHoc" runat="server" Height="32px" Width="166px">
-                                </asp:DropDownList>
+                                <asp:TextBox ID="txtTenHK0" runat="server" CssClass="textbox"></asp:TextBox>
+                                <asp:Label ID="lblErrTenHK" runat="server" ForeColor="Red" Text="*Bạn không thể bỏ trống trường này"></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style2">Từ ngày:</td>
                             <td>
-                                <asp:TextBox ID="txtTuNgay0" runat="server" Height="16px" Width="157px"></asp:TextBox>
+                                <asp:TextBox ID="txtTuNgay0" runat="server" CssClass="textbox"></asp:TextBox>
                                 <asp:CalendarExtender ID="txtTuNgay0_CalendarExtender0" runat="server" TargetControlID="txtTuNgay0">
                                 </asp:CalendarExtender>
                                 <asp:CalendarExtender ID="txtTuNgay0_CalendarExtender" runat="server" Enabled="True" TargetControlID="txtTuNgay0">
                                 </asp:CalendarExtender>
+                                <asp:Label ID="lblErrTuNgay" runat="server" ForeColor="Red" Text="*Bạn không thể bỏ trống trường này"></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style2">Đến ngày:</td>
                             <td>
-                                <asp:TextBox ID="txtDenNgay0" runat="server" Height="16px" Width="156px"></asp:TextBox>
+                                <asp:TextBox ID="txtDenNgay0" runat="server" CssClass="textbox"></asp:TextBox>
                                 <asp:CalendarExtender ID="txtDenNgay0_CalendarExtender0" runat="server" TargetControlID="txtDenNgay0">
                                 </asp:CalendarExtender>
                                 <asp:CalendarExtender ID="txtDenNgay0_CalendarExtender" runat="server" Enabled="True" TargetControlID="txtDenNgay0">
                                 </asp:CalendarExtender>
+                                <asp:Label ID="lblErrDenNgay" runat="server" ForeColor="Red" Text="*Bạn không thể bỏ trống trường này"></asp:Label>
                             </td>
                         </tr>
                         <tr>
@@ -105,11 +109,10 @@
                                 <asp:CheckBox ID="ckitem" runat="server" />
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="MaHK" HeaderText="Mã học kỳ" />
+                        <asp:BoundField DataField="MaHK" HeaderText="Mã học kỳ" Visible="False" />
                         <asp:BoundField DataField="TenHK" HeaderText="Tên học kỳ" />
                         <asp:BoundField DataField="TuNgay" HeaderText="Từ ngày" />
                         <asp:BoundField DataField="DenNgay" HeaderText="Đến ngày" />
-                        <asp:BoundField DataField="MaNamHoc" HeaderText="Mã năm học" />
                         <asp:TemplateField HeaderText="Thao tác">
                             <EditItemTemplate>
                                 <asp:ImageButton ID="imgUpdate" runat="server" CommandName="update" ImageUrl="~/App_Themes/admin/images/Save.png" ToolTip="Lưu lại" CssClass="abc" />

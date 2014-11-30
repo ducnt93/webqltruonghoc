@@ -71,23 +71,13 @@
     <Compile Include="MONHOCBL.cs" />
     <Compile Include="NAMHOCBL.cs" />
     <Compile Include="NHATRUONGBL.cs" />
+    <Compile Include="PHANCONGBL.cs" />
+    <Compile Include="PHANLOPBL.cs" />
     <Compile Include="QUANTRIBL.cs" />
     <Compile Include="THOIKHOABIEUBL.cs" />
     <Compile Include="TINTUCBL.cs" />
     <Compile Include="TOBOMONBL.cs" />
-    <Compile Include="QLTHPT1Facade.cs" />
     <Compile Include="ServerCache.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessObjects\QLTHPT1.BusinessObjects.csproj">
-      <Project>{57BE616B-2AB1-4C6B-8DE5-C8BE328CEEAD}</Project>
-      <Name>QLTHPT1.BusinessObjects</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataLayer\QLTHPT1.DataAccess.csproj">
-      <Project>{9EE87ABA-B42F-4D9F-BE70-1F4F82B62480}</Project>
-      <Name>QLTHPT1.DataAccess</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -100,6 +90,19 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjects\QLTHPT1.BusinessObjects.csproj">
+      <Project>{f87e25bc-85da-406a-a629-8d3b32d2bee1}</Project>
+      <Name>QLTHPT1.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\QLTHPT1.DataAccess.csproj">
+      <Project>{9ee87aba-b42f-4d9f-be70-1f4f82b62480}</Project>
+      <Name>QLTHPT1.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

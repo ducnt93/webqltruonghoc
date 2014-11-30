@@ -2,6 +2,16 @@
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 <style type="text/css">
 
+    .drop
+     {
+         width:200px;
+         height:32px;
+     }
+     .textbox
+     {
+          width:200px;
+         height:32px;
+     }
 
 
     .abc {
@@ -26,18 +36,76 @@
     .auto-style3 {
         width: 397px;
     }
+    .auto-style4 {
+        height: 23px;
+    }
+    .auto-style6 {
+        width: 103px;
+    }
+    .auto-style7 {
+        width: 264px;
+    }
+    .auto-style8 {
+        width: 86px;
+    }
+    .auto-style9 {
+        width: 145px;
+    }
 </style>
 <div>
  <h2>Quản trị banner: </h2>   
 
-    <br />
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
           <asp:ImageButton ID="imgAdd" runat="server" ImageUrl="~/App_Themes/admin/images/add.png" ToolTip="Thêm mới" Width="32px" OnClick="ImageButton1_Click" />
         <asp:Label ID="lblErr" runat="server" ForeColor="Red"></asp:Label>
         &nbsp;<br />
+<asp:Panel ID="Panel1" runat="server" Height="148px">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style3">Tìm theo tên banner:
-                <asp:TextBox ID="txtTim" runat="server" Height="24px" Width="229px" ToolTip="Tìm kiếm banner theo tên"></asp:TextBox>
+            <td colspan="4" class="auto-style4">Thêm banner:</td>
+        </tr>
+        <tr>
+            <td class="auto-style6">Tên banner:</td>
+            <td class="auto-style7">
+                <asp:TextBox ID="txtTen" runat="server" CssClass="textbox"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblErrTen" runat="server" ForeColor="Red" Text="*Bạn không thể bỏ trống trường này"></asp:Label>
+            </td>
+            <td rowspan="2" class="auto-style8">Mô tả:
+                </td>
+            <td rowspan="2">
+                <asp:TextBox ID="txtMoTa" runat="server" Height="60px" Width="281px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style6">Đường dẫn:</td>
+            <td class="auto-style7">
+                <asp:TextBox ID="txtDuongdan" runat="server" CssClass="textbox"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblErrLink" runat="server" ForeColor="Red" Text="*Bạn không thể bỏ trống trường này"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style2" colspan="2">
+                <asp:ImageButton ID="imgSave" runat="server" CssClass="img" ImageUrl="~/App_Themes/admin/images/save_32x32.png" OnClick="imgSave_Click" ToolTip="Lưu lại" />
+                <asp:ImageButton ID="imgCancel0" runat="server" CssClass="img" ImageUrl="~/App_Themes/admin/images/Delete_32x32.png" OnClick="imgCancel_Click" ToolTip="Hủy bỏ" />
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+    </table>
+</asp:Panel>
+
+
+    <br />
+    <table class="auto-style1">
+        <tr>
+            <td class="auto-style9">Tìm theo tên banner:
+                </td>
+            <td class="auto-style3">
+                <asp:TextBox ID="txtTim" runat="server" ToolTip="Tìm kiếm banner theo tên" CssClass="textbox"></asp:TextBox>
             </td>
             <td>
                 <asp:Button ID="btnTim" runat="server" Height="25px" Text="Tìm" Width="90px" />
@@ -87,34 +155,15 @@
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
 
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
+    <br />
+          
 </div>
 
 <p>
     &nbsp;</p>
-<asp:Panel ID="Panel1" runat="server" Height="148px">
-    <table class="auto-style1">
-        <tr>
-            <td colspan="2">Thêm banner:</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">Tên banner:<asp:TextBox ID="txtTen" runat="server" Height="27px" Width="257px"></asp:TextBox>
-            </td>
-            <td rowspan="2">Mô tả:
-                <asp:TextBox ID="txtMoTa" runat="server" Height="60px" Width="323px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style2">Đường dẫn:<asp:TextBox ID="txtDuongdan" runat="server" Height="26px" Width="257px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style2">
-                <asp:ImageButton ID="imgSave" runat="server" CssClass="img" ImageUrl="~/App_Themes/admin/images/save_32x32.png" OnClick="imgSave_Click" ToolTip="Lưu lại" />
-                <asp:ImageButton ID="imgCancel0" runat="server" CssClass="img" ImageUrl="~/App_Themes/admin/images/Delete_32x32.png" OnClick="imgCancel_Click" ToolTip="Hủy bỏ" />
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
-</asp:Panel>
+
 
 

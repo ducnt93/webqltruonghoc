@@ -15,23 +15,45 @@ namespace QLTHPT.AdminControls
         QUANTRIBL bll = new QUANTRIBL();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                txtpass.Attributes.Add("onKeyPress", "doClick('" + bntLogin.ClientID + "',event)");
+            }
+          
         }
 
         protected void bntLogin_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 List<QUANTRI> list = new List<QUANTRI>();
-                list = bll.GetList();
+                list = bll.GetListTT();
+                string mk = HamXuLy.EncodeTo64(txtpass.Text);
                 foreach (var item in list)
                 {
-                    if(item.TenDNhap == txtuser.Text && item.MatKhau==txtpass.Text)
+
+
+                    //if ((item.TenDNhap == txtuser.Text) && (item.MatKhau == HamXuLy.MaHoa(txtpass.Text)))
+                    if ((item.TenDNhap == txtuser.Text) && (item.MatKhau == mk))
                     {
-                        Session["User"] = item.TenNguoiDung;
-                        Session["Ma_loai_nd"] = item.MaLoaiND;
-                        Session["Loai_nguoi_dung"] = item.MaLoaiND;
-                        Response.Redirect("~/admin.aspx");
+                        if(item.TrangThai == true)
+                        {
+                            Session["User"] = item.TenGiaoVien;
+                            Session["MaGiaoVien"] = item.MaGiaoVien;
+                            Session["Ma_loai_nd"] = item.MaLoaiND;
+                            Session["Loai_nguoi_dung"] = item.MaLoaiND;
+                            Session["trangthai"] = item.TrangThai;
+                            Session["chunhiem"] = item.ChuNhiem;
+                            Session["mamon"] = item.MaMon;//
+                            Response.Redirect("~/admin.aspx");
+                        }
+
+                        else
+                        {
+                            Label1.Text = "Tài khoản đã bị khóa. Vui lòng liên hệ ban quản trị!";
+                        }
+                      
                     }
                 }
             }
@@ -41,50 +63,5 @@ namespace QLTHPT.AdminControls
                 throw ex;
             }
         }
-
-        //protected void bntLogin_Click(object sender, EventArgs e)
-        //{
-        //    if (txtuser.Text.Trim().Equals(""))
-        //    {
-        //        Label1.Text = "Tên đăng nhập không thể bỏ trống";
-        //        txtuser.Focus();
-        //        return;
-        //    }
-        //    if (txtpass.Text.Trim().Equals(""))
-        //    {
-        //        Label1.Text = "Mật khẩu không thể bỏ trống";
-        //        txtpass.Focus();
-        //        return;
-        //    }
-        //    users_info us;
-        //    us = users_info.Checkuser(txtuser.Text.Trim());
-        //    if (us!=null)
-        //    {
-        //        if (HamXuLy.MaHoa(txtpass.Text).Equals(us.password))
-        //        {
-        //            if (us.status==true)
-        //            {
-        //                Session["admin"] = us.id;
-        //                Session["username"] = us.username;
-        //                Session["name"] = us.fullname;
-        //                Session["role"] = us.rolecode;
-                        
-        //                Response.Redirect("admin.aspx");
-        //            }
-        //            else
-        //            {
-        //                Label1.Text = "Tài khoản của bạn đã bị khóa";
-        //            }
-        //        }
-        //        else
-        //        {
-        //            Label1.Text = "Mật khẩu không chính xác";
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Label1.Text = "Tên đăng nhập này không tồn tại";
-        //    }
-        //}
     }
 }

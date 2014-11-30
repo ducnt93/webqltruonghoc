@@ -48,7 +48,7 @@ namespace QLTHPT1.BusinessLogic
 			}
 			return (List<HOCKY>) ServerCache.Get(cacheName);
 		}
-
+    
 		/// <summary>
 		/// Get DataSet of HOCKY
 		/// </summary>

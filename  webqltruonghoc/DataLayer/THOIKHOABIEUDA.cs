@@ -25,7 +25,8 @@ namespace QLTHPT1.DataAccess
 		public THOIKHOABIEU Populate(IDataReader myReader)
 		{
 			THOIKHOABIEU obj = new THOIKHOABIEU();
-			obj.MaTKB = (string) myReader["MaTKB"];
+			obj.MaTKB = (int) myReader["MaTKB"];
+            obj.TenThu = (string)myReader["TenThu"];
 			obj.MaLop = (int) myReader["MaLop"];
 			obj.Tiet1 = (string) myReader["Tiet1"];
 			obj.Tiet2 = (string) myReader["Tiet2"];
@@ -53,6 +54,19 @@ namespace QLTHPT1.DataAccess
 				return null;
 			}
 		}
+
+        public List<THOIKHOABIEU> GetByMaLopVaHK(int malop,int mahk)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_THOIKHOABIEU_GetByMaLopVaHK", Data.CreateParameter("MaLop", malop),Data.CreateParameter("MaHK",mahk)))
+            {
+                List<THOIKHOABIEU> list = new List<THOIKHOABIEU>();
+                while (reader.Read())
+                {
+                   list.Add(Populate(reader));
+                }
+                return list;
+            }
+        }
 
 		/// <summary>
 		/// Get all of THOIKHOABIEU
@@ -129,10 +143,10 @@ namespace QLTHPT1.DataAccess
 		/// <returns>key of table</returns>
 		public int Add(THOIKHOABIEU obj)
 		{
-			DbParameter parameterItemID = Data.CreateParameter("MaTKB", obj.MaTKB);
+			//DbParameter parameterItemID = Data.CreateParameter("MaTKB", obj.MaTKB);
 			//parameterItemID.Direction = ParameterDirection.Output;
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_THOIKHOABIEU_Add"
-							,parameterItemID
+							//,parameterItemID
 							,Data.CreateParameter("MaLop", obj.MaLop)
 							,Data.CreateParameter("Tiet1", obj.Tiet1)
 							,Data.CreateParameter("Tiet2", obj.Tiet2)
@@ -141,6 +155,8 @@ namespace QLTHPT1.DataAccess
 							,Data.CreateParameter("Tiet5", obj.Tiet5)
 							,Data.CreateParameter("TuNgay", obj.TuNgay)
 							,Data.CreateParameter("DenNgay", obj.DenNgay)
+                            ,Data.CreateParameter("MaHK",obj.MaHK)
+                            ,Data.CreateParameter("TenThu",obj.TenThu)
 			);
 			return 0;
 		}
@@ -162,6 +178,8 @@ namespace QLTHPT1.DataAccess
 							,Data.CreateParameter("Tiet5", obj.Tiet5)
 							,Data.CreateParameter("TuNgay", obj.TuNgay)
 							,Data.CreateParameter("DenNgay", obj.DenNgay)
+                            ,Data.CreateParameter("MaHK",obj.MaHK)
+                            ,Data.CreateParameter("TenThu",obj.TenThu)
 			);
 		}
 
@@ -170,7 +188,7 @@ namespace QLTHPT1.DataAccess
 		/// </summary>
 		/// <param name="matkb">MaTKB</param>
 		/// <returns></returns>
-		public void Delete(string matkb)
+		public void Delete(int matkb)
 		{
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_THOIKHOABIEU_Delete", Data.CreateParameter("MaTKB", matkb));
 		}

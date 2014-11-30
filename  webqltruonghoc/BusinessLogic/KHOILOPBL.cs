@@ -28,12 +28,18 @@ namespace QLTHPT1.BusinessLogic
 		/// <returns>KHOILOP</returns>
 		public KHOILOP GetByMaKhoi(int makhoi)
 		{
-            return objKHOILOPDA.GetByMaKhoi(makhoi);
+			return objKHOILOPDA.GetByMaKhoi(makhoi);
 		}
-        public List<KHOILOP> GetByMaHocKy(int mahk)
+
+        public List<KHOILOP> GetByMaNam(int manh)
         {
-            return objKHOILOPDA.GetByMaHocKy(mahk);
+            return objKHOILOPDA.GetByMaNam(manh);
         }
+
+        //public List<KHOILOP> GetByMaNH(int manh)
+        //{
+        //    return objKHOILOPDA.GetByMaNH(manh);
+        //}
 		/// <summary>
 		/// Get all of KHOILOP
 		/// </summary>
@@ -47,7 +53,10 @@ namespace QLTHPT1.BusinessLogic
 			}
 			return (List<KHOILOP>) ServerCache.Get(cacheName);
 		}
-
+        public List<KHOILOP> GetList1()
+        {
+            return objKHOILOPDA.GetList();
+        }
 		/// <summary>
 		/// Get DataSet of KHOILOP
 		/// </summary>

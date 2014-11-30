@@ -16,8 +16,9 @@
             <li>
                 <asp:HyperLink ID="hpKhoiHoc" runat="server" NavigateUrl="~/NhaTruong.aspx?uc=khoihoc">Khối lớp học</asp:HyperLink></li>
             <li>
-                <asp:HyperLink ID="hpDSLop" runat="server" NavigateUrl="~/NhaTruong.aspx?uc=dslop">Danh sách lớp</asp:HyperLink></li>
-            
+                <asp:HyperLink ID="hpPhanLop" runat="server" NavigateUrl="~/NhaTruong.aspx?uc=phanlop">Phân lớp</asp:HyperLink></li>
+                <li><asp:HyperLink ID="hpDSLop" runat="server" NavigateUrl="~/NhaTruong.aspx?uc=dslop">Danh sách lớp</asp:HyperLink></li>  
+        <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NhaTruong.aspx?uc=hocsinh">Danh sách học sinh</asp:HyperLink></li>  
         <li>
             <asp:HyperLink ID="hpTTTruong" runat="server" NavigateUrl="~/NhaTruong.aspx?uc=ttnhatruong">Thông tin nhà trường</asp:HyperLink></li>
         <li>

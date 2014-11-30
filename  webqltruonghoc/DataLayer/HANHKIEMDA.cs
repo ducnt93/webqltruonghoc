@@ -25,21 +25,48 @@ namespace QLTHPT1.DataAccess
 		public HANHKIEM Populate(IDataReader myReader)
 		{
 			HANHKIEM obj = new HANHKIEM();
-			obj.TenHocSinh = (string) myReader["TenHocSinh"];
+            obj.MaHS = (string)myReader["MaHS"];
 			obj.MaLop = (int) myReader["MaLop"];
-			obj.MaHK = (string) myReader["MaHK"];
-			obj.NgayNghiCoPhep = (Byte) myReader["NgayNghiCoPhep"];
-			obj.NgayNghiKoPhep = (Byte) myReader["NgayNghiKoPhep"];
-			obj.SoLanKyLuat = (Byte) myReader["SoLanKyLuat"];
+			obj.MaHK = (int) myReader["MaHK"];
+			obj.NgayNghiCoPhep = (int) myReader["NgayNghiCoPhep"];
+            obj.NgayNghiKoPhep = (int)myReader["NgayNghiKoPhep"];
+            obj.SoLanKyLuat = (int)myReader["SoLanKyLuat"];
 			obj.HanhKiem = (string) myReader["HanhKiem"];
 			return obj;
 		}
+        public HANHKIEM Populate1(IDataReader myReader)
+        {
+            HANHKIEM obj = new HANHKIEM();
+            obj.MaHS = (string)myReader["MaHS"];
+           // obj.MaLop = (int)myReader["MaLop"];
+            obj.TenHocSinh = (string)myReader["TenHocSinh"];
+            obj.NgayNghiCoPhep = (int)myReader["NgayNghiCoPhep"];
+            obj.NgayNghiKoPhep = (int)myReader["NgayNghiKoPhep"];
+            obj.SoLanKyLuat = (int)myReader["SoLanKyLuat"];
+            obj.HanhKiem = (string)myReader["HanhKiem"];
+            return obj;
+        }
 
 
-		/// <summary>
-		/// Get all of HANHKIEM
-		/// </summary>
-		/// <returns>List<<HANHKIEM>></returns>
+        public HANHKIEM Populate2(IDataReader myReader)
+        {
+            HANHKIEM obj = new HANHKIEM();
+            obj.MaHS = (string)myReader["MaHS"];
+            return obj;
+        }
+
+        public List<HANHKIEM> GetListByMaHSHK(string mahs, int mahk)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "[sproc_HANHKIEM_GetByMaLopVaHK]", Data.CreateParameter("MaLop", mahs), Data.CreateParameter("MaHK", mahk)))
+            {
+                List<HANHKIEM> list = new List<HANHKIEM>();
+                while (reader.Read())
+                {
+                    list.Add(Populate2(reader));
+                }
+                return list;
+            }
+        }
 		public List<HANHKIEM> GetList()
 		{
 			using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_HANHKIEM_Get"))
@@ -53,6 +80,18 @@ namespace QLTHPT1.DataAccess
 			}
 		}
 
+        public List<HANHKIEM> GetListByMaLopHK(int malop, int mahk)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "[sproc_HANHKIEM_GetByMaLopVaHK]", Data.CreateParameter("MaLop", malop), Data.CreateParameter("MaHK", mahk)))
+            {
+                List<HANHKIEM> list = new List<HANHKIEM>();
+                while (reader.Read())
+                {
+                    list.Add(Populate1(reader));
+                }
+                return list;
+            }
+        }
 		/// <summary>
 		/// Get DataSet of HANHKIEM
 		/// </summary>
@@ -112,7 +151,7 @@ namespace QLTHPT1.DataAccess
 		public int Add(HANHKIEM obj)
 		{
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_HANHKIEM_Add"
-							,Data.CreateParameter("TenHocSinh", obj.TenHocSinh)
+                            , Data.CreateParameter("MaHS", obj.MaHS)
 							,Data.CreateParameter("MaLop", obj.MaLop)
 							,Data.CreateParameter("MaHK", obj.MaHK)
 							,Data.CreateParameter("NgayNghiCoPhep", obj.NgayNghiCoPhep)
@@ -123,7 +162,24 @@ namespace QLTHPT1.DataAccess
 			return 0;
 		}
 
-//No key Found
+public int Update(HANHKIEM obj )
+        {
+            SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure, "sproc_HANHKIEM_Update"
+                            , Data.CreateParameter("MaHS", obj.MaHS)
+			    		    ,Data.CreateParameter("MaLop", obj.MaLop)
+							,Data.CreateParameter("MaHK", obj.MaHK)
+							,Data.CreateParameter("NgayNghiCoPhep", obj.NgayNghiCoPhep)
+							,Data.CreateParameter("NgayNghiKoPhep", obj.NgayNghiKoPhep)
+							,Data.CreateParameter("SoLanKyLuat", obj.SoLanKyLuat)
+							,Data.CreateParameter("HanhKiem", obj.HanhKiem)
+                );
+            return 0;
+        }
+
+        public void Delete(string mahs)
+{
+    SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure, "sproc_HANHKIEM_Delete", Data.CreateParameter("MaHS", mahs));
+}
 		#endregion
 	}
 }

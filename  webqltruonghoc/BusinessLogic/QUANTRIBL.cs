@@ -26,10 +26,10 @@ namespace QLTHPT1.BusinessLogic
 		/// </summary>
 		/// <param name="mand">MaND</param>
 		/// <returns>QUANTRI</returns>
-		public QUANTRI GetByMaND(string mand)
-		{
-			return objQUANTRIDA.GetByMaND(mand);
-		}
+        //public QUANTRI GetByMaND(string mand)
+        //{
+        //    return objQUANTRIDA.GetByMaND(mand);
+        //}
 
 		/// <summary>
 		/// Get all of QUANTRI
@@ -44,7 +44,10 @@ namespace QLTHPT1.BusinessLogic
 			}
 			return (List<QUANTRI>) ServerCache.Get(cacheName);
 		}
-
+        public List<QUANTRI> GetListTT()
+        {
+            return objQUANTRIDA.GetList1();
+        }
 		/// <summary>
 		/// Get DataSet of QUANTRI
 		/// </summary>

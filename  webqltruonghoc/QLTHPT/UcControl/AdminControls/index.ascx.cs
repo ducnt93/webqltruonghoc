@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace QLTHPT.AdminControls
 {
-    public partial class index : System.Web.UI.UserControl
+    public partial class tracuuindex : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -156,24 +156,23 @@ namespace QLTHPT.AdminControls
                 Response.Redirect("~/NguoiDung.aspx");
             }
         }
-
-        protected void imgTienIch_Click(object sender, ImageClickEventArgs e)
-        {
-            if (Session["Ma_loai_nd"].ToString() == "GV")
-            {
-
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Bạn Không Có Quền !');location.href='#';", true);
-
-            }
-            else
-            {
-                Response.Redirect("~/TienIch.aspx");
-            }
-        }
-
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("~/QuanLyHocSinh.aspx");
+            //bool kt = bool.Parse(Session["chunhiem"].ToString());
+            //if(kt == false)
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Bạn Không Có Quền !');location.href='#';", true);
+            //}
+            //else
+            //{
+                Response.Redirect("~/QuanLyHocSinh.aspx");
+            //}
+          
+        }
+
+        protected void imgDiem_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("~/QuanLyDiem.aspx?uc=diem");
         }
 
        

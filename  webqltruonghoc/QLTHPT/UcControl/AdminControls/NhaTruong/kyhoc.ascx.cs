@@ -15,25 +15,32 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
         NAMHOCBL nhBus = new NAMHOCBL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Panel2.Visible = false;
+            
+            lblErr.Text = "";
+            ktra(false);
             if (!IsPostBack)
             {
-                LoadNamHoc();
+                Panel2.Visible = false;       
                 LoadKyHoc();
             }
 
         }
-
-        private void LoadNamHoc()
+        public void ktra(bool p)
         {
+            if((txtDenNgay0.Text == ""))
+            {
+                lblErrDenNgay.Visible = p;
+            }
+            if(txtTenHK0.Text=="")
+            {
+                lblErrTenHK.Visible = p;
 
-            drNamHoc.DataSource = nhBus.GetList();
-            drNamHoc.DataTextField = "TenNamHoc";
-            drNamHoc.DataValueField = "MaNamHoc";
-            drNamHoc.DataBind();
-            drNamHoc.Items.Insert(0, new ListItem("--Chọn--"));
+            }
+            if(txtTuNgay0.Text=="")
+            {
+                lblErrTuNgay.Visible = p;
+            }
         }
-
         private void LoadKyHoc()
         {
             gvKyHoc.DataSource = khBus.GetList();
@@ -42,33 +49,33 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
 
         }
 
-        protected void drNamHoc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (drNamHoc.SelectedIndex == 0)
-            {
-                LoadKyHoc();
-            }
-            else
-            {
-                LoadHocKyMaNam();
+        //protected void drNamHoc_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (drNamHoc.SelectedIndex == 0)
+        //    {
+        //        LoadKyHoc();
+        //    }
+        //    else
+        //    {
+        //        LoadHocKyMaNam();
                
-             }
+        //     }
 
-        }
+        //}
 
-        private void LoadHocKyMaNam()
-        {
-            if(drNamHoc.SelectedIndex == 0 )
-            {
-                LoadKyHoc();
-            }
-            else
-            {
-            gvKyHoc.DataSource = khBus.GetByMaNamHoc(int.Parse(drNamHoc.SelectedValue));
-            gvKyHoc.DataBind();
-            }
+        //private void LoadHocKyMaNam()
+        //{
+        //    if(drNamHoc.SelectedIndex == 0 )
+        //    {
+        //        LoadKyHoc();
+        //    }
+        //    else
+        //    {
+        //    gvKyHoc.DataSource = khBus.GetByMaNamHoc(int.Parse(drNamHoc.SelectedValue));
+        //    gvKyHoc.DataBind();
+        //    }
            
-        }
+        //}
 
         protected void ckALl_CheckedChanged(object sender, EventArgs e)
         {
@@ -91,8 +98,7 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
         {
             try
             {
-
-                obj.MaNamHoc = int.Parse(drMaNamHoc.SelectedValue);
+                ktra(true);
                 obj.TenHK = txtTenHK0.Text;
                 obj.TuNgay = DateTime.Parse(txtTuNgay0.Text);
                 obj.DenNgay = DateTime.Parse(txtDenNgay0.Text);
@@ -109,24 +115,27 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
 
         protected void imgCancel_Click(object sender, ImageClickEventArgs e)
         {
+            txtTuNgay0.Text = "";
+            txtTenHK0.Text = "";
+            txtDenNgay0.Text = "";
             Panel2.Visible = false;
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Panel2.Visible = true;
-            LoadMaNam();
+            
 
         }
 
-        private void LoadMaNam()
-        {
-            NAMHOCBL nh = new NAMHOCBL();
-            drMaNamHoc.DataSource = nh.GetList();
-            drMaNamHoc.DataTextField = "TenNamHoc";
-            drMaNamHoc.DataValueField = "MaNamHoc";
-            drMaNamHoc.DataBind();
-        }
+        //private void LoadMaNam()
+        //{
+        //    NAMHOCBL nh = new NAMHOCBL();
+        //    drMaNamHoc.DataSource = nh.GetList();
+        //    drMaNamHoc.DataTextField = "TenNamHoc";
+        //    drMaNamHoc.DataValueField = "MaNamHoc";
+        //    drMaNamHoc.DataBind();
+        //}
 
         protected void imgRefresh_Click(object sender, ImageClickEventArgs e)
         {
@@ -170,7 +179,8 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
         protected void gvKyHoc_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gvKyHoc.EditIndex = e.NewEditIndex;
-            LoadHocKyMaNam();
+            //LoadHocKyMaNam();
+            LoadKyHoc();
         }
 
         protected void gvKyHoc_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -183,11 +193,11 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
                 obj.TenHK = ((TextBox)(row.Cells[2].Controls[0])).Text;
                 obj.TuNgay = DateTime.Parse(((TextBox)(row.Cells[3].Controls[0])).Text);
                 obj.DenNgay = DateTime.Parse(((TextBox)(row.Cells[4].Controls[0])).Text);          
-                obj.MaNamHoc = int.Parse(((TextBox)(row.Cells[5].Controls[0])).Text);
+                //obj.MaNamHoc = int.Parse(((TextBox)(row.Cells[5].Controls[0])).Text);
                 khBus.Update(obj);
                 //Reset the edit index.
-                //gvKyHoc.EditIndex = -1;
-                LoadHocKyMaNam();
+                gvKyHoc.EditIndex = -1;
+                LoadKyHoc();
             }
             catch (Exception ex)
             {

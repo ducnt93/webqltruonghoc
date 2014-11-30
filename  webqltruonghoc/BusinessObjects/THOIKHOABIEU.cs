@@ -5,8 +5,15 @@ namespace QLTHPT1.BusinessObjects
 	public class THOIKHOABIEU
 	{
 		#region ***** Fields & Properties ***** 
-		private string _MaTKB;
-		public string MaTKB
+		private int _MaTKB;
+        private string _TenThu;
+
+        public string TenThu
+        {
+            get { return _TenThu; }
+            set { _TenThu = value; }
+        }
+		public int MaTKB
 		{ 
 			get 
 			{ 
@@ -113,17 +120,29 @@ namespace QLTHPT1.BusinessObjects
 				_DenNgay = value;
 			}
 		}
+		private int _MaHK;
+		public int MaHK
+		{ 
+			get 
+			{ 
+				return _MaHK;
+			}
+			set 
+			{ 
+				_MaHK = value;
+			}
+		}
 		#endregion
 
 		#region ***** Init Methods ***** 
 		public THOIKHOABIEU()
 		{
 		}
-		public THOIKHOABIEU(string matkb)
+		public THOIKHOABIEU(int matkb)
 		{
 			this.MaTKB = matkb;
 		}
-		public THOIKHOABIEU(string matkb, int malop, string tiet1, string tiet2, string tiet3, string tiet4, string tiet5, DateTime tungay, DateTime denngay)
+		public THOIKHOABIEU(int matkb, int malop, string tiet1, string tiet2, string tiet3, string tiet4, string tiet5, DateTime tungay, DateTime denngay, int mahk)
 		{
 			this.MaTKB = matkb;
 			this.MaLop = malop;
@@ -134,6 +153,7 @@ namespace QLTHPT1.BusinessObjects
 			this.Tiet5 = tiet5;
 			this.TuNgay = tungay;
 			this.DenNgay = denngay;
+			this.MaHK = mahk;
 		}
 		#endregion
 	}

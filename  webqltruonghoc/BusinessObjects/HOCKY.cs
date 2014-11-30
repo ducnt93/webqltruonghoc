@@ -17,13 +17,7 @@ namespace QLTHPT1.BusinessObjects
 				_MaHK = value;
 			}
 		}
-        private string _TenHK, _TenNamHoc;
-
-        public string TenNamHoc
-        {
-            get { return _TenNamHoc; }
-            set { _TenNamHoc = value; }
-        }
+		private string _TenHK;
 		public string TenHK
 		{ 
 			get 
@@ -33,18 +27,6 @@ namespace QLTHPT1.BusinessObjects
 			set 
 			{ 
 				_TenHK = value;
-			}
-		}
-		private int _MaNamHoc;
-		public int MaNamHoc
-		{ 
-			get 
-			{ 
-				return _MaNamHoc;
-			}
-			set 
-			{ 
-				_MaNamHoc = value;
 			}
 		}
 		private DateTime _TuNgay;
@@ -81,14 +63,12 @@ namespace QLTHPT1.BusinessObjects
 		{
 			this.MaHK = mahk;
 		}
-		public HOCKY(int mahk, string tenhk, int manamhoc, DateTime tungay, DateTime denngay, string tennamhoc)
+		public HOCKY(int mahk, string tenhk, DateTime tungay, DateTime denngay)
 		{
 			this.MaHK = mahk;
 			this.TenHK = tenhk;
-			this.MaNamHoc = manamhoc;
 			this.TuNgay = tungay;
 			this.DenNgay = denngay;
-            this.TenNamHoc = tennamhoc;
 		}
 		#endregion
 	}

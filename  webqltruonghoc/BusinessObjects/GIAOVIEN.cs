@@ -89,16 +89,16 @@ namespace QLTHPT1.BusinessObjects
 				_ChuNhiem = value;
 			}
 		}
-		private int _MaTo;
-		public int MaTo
+		private int _MaMon;
+		public int MaMon
 		{ 
 			get 
 			{ 
-				return _MaTo;
+				return _MaMon;
 			}
 			set 
 			{ 
-				_MaTo = value;
+				_MaMon = value;
 			}
 		}
 		#endregion
@@ -120,7 +120,7 @@ namespace QLTHPT1.BusinessObjects
 			this.DiaChi = diachi;
 			this.SoDienThoai = sodienthoai;
 			this.ChuNhiem = chunhiem;
-			this.MaTo = mato;
+			this.MaMon = mato;
 		}
 		#endregion
 	}

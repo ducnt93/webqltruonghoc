@@ -10,8 +10,7 @@
      <h2>Menu Chức Năng</h2>
     
         <ul>
-         <li>
-                <asp:HyperLink ID="hpHocSinh" runat="server" NavigateUrl="~/QuanLyHocSinh.aspx?uc=hocsinh">Danh sách học sinh</asp:HyperLink></li>
+       
             <li>
                 <asp:HyperLink ID="hpDiem" runat="server" NavigateUrl="~/QuanLyHocSinh.aspx?uc=diem">Bảng điểm</asp:HyperLink></li>
             <li>
@@ -20,8 +19,6 @@
                 <asp:HyperLink ID="hpKhenThuong" runat="server" NavigateUrl="~/QuanLyHocSinh.aspx?uc=khenthuong">Khen thưởng</asp:HyperLink></li>
             <li>
                 <asp:HyperLink ID="hpKyLuat" runat="server" NavigateUrl="~/QuanLyHocSinh.aspx?uc=kyluat">Kỷ luật</asp:HyperLink></li>
-            <li>
-                <asp:HyperLink ID="hpMonHoc" runat="server" NavigateUrl="~/QuanLyHocSinh.aspx?uc=monhoc">Môn học</asp:HyperLink></li>
             <li>
                 <asp:HyperLink ID="hpThoiKhoaBieu" runat="server" NavigateUrl="~/QuanLyHocSinh.aspx?uc=thoikhoabieu">Thời khóa biểu</asp:HyperLink>
 

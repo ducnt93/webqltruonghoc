@@ -16,20 +16,13 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                pnNamHoc.Visible = false;
+       
+                lblErrNamHoc.Visible = false;
                 if (!IsPostBack)
                 {
+                    pnNamHoc.Visible = false;
                     LoadALL();
                 }
-            }
-            catch (Exception ex)
-            {
-
-                lblErr.Text = ex.Message;
-            }
-
         }
 
         private void LoadALL()
@@ -40,23 +33,34 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
 
         protected void imgThemMoi_Click(object sender, ImageClickEventArgs e)
         {
+            
             pnNamHoc.Visible = true;
         }
 
         protected void imgCancel_Click(object sender, ImageClickEventArgs e)
         {
+            txtTenNH.Text = "";
             pnNamHoc.Visible = false;
             LoadALL(); 
         }
 
         protected void imgLuu_Click(object sender, ImageClickEventArgs e)
         {
+          
             try
             {
-                NAMHOC obj = new NAMHOC();
-                obj.TenNamHoc = txtTenNH.Text;
-                nh.Add(obj);
-                LoadALL();
+                if(txtTenNH.Text == "")
+                {
+                    lblErrNamHoc.Visible = true;
+                }
+                else
+                {
+                    NAMHOC obj = new NAMHOC();
+                    obj.TenNamHoc = txtTenNH.Text;
+                    nh.Add(obj);
+                    LoadALL();
+                }
+                
             }
             catch (Exception ex)
             {

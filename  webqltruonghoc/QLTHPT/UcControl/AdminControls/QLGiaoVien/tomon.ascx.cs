@@ -15,22 +15,24 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
         LOAINGUOIDUNGBL loaindBus = new LOAINGUOIDUNGBL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            pnAdd.Visible = false;
+            lblErr.Text = "";
+            lblErrTenTo.Visible = false;
             if (!IsPostBack)
             {
+                pnAdd.Visible = false;
                 LoadToMon();
-                LoadNguoiDung();
+
             }
         }
 
-        private void LoadNguoiDung()
-        {
-            drLoaiND.DataSource = loaindBus.GetList();
-            drLoaiND.DataTextField = "TenLoaiND";
-            drLoaiND.DataValueField = "MaLoaiND";
-            drLoaiND.DataBind();
+        //private void LoadNguoiDung()
+        //{
+        //    drLoaiND.DataSource = loaindBus.GetList();
+        //    drLoaiND.DataTextField = "TenLoaiND";
+        //    drLoaiND.DataValueField = "MaLoaiND";
+        //    drLoaiND.DataBind();
 
-        }
+        //}
 
         private void LoadToMon()
         {
@@ -47,7 +49,7 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
         {
             try
             {
-                int mato =int.Parse( gvToMon.DataKeys[e.RowIndex].Value.ToString());
+                int mato = int.Parse(gvToMon.DataKeys[e.RowIndex].Value.ToString());
                 tmBus.Delete(mato);
                 LoadToMon();
             }
@@ -73,9 +75,9 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
                 GridViewRow row = gvToMon.Rows[e.RowIndex];
                 int mato = int.Parse(gvToMon.DataKeys[e.RowIndex].Value.ToString());
                 obj.MaTo = mato;
-                obj.MaLoaiND = ((TextBox)(row.Cells[3].Controls[0])).Text;
+                // obj.MaLoaiND = ((TextBox)(row.Cells[3].Controls[0])).Text;
                 obj.TenToBoMon = ((TextBox)(row.Cells[2].Controls[0])).Text;
-                obj.MoTa = ((TextBox)(row.Cells[4].Controls[0])).Text;
+                obj.MoTa = ((TextBox)(row.Cells[3].Controls[0])).Text;
                 tmBus.Update(obj);
                 //Reset the edit index.
                 gvToMon.EditIndex = -1;
@@ -116,6 +118,8 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
 
         protected void imgCancel_Click(object sender, ImageClickEventArgs e)
         {
+            txtTenTo.Text = "";
+            txtMoTa.Text = "";
             pnAdd.Visible = false;
             LoadToMon();
         }
@@ -124,12 +128,19 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
         {
             try
             {
-                obj.MaLoaiND = drLoaiND.SelectedValue;
-               // obj.MaTo = int.Parse(txtMaTo.Text.Trim());
-                obj.MoTa = txtMoTa.Text.Trim();
-                obj.TenToBoMon = txtTenTo.Text;
-                tmBus.Add(obj);
-                LoadToMon();
+                if (txtTenTo.Text == "")
+                {
+                    lblErrTenTo.Visible = true;
+                }
+                else
+                {
+                    obj.MoTa = txtMoTa.Text.Trim();
+                    obj.TenToBoMon = txtTenTo.Text;
+                    tmBus.Add(obj);
+                    pnAdd.Visible = false;
+                    LoadToMon();
+                }
+
             }
             catch (Exception ex)
             {
@@ -156,13 +167,13 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
             }
             LoadToMon();
         }
-        
+
 
         protected void imgRefresh_Click(object sender, ImageClickEventArgs e)
         {
             pnAdd.Visible = false;
             LoadToMon();
-               
+
         }
     }
 }

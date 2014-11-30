@@ -16,37 +16,24 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Panel1.Visible = false;
+            
             lblErr.Text = "";
+            KtraThem(false); 
             if (!IsPostBack)
             {
+                Panel1.Visible = false;
+                Panel3.Visible = false;
+                Panel2.Visible = true;
                 LoadGV();
-                LoadTo();
-
             }
         }
 
-        private void LoadTo()
-        {
-            try
-            {
-                drToGiaoVien.DataSource = tmBus.GetList();
-                drToGiaoVien.DataTextField = "TenToBoMon";
-                drToGiaoVien.DataValueField = "MaTo";
-                drToGiaoVien.DataBind();
-                drToGiaoVien.Items.Insert(0, "--Chọn tổ bộ môn--");
-
-            }
-            catch (Exception ex)
-            {
-
-                lblErr.Text = ex.Message;
-            }
-
-        }
+      
 
         protected void imgCancel_Click(object sender, ImageClickEventArgs e)
         {
+            Panel1.Visible = false;
+            Panel3.Visible = false;
             gvGiaoVien.EditIndex = -1;
             LoadGV();
         }
@@ -60,6 +47,8 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Panel1.Visible = true;
+            Panel2.Visible = false;
+            Panel3.Visible = false;
             LoadToMon();
         }
 
@@ -123,41 +112,24 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
 
         protected void gvGiaoVien_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            try
-            {
-                GridViewRow row = gvGiaoVien.Rows[e.RowIndex];
-                string magv = gvGiaoVien.DataKeys[e.RowIndex].Value.ToString();
-                obj.MaGiaoVien = magv;
-                // obj.MaGiaoVien = ((TextBox)(row.Cells[1].Controls[0])).Text;
-                obj.TenGiaoVien = ((TextBox)(row.Cells[2].Controls[0])).Text;
-                obj.GioiTinh = ((TextBox)row.Cells[4].Controls[0]).Text;
-                obj.NgaySinh = DateTime.Parse(((TextBox)(row.Cells[3].Controls[0])).Text);
-                obj.DiaChi = ((TextBox)(row.Cells[5].Controls[0])).Text;
-                obj.SoDienThoai = ((TextBox)(row.Cells[6].Controls[0])).Text;
-                obj.MaTo = int.Parse(((TextBox)(row.Cells[7].Controls[0])).Text);
-               bool ck = ((CheckBox)(row.Cells[8].Controls[0])).Checked;
-               
-                if(ck == true)
-                {
-                    obj.ChuNhiem = true;
-                }
-                else
-                {
-                    obj.ChuNhiem = false;
-                }
-                gvBus.Update(obj);
-                //Reset the edit index.
-                gvGiaoVien.EditIndex = -1;
-
-                //Bind data to the GridView control.
-                LoadGV();
-            }
-            catch (Exception ex)
-            {
-
-                lblErr.Text = ex.Message;
-            }
-
+            Panel3.Visible = true;
+            Panel2.Visible = true;
+            Panel1.Visible = false;
+            txtMaGV0.Text = gvGiaoVien.Rows[e.RowIndex].Cells[1].Text;
+            txtNgaySinh0.Text = gvGiaoVien.Rows[e.RowIndex].Cells[3].Text;
+            txtSDT0.Text = gvGiaoVien.Rows[e.RowIndex].Cells[6].Text;
+            txtTenGV0.Text = gvGiaoVien.Rows[e.RowIndex].Cells[2].Text;
+            txtDiaChi0.Text = gvGiaoVien.Rows[e.RowIndex].Cells[5].Text;
+         //(  (bool) (gvGiaoVien.Rows[e.RowIndex].Cells[7]));
+         //   if(ktra == true)
+         //   {
+         //         ckChuNhiemSua.Checked = true;
+         //   }
+         //   else
+         //   {
+         //       ckChuNhiemSua.Checked =false;
+         //   }
+          
         }
 
         protected void gvGiaoVien_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
@@ -176,13 +148,13 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
         {
             for (int i = 0; i < gvGiaoVien.Rows.Count; i++)
             {
-                
+
                 GridViewRow row = gvGiaoVien.Rows[i];
                 bool isChecked = ((CheckBox)row.FindControl("ckitem")).Checked;
 
                 if (isChecked)
                 {
-                   
+
                     string id = (gvGiaoVien.Rows[i].Cells[1].Text);
                     gvBus.Delete(id);
                 }
@@ -194,24 +166,37 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
         {
             try
             {
-                obj.MaGiaoVien = txtMaGV.Text;
-                obj.TenGiaoVien = txtTenGV.Text;
-                obj.DiaChi = txtDiaChi.Text;
-                if (ckChuNhiem.Checked == true)
+                if ((txtMaGV.Text == "") || (txtSDT.Text == "") || (txtTenGV.Text == "") || (txtNgaySinh.Text == ""))
                 {
-                    obj.ChuNhiem = true;
+                    KtraThem(true);
+                }
+
+                if ((drGioiTinh.SelectedIndex == 0) || (drTo.SelectedIndex == 0))
+                {
+                    lblErr.Text = "Bạn không được để trống!";
                 }
                 else
                 {
-                    obj.ChuNhiem = false;
+                    obj.MaGiaoVien = txtMaGV.Text;
+                    obj.TenGiaoVien = txtTenGV.Text;
+                    obj.DiaChi = txtDiaChi.Text;
+                    if (ckChuNhiem.Checked == true)
+                    {
+                        obj.ChuNhiem = true;
+                    }
+                    else
+                    {
+                        obj.ChuNhiem = false;
+                    }
+
+                    obj.NgaySinh = DateTime.Parse(txtNgaySinh.Text);
+                    obj.SoDienThoai = txtSDT.Text.Trim();
+                    obj.GioiTinh = drGioiTinh.SelectedValue;
+                    obj.MaMon = int.Parse(drTo.SelectedValue);
+                    gvBus.Add(obj);
+                    LoadGV();
                 }
 
-                obj.NgaySinh = DateTime.Parse(txtNgaySinh.Text);
-                obj.SoDienThoai = txtSDT.Text.Trim();
-                obj.GioiTinh = drGioiTinh.SelectedValue;
-                obj.MaTo = int.Parse(drTo.SelectedValue);
-                gvBus.Add(obj);
-                LoadGV();
             }
             catch (Exception ex)
             {
@@ -221,19 +206,67 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
 
         }
 
-        protected void drNamHoc_SelectedIndexChanged(object sender, EventArgs e)
+        private void KtraThem(bool p)
         {
-            if (drToGiaoVien.SelectedIndex == 0)
+            if(txtNgaySinh.Text=="")
             {
-                LoadGV();
+                lblErrNgaySinh.Visible = p;
             }
-            else
+            if(txtMaGV.Text=="")
             {
-                gvGiaoVien.DataSource = gvBus.GetByMaTo(int.Parse(drToGiaoVien.SelectedValue));
-                gvGiaoVien.DataBind();
+                lblErrMaGV.Visible = p;
             }
-
-
+            if(txtSDT.Text=="")
+            {
+                lblErrSDT.Visible = p;
+            }
+            if(txtTenGV.Text=="")
+            {
+                lblErrTenGV.Visible = p;
+            }
         }
+
+        protected void imgSaveSua_Click(object sender, ImageClickEventArgs e)
+        {
+            try
+            {
+                if ((txtMaGV0.Text == "") || (txtSDT0.Text == "") || (txtTenGV0.Text == "") || (txtNgaySinh0.Text == ""))
+                {
+                    KtraThem(true);
+                }
+
+                if ((drGioiTinhSua.SelectedIndex == 0) || (drToSua.SelectedIndex == 0))
+                {
+                    lblErr.Text = "Bạn không được để trống!";
+                }
+                else
+                {
+                    obj.MaGiaoVien = txtMaGV0.Text;
+                    obj.TenGiaoVien = txtTenGV0.Text;
+                    obj.DiaChi = txtDiaChi0.Text;
+                    if (ckChuNhiemSua.Checked == true)
+                    {
+                        obj.ChuNhiem = true;
+                    }
+                    else
+                    {
+                        obj.ChuNhiem = false;
+                    }
+
+                    obj.NgaySinh = DateTime.Parse(txtNgaySinh0.Text);
+                    obj.SoDienThoai = txtSDT0.Text.Trim();
+                    obj.GioiTinh = drGioiTinhSua.SelectedValue;
+                    obj.MaMon = int.Parse(drToSua.SelectedValue);
+                    gvBus.Add(obj);
+                    LoadGV();
+                }
+            }
+            catch
+            {
+                lblErr.Text = "Quá trình sửa gặp lỗi. Vui lòng xem lại";
+            }
+        }
+
+     
     }
 }

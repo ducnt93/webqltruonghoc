@@ -25,16 +25,25 @@ namespace QLTHPT1.DataAccess
 		public KYLUAT Populate(IDataReader myReader)
 		{
 			KYLUAT obj = new KYLUAT();
-			obj.KhoiHoc = (string) myReader["KhoiHoc"];
-			obj.Lop = (string) myReader["Lop"];
-			obj.TenHocSinh = (string) myReader["TenHocSinh"];
+			obj.KhoiHoc = (int) myReader["KhoiHoc"];
+			obj.Lop = (int) myReader["Lop"];
+			obj.HocSinh = (string) myReader["HocSinh"];
 			obj.HinhThucKyLuat = (string) myReader["HinhThucKyLuat"];
-			obj.NgayKyLuat = (string) myReader["NgayKyLuat"];
+			obj.NgayKyLuat = (DateTime) myReader["NgayKyLuat"];
 			obj.NoiDung = (string) myReader["NoiDung"];
 			return obj;
 		}
 
-
+        public KYLUAT Populate1(IDataReader myReader)
+        {
+            KYLUAT obj = new KYLUAT();
+            obj.HocSinh = (string)myReader["HocSinh"];
+            obj.TenHocSinh = (string)myReader["TenHocSinh"];
+            obj.HinhThucKyLuat = (string)myReader["HinhThucKyLuat"];
+            obj.NgayKyLuat = (DateTime)myReader["NgayKyLuat"];
+            obj.NoiDung = (string)myReader["NoiDung"];
+            return obj;
+        }
 		/// <summary>
 		/// Get all of KYLUAT
 		/// </summary>
@@ -51,7 +60,21 @@ namespace QLTHPT1.DataAccess
 				return list;
 			}
 		}
-
+        public List<KYLUAT> GetByLop(int lop)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_KYLUAT_GetByLop",Data.CreateParameter("Lop",lop)))
+            {
+                List<KYLUAT> list = new List<KYLUAT>();
+               
+                    while (reader.Read())
+                    {
+                        list.Add(Populate1(reader));
+                    }
+                
+               
+                return list;
+            }
+        }
 		/// <summary>
 		/// Get DataSet of KYLUAT
 		/// </summary>
@@ -113,7 +136,7 @@ namespace QLTHPT1.DataAccess
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_KYLUAT_Add"
 							,Data.CreateParameter("KhoiHoc", obj.KhoiHoc)
 							,Data.CreateParameter("Lop", obj.Lop)
-							,Data.CreateParameter("TenHocSinh", obj.TenHocSinh)
+							,Data.CreateParameter("HocSinh", obj.HocSinh)
 							,Data.CreateParameter("HinhThucKyLuat", obj.HinhThucKyLuat)
 							,Data.CreateParameter("NgayKyLuat", obj.NgayKyLuat)
 							,Data.CreateParameter("NoiDung", obj.NoiDung)
@@ -121,6 +144,24 @@ namespace QLTHPT1.DataAccess
 			return 0;
 		}
 
+        public void Update(KYLUAT obj)
+        {
+            SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure, "sproc_KYLUAT_Update"
+                            , Data.CreateParameter("KhoiHoc", obj.KhoiHoc)
+                            , Data.CreateParameter("Lop", obj.Lop)
+                            , Data.CreateParameter("HocSinh", obj.HocSinh)
+                            , Data.CreateParameter("HinhThucKyLuat", obj.HinhThucKyLuat)
+                            , Data.CreateParameter("NgayKyLuat", obj.NgayKyLuat)
+                            , Data.CreateParameter("NoiDung", obj.NoiDung)
+            );
+           
+        }
+
+        public void Delete(string hocsinh)
+        {
+            SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure, "sproc_KYLUAT_Delete", Data.CreateParameter("HocSinh", hocsinh));
+          
+        }
 //No key Found
 		#endregion
 	}

@@ -35,7 +35,28 @@ namespace QLTHPT1.BusinessLogic
 			}
 			return (List<BANGDIEM>) ServerCache.Get(cacheName);
 		}
+   
+        public List<BANGDIEM> GetByMaHocSinhTraCuu(string mahs, int mahk, int malop)
+        {
+            return objBANGDIEMDA.GetByMaHocSinhTraCuu(mahs, mahk, malop);
+        }
+        public List<BANGDIEM> GetByMaMonVaLopVaHK(int mamon, int malop, int mahk)
+        {
+            return objBANGDIEMDA.GetByMaMonVaLopVaHK(mamon, malop, mahk);
+        }
 
+        public List<BANGDIEM> GetByMaMonHKMaHS3(int mahk, int malop, string mahs,int mamon)
+        {
+            return objBANGDIEMDA.GetByMaMonHKMaHS3(mahk, malop, mahs,mahk);
+        }
+        public List<BANGDIEM> GetByMaMonHKMaHS(int mamon , int mahk, string mahs)
+        {
+            return objBANGDIEMDA.GetByMaMonHKMaHS(mamon, mahk, mahs);
+        }
+        public List<BANGDIEM> GetByMaMonVaLopVaHKByHS(int mamon, int malop, int mahk,string mahs)
+        {
+            return objBANGDIEMDA.GetByMaMonVaLopVaHKByHS(mamon, malop, mahk,mahs);
+        }
 		/// <summary>
 		/// Get DataSet of BANGDIEM
 		/// </summary>
@@ -54,16 +75,15 @@ namespace QLTHPT1.BusinessLogic
         {
             return objBANGDIEMDA.GetByMaMon(mamon);
         }
-        public List<BANGDIEM> GetByMaHocSinh(int mahs)
+        public List<BANGDIEM> GetByMaHocSinh(string mahs,int mahk, int mamon)
         {
-            return objBANGDIEMDA.GetByMaHocSinh(mahs);
+            return objBANGDIEMDA.GetByMaHocSinh(mahs, mahk, mamon);
         }
-		/// <summary>
-		/// Get all of BANGDIEM paged
-		/// </summary>
-		/// <param name="recperpage">recperpage</param>
-		/// <param name="pageindex">pageindex</param>
-		/// <returns>List<<BANGDIEM>></returns>
+        public List<BANGDIEM> GetByHKVaLopVaMon(int mamon,int malop, int mahk)
+        {
+            return objBANGDIEMDA.GetByMaMonVaLopVaHK(mamon, malop, mahk);
+        }
+	
 		public List<BANGDIEM> GetListPaged(int recperpage, int pageindex)
 		{
 			return objBANGDIEMDA.GetListPaged(recperpage, pageindex);
@@ -98,7 +118,34 @@ namespace QLTHPT1.BusinessLogic
 			return objBANGDIEMDA.Add(obj_bangdiem);
 		}
 
-//No key Found
+        public void Delete(string mahs)
+        {
+            objBANGDIEMDA.Delete(mahs);
+        }
+
+        public void Update(BANGDIEM obj_bangdiem)
+        {
+            objBANGDIEMDA.Update(obj_bangdiem);
+        }
 		#endregion
-	}
+
+        #region TrungPQ Add new
+        public DataTable LoadHS_Nam_Ky_Khoi_Lop(string Nam, string Ky, String Khoi, string Lop)
+        {
+            BANGDIEMDA da = new BANGDIEMDA();
+            return da.LoadHS_Nam_Ky_Khoi_Lop(Nam, Ky, Khoi, Lop);
+        }
+        public DataTable Get_Diem_MaHocSinh_MaMonHoc(string MaHocSinh, int MaMonHoc)
+        {
+            BANGDIEMDA da = new BANGDIEMDA();
+            return da.Get_Diem_MaHocSinh_MaMonHoc(MaHocSinh, MaMonHoc);
+        }
+        public DataTable GetByMaHocSinhTraCuu_(string mahs, int mahk, int malop)
+            {
+                BANGDIEMDA da = new BANGDIEMDA();
+                return da.GetByMaHocSinhTraCuu_(mahs,mahk, malop);
+            }
+
+        #endregion
+    }
 }

@@ -10,7 +10,7 @@
 namespace QLTHPT.AdminControls {
     
     
-    public partial class index {
+    public partial class tracuuindex {
         
         /// <summary>
         /// hpTrangChu control.
@@ -40,15 +40,6 @@ namespace QLTHPT.AdminControls {
         protected global::System.Web.UI.WebControls.ImageButton imgTeacher;
         
         /// <summary>
-        /// imgNhaTrung control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgNhaTrung;
-        
-        /// <summary>
         /// imgNguoiDung control.
         /// </summary>
         /// <remarks>
@@ -58,13 +49,13 @@ namespace QLTHPT.AdminControls {
         protected global::System.Web.UI.WebControls.ImageButton imgNguoiDung;
         
         /// <summary>
-        /// imgTienIch control.
+        /// imgNhaTrung control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgTienIch;
+        protected global::System.Web.UI.WebControls.ImageButton imgNhaTrung;
         
         /// <summary>
         /// PlaceHolder1 control.

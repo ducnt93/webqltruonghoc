@@ -7,6 +7,11 @@ body {
 a {
 	outline:0;
 }
+.p 
+{
+   font-size:15px;
+   font-style:oblique;
+}
 #background {
 	background: url('../IndexPage/images/bg-footer.jpg') repeat-x 50% bottom;
 	min-height:1140px;
@@ -16,7 +21,7 @@ a {
 	min-height:1140px;
 }
 #background #page #body {
-	width:960px;
+	width:988px;
 	margin:0 auto 25px;
 	overflow:hidden;
 }
@@ -210,7 +215,7 @@ r ul li a:hover {
 #background #page #body #content #header ul.navigation {
 	list-style:none;
 	margin:0;
-	padding:0;
+	padding: 6px;
 	position:absolute;
 	right:10px;
     top: 50px;
@@ -229,9 +234,10 @@ r ul li a:hover {
 }
 #background #page #body #content #header ul.navigation li a {
 	display:block;
+	text-transform:  uppercase;
 	text-decoration:none;
 	color:#2f360b;
-	padding:0 25px;
+	padding: 0px 19px 0px 20px;
 	font-family:Arial;
 	font-size:14px;
 }
@@ -240,19 +246,30 @@ r ul li a:hover {
 	display:block;
 	text-decoration:none;
 	color:#84aa01;
-	text-shadow:2px 0px #c2d485;
+	/*text-shadow:2px 0px #c2d485;*/
 	font-family:Arial;
 	font-size:14px;
 }
-#background #page #body #content #header ul.navigation li a.active {
-	background: url('../IndexPage/images/bg-menu-hover.gif') no-repeat center;
-	display:block;
-	text-decoration:none;
-	color:#84aa01;
-	text-shadow:2px 0px #c2d485;
-	font-family:Arial;
-	font-size:14px;
+.news{
+    background-color:#ffd6d6;
+    margin:10px 0px 0px 0px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
 }
+.news h2{
+    padding: 5px 0px 5px 20px;
+    text-transform: uppercase;
+}
+
+/*background #page #body #content #header ul.navigation li a.active{
+	/* background: url('../IndexPage/images/bg-menu-hover.gif') no-repeat center; */
+	/* display:block; */
+	/* text-decoration:none; */
+	/* color:#84aa01; */
+	/* text-shadow:2px 0px #c2d485; */
+	/* font-family:Arial; */
+	/* font-size: 14px; */
+/*}*/
 #background #page #body #content .body {
 	width:698px;
 }
@@ -260,28 +277,32 @@ r ul li a:hover {
 	font-family:Arial;
 	font-size:14px;
 	padding: 0 10px;
-	width:671px;
-	color:#809997;
+	width:675px;
+	/*color:#809997;*/
+    color:darkblue;
 }
 #background #page #body #content .body .content p {
 	font-family:Arial;
 	font-size:14px;
+    color:darkblue;
 	width:612px;
-	color:#809997;
+	/*color:#809997;*/
 	line-height:25px;
 }
 #background #page #body #content .body .content p a {
-	color:#809997;
+	/*color:#809997;*/
+    color:darkblue;
+    text-decoration:underline;
 }
 #background #page #body #content .body .content p a:hover {
 	color:#75bab4;
 }
 #background #page #body #content .body .content h2 {
-	color:#7e8a00;
+	color: #553410;
 	font-family: 'Times New Roman';
-	font-size:40px;
-	font-style:Italic;
-	margin:0 0 20px 0;
+	font-size: 40px;
+	/* font-style:Italic; */
+	margin:70px 0px 20px 0px;
 	font-weight:normal;
 }
 #background #page #body #content .body .content ul {
@@ -302,7 +323,8 @@ r ul li a:hover {
 	line-height:24px;
 }
 #background #page #body #content .body .content ul li h3 a:hover {
-	color:#809997;
+	/*color:#809997;*/
+    color:darkblue;
 }
 #background #page #body #content .body .content ul li h3 a {
 	font-family:Arial;
@@ -414,14 +436,11 @@ r ul li a:hover {
 	margin:0 0 15px 0;
 	overflow:hidden;
 }
-#background #page #body #content .body .content ul.section p {
-	font-family: Arial;
-	font-size: 14px;
-	margin:0 0 30px 0;
-	overflow: hidden;
-	padding: 0 30px;
-	width: 540px;
-}
+    #background #page #body #content .body .content ul.section p {
+        font-family: Arial;
+        font-size: 14px;
+        margin: 0 0 30px 0;
+    }
 #background #page #body #content .body .content ul.section li {
 	background: url('../IndexPage/images/separator.gif') no-repeat center bottom;
 	padding-bottom:20px;
@@ -568,12 +587,13 @@ r ul li a:hover {
 	list-style:none;
 	margin:0;
 	padding:0;
-	width:960px;
+	width:980px;
 }
 #background #page #body .featured ul li {
 	float:left;
-	width:280px;
+	width:279px;
 	margin: 9px 20px 0 20px;
+    list-style:none;
 }
 #background #page #body .featured h2 a {
 	color:#553410;
@@ -784,4 +804,4 @@ r ul li a:hover {
 #section {
 	text-align:center;
 	background:url('../IndexPage/images/bg-footer3.jpg');
-}
+}#background #page #body #content #header ul.navigation

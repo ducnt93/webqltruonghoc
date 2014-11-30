@@ -16,8 +16,14 @@ namespace QLTHPT
                case "giaovien":
                    PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/QLGiaoVien/giaovien.ascx"));
                    break;
+               case "phancong":
+                   PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/QLGiaoVien/phancong.ascx"));
+                   break;
                case "tomon":
                    PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/QLGiaoVien/tomon.ascx"));
+                   break;
+               case "monhoc":
+                   PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/QLGiaoVien/monhoc.ascx"));
                    break;
            }
         }

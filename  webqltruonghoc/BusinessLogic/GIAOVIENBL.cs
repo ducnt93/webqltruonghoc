@@ -31,10 +31,7 @@ namespace QLTHPT1.BusinessLogic
 			return objGIAOVIENDA.GetByMaGiaoVien(magiaovien);
 		}
 
-        public List<GIAOVIEN> GetByMaTo(int mato)
-        {
-            return objGIAOVIENDA.GetByMaTo(mato);
-        }
+        
 
 		/// <summary>
 		/// Get all of GIAOVIEN

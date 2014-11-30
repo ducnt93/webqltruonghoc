@@ -17,6 +17,30 @@ namespace QLTHPT1.BusinessObjects
 				_MaLoaiND = value;
 			}
 		}
+		private int _MaND;
+		public int MaND
+		{ 
+			get 
+			{ 
+				return _MaND;
+			}
+			set 
+			{ 
+				_MaND = value;
+			}
+		}
+		private string _MaGiaoVien;
+		public string MaGiaoVien
+		{ 
+			get 
+			{ 
+				return _MaGiaoVien;
+			}
+			set 
+			{ 
+				_MaGiaoVien = value;
+			}
+		}
 		private string _TenLoaiND;
 		public string TenLoaiND
 		{ 
@@ -35,13 +59,15 @@ namespace QLTHPT1.BusinessObjects
 		public LOAINGUOIDUNG()
 		{
 		}
-		public LOAINGUOIDUNG(string maloaind)
+		public LOAINGUOIDUNG(int mand)
 		{
-			this.MaLoaiND = maloaind;
+			this.MaND = mand;
 		}
-		public LOAINGUOIDUNG(string maloaind, string tenloaind)
+		public LOAINGUOIDUNG(string maloaind, int mand, string magiaovien, string tenloaind)
 		{
 			this.MaLoaiND = maloaind;
+			this.MaND = mand;
+			this.MaGiaoVien = magiaovien;
 			this.TenLoaiND = tenloaind;
 		}
 		#endregion

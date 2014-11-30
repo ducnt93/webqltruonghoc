@@ -25,16 +25,25 @@ namespace QLTHPT1.DataAccess
 		public KHENTHUONG Populate(IDataReader myReader)
 		{
 			KHENTHUONG obj = new KHENTHUONG();
-			obj.TenKhoi = (string) myReader["TenKhoi"];
-			obj.TenHocSinh = (string) myReader["TenHocSinh"];
-			obj.Lop = (string) myReader["Lop"];
+			obj.KhoiHoc = (int) myReader["KhoiHoc"];
+			obj.HocSinh = (string) myReader["HocSinh"];
+			obj.Lop = (int) myReader["Lop"];
 			obj.HinhThucKhen = (string) myReader["HinhThucKhen"];
-			obj.NoiKhenThuong = (string) myReader["NoiKhenThuong"];
 			obj.NgayKhen = (DateTime) myReader["NgayKhen"];
 			obj.NoiDungKhen = (string) myReader["NoiDungKhen"];
 			return obj;
 		}
 
+        public KHENTHUONG Populate1(IDataReader myReader)
+        {
+            KHENTHUONG obj = new KHENTHUONG();
+            obj.HocSinh = (string)myReader["HocSinh"];
+            obj.TenHocSinh = (string)myReader["TenHocSinh"];
+            obj.HinhThucKhen = (string)myReader["HinhThucKhen"];
+            obj.NgayKhen = (DateTime)myReader["NgayKhen"];
+            obj.NoiDungKhen = (string)myReader["NoiDungKhen"];
+            return obj;
+        }
 
 		/// <summary>
 		/// Get all of KHENTHUONG
@@ -53,6 +62,18 @@ namespace QLTHPT1.DataAccess
 			}
 		}
 
+        public List<KHENTHUONG> GetByLop(int lop)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "[sproc_KHENTHUONG_GetByLop]",Data.CreateParameter("Lop",lop)))
+            {
+                List<KHENTHUONG> list = new List<KHENTHUONG>();
+                while (reader.Read())
+                {
+                    list.Add(Populate1(reader));
+                }
+                return list;
+            }
+        }
 		/// <summary>
 		/// Get DataSet of KHENTHUONG
 		/// </summary>
@@ -112,17 +133,33 @@ namespace QLTHPT1.DataAccess
 		public int Add(KHENTHUONG obj)
 		{
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_KHENTHUONG_Add"
-							,Data.CreateParameter("TenKhoi", obj.TenKhoi)
-							,Data.CreateParameter("TenHocSinh", obj.TenHocSinh)
+							,Data.CreateParameter("KhoiHoc", obj.KhoiHoc)
+							,Data.CreateParameter("HocSinh", obj.HocSinh)
 							,Data.CreateParameter("Lop", obj.Lop)
 							,Data.CreateParameter("HinhThucKhen", obj.HinhThucKhen)
-							,Data.CreateParameter("NoiKhenThuong", obj.NoiKhenThuong)
 							,Data.CreateParameter("NgayKhen", obj.NgayKhen)
 							,Data.CreateParameter("NoiDungKhen", obj.NoiDungKhen)
 			);
 			return 0;
 		}
 
+        public void Update(KHENTHUONG obj)
+        {
+            SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure, "sproc_KHENTHUONG_Update"
+                            , Data.CreateParameter("KhoiHoc", obj.KhoiHoc)
+                            , Data.CreateParameter("HocSinh", obj.HocSinh)
+                            , Data.CreateParameter("Lop", obj.Lop)
+                            , Data.CreateParameter("HinhThucKhen", obj.HinhThucKhen)  
+                            , Data.CreateParameter("NgayKhen", obj.NgayKhen)
+                            , Data.CreateParameter("NoiDungKhen", obj.NoiDungKhen)
+            );
+            
+        }
+
+        public void Delete(string hocsinh)
+        {
+            SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure, "[sproc_KHENTHUONG_Delete]", Data.CreateParameter("HocSinh", hocsinh));
+        }
 //No key Found
 		#endregion
 	}

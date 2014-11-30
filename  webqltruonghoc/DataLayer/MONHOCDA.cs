@@ -25,15 +25,26 @@ namespace QLTHPT1.DataAccess
 		public MONHOC Populate(IDataReader myReader)
 		{
 			MONHOC obj = new MONHOC();
-			obj.MaMonHoc = (string) myReader["MaMonHoc"];
-			obj.MaGiaoVien = (string) myReader["MaGiaoVien"];
+			obj.MaMonHoc = (int) myReader["MaMonHoc"];
+			obj.MaTo = (int) myReader["MaTo"];
 			obj.TenMonHoc = (string) myReader["TenMonHoc"];
 			obj.SoTiet = (int) myReader["SoTiet"];
 			obj.HeSo = (int) myReader["HeSo"];
-			obj.TrangThai = (int) myReader["TrangThai"];
+			
 			return obj;
 		}
-
+        public List<MONHOC> GetByMaTo(int maTo)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "sproc_MONHOC_GetByMaTo", Data.CreateParameter("MaTo", maTo)))
+            {
+                List<MONHOC> list = new List<MONHOC>();
+                while (reader.Read())
+                {
+                    list.Add(Populate(reader));
+                }
+                return list;
+            }
+        }
 		/// <summary>
 		/// Get MONHOC by mamonhoc
 		/// </summary>
@@ -67,6 +78,19 @@ namespace QLTHPT1.DataAccess
 				return list;
 			}
 		}
+
+        public List<MONHOC> GetListByMaMon(int mamon)
+        {
+            using (IDataReader reader = SqlHelper.ExecuteReader(Data.ConnectionString, CommandType.StoredProcedure, "[sproc_MONHOC_GetListByMaMon]", Data.CreateParameter("MaMon", mamon)))
+            {
+                List<MONHOC> list = new List<MONHOC>();
+                while (reader.Read())
+                {
+                    list.Add(Populate(reader));
+                }
+                return list;
+            }
+        }
 
 		/// <summary>
 		/// Get DataSet of MONHOC
@@ -125,16 +149,13 @@ namespace QLTHPT1.DataAccess
 		/// <param name="obj">MONHOC</param>
 		/// <returns>key of table</returns>
 		public int Add(MONHOC obj)
-		{
-			DbParameter parameterItemID = Data.CreateParameter("MaMonHoc", obj.MaMonHoc);
-		//	parameterItemID.Direction = ParameterDirection.Output;
+		{		
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_MONHOC_Add"
-							,parameterItemID
-							,Data.CreateParameter("MaGiaoVien", obj.MaGiaoVien)
+							,Data.CreateParameter("MaTo", obj.MaTo)
 							,Data.CreateParameter("TenMonHoc", obj.TenMonHoc)
 							,Data.CreateParameter("SoTiet", obj.SoTiet)
 							,Data.CreateParameter("HeSo", obj.HeSo)
-							,Data.CreateParameter("TrangThai", obj.TrangThai)
+							//,Data.CreateParameter("TrangThai", obj.TrangThai)
 			);
 			return 0;
 		}
@@ -148,11 +169,11 @@ namespace QLTHPT1.DataAccess
 		{
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_MONHOC_Update"
 							,Data.CreateParameter("MaMonHoc", obj.MaMonHoc)
-							,Data.CreateParameter("MaGiaoVien", obj.MaGiaoVien)
+							,Data.CreateParameter("MaTo", obj.MaTo)
 							,Data.CreateParameter("TenMonHoc", obj.TenMonHoc)
 							,Data.CreateParameter("SoTiet", obj.SoTiet)
 							,Data.CreateParameter("HeSo", obj.HeSo)
-							,Data.CreateParameter("TrangThai", obj.TrangThai)
+							//,Data.CreateParameter("TrangThai", obj.TrangThai)
 			);
 		}
 
@@ -166,5 +187,12 @@ namespace QLTHPT1.DataAccess
 			SqlHelper.ExecuteNonQuery(Data.ConnectionString, CommandType.StoredProcedure,"sproc_MONHOC_Delete", Data.CreateParameter("MaMonHoc", mamonhoc));
 		}
 		#endregion
-	}
+
+        public DataTable GetAllMonHoc()
+        {
+            DataTable result = null;
+            result = SqlHelper.SelectTableSP("sproc_MONHOC_Get");
+            return result;
+        }
+    }
 }

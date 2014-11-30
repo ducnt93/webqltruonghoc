@@ -197,6 +197,18 @@ namespace QLTHPT1.BusinessObjects
 				_TrangThai = value;
 			}
 		}
+		private int _MaNamHoc;
+		public int MaNamHoc
+		{ 
+			get 
+			{ 
+				return _MaNamHoc;
+			}
+			set 
+			{ 
+				_MaNamHoc = value;
+			}
+		}
 		private string _SoDienThoaiNha;
 		public string SoDienThoaiNha
 		{ 
@@ -219,7 +231,7 @@ namespace QLTHPT1.BusinessObjects
 		{
 			this.MaHocSinh = mahocsinh;
 		}
-		public HOCSINH(string mahocsinh, int malop, string tenhocsinh, string email, string gioitinh, DateTime ngaysinh, string noisinh, string diachi, DateTime ngaynhaphoc, string hotenbo, string hotenme, string anh, string nghebo, string ngheme, DateTime ngayvaodoan, string trangthai, string sodienthoainha)
+		public HOCSINH(string mahocsinh, int malop, string tenhocsinh, string email, string gioitinh, DateTime ngaysinh, string noisinh, string diachi, DateTime ngaynhaphoc, string hotenbo, string hotenme, string anh, string nghebo, string ngheme, DateTime ngayvaodoan, string trangthai, int manamhoc, string sodienthoainha)
 		{
 			this.MaHocSinh = mahocsinh;
 			this.MaLop = malop;
@@ -237,6 +249,7 @@ namespace QLTHPT1.BusinessObjects
 			this.NgheMe = ngheme;
 			this.NgayVaoDoan = ngayvaodoan;
 			this.TrangThai = trangthai;
+			this.MaNamHoc = manamhoc;
 			this.SoDienThoaiNha = sodienthoainha;
 		}
 		#endregion

@@ -16,6 +16,12 @@ namespace QLTHPT
                 case "khoihoc":
                     PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/NhaTruong/khoihoc.ascx"));
                     break;
+                case "hocsinh":
+                    PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/NhaTruong/hocsinh.ascx"));
+                    break;
+                case "phanlop":
+                    PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/NhaTruong/phanlop.ascx"));
+                    break;
                 case "kyhoc":
                     PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/NhaTruong/kyhoc.ascx"));
                     break;
@@ -34,6 +40,7 @@ namespace QLTHPT
                 case "dslop":
                     PlaceHolder1.Controls.Add(LoadControl("~/UcControl/AdminControls/NhaTruong/dslop.ascx"));
                     break;
+              
             }
         }
     }

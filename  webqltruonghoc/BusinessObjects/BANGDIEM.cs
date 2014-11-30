@@ -6,6 +6,36 @@ namespace QLTHPT1.BusinessObjects
 	{
 		#region ***** Fields & Properties ***** 
 		private string _MaHocSinh;
+        private string _TenHocSinh;
+
+        public string TenHocSinh
+        {
+            get { return _TenHocSinh; }
+            set { _TenHocSinh = value; }
+        }
+        private float _DTB;
+        private DateTime _NgaySinh;
+        private string _TenMonHoc;
+
+        public string TenMonHoc
+        {
+            get { return _TenMonHoc; }
+            set { _TenMonHoc = value; }
+        }
+
+        public DateTime NgaySinh
+        {
+            get { return _NgaySinh; }
+            set { _NgaySinh = value; }
+        }
+
+
+        public float DTB
+        {
+            get { return _DTB; }
+            set { _DTB = value; }
+        }
+
 		public string MaHocSinh
 		{ 
 			get 
@@ -17,8 +47,8 @@ namespace QLTHPT1.BusinessObjects
 				_MaHocSinh = value;
 			}
 		}
-		private string _MaMonHoc;
-		public string MaMonHoc
+		private int _MaMonHoc;
+		public int MaMonHoc
 		{ 
 			get 
 			{ 
@@ -113,6 +143,30 @@ namespace QLTHPT1.BusinessObjects
 				_D1T_2 = value;
 			}
 		}
+		private int _Malop;
+		public int Malop
+		{ 
+			get 
+			{ 
+				return _Malop;
+			}
+			set 
+			{ 
+				_Malop = value;
+			}
+		}
+		private int _MaHK;
+		public int MaHK
+		{ 
+			get 
+			{ 
+				return _MaHK;
+			}
+			set 
+			{ 
+				_MaHK = value;
+			}
+		}
 		private Single _DThi;
 		public Single DThi
 		{ 
@@ -131,7 +185,11 @@ namespace QLTHPT1.BusinessObjects
 		public BANGDIEM()
 		{
 		}
-		public BANGDIEM(string mahocsinh, string mamonhoc, Single dm_1, Single dm_2, Single d15_1, Single d15_2, Single d15_3, Single d1t_1, Single d1t_2, Single dthi)
+		public BANGDIEM(string mahocsinh)
+		{
+			this.MaHocSinh = mahocsinh;
+		}
+		public BANGDIEM(string mahocsinh, int mamonhoc, Single dm_1, Single dm_2, Single d15_1, Single d15_2, Single d15_3, Single d1t_1, Single d1t_2, int malop, int mahk, Single dthi)
 		{
 			this.MaHocSinh = mahocsinh;
 			this.MaMonHoc = mamonhoc;
@@ -142,6 +200,8 @@ namespace QLTHPT1.BusinessObjects
 			this.D15_3 = d15_3;
 			this.D1T_1 = d1t_1;
 			this.D1T_2 = d1t_2;
+			this.Malop = malop;
+			this.MaHK = mahk;
 			this.DThi = dthi;
 		}
 		#endregion

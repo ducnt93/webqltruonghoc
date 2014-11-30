@@ -30,10 +30,14 @@ namespace QLTHPT1.BusinessLogic
 		{
 			return objHOCSINHDA.GetByMaHocSinh(mahocsinh);
 		}
-
-        public List<HOCSINH> GetByMaLop(int malop)
+         public   List<HOCSINH> GetTenByMaHS(string mahs)
         {
-            return objHOCSINHDA.GetByMaLop(malop);
+            return objHOCSINHDA.GetTenByMaHS(mahs);
+        }
+
+        public List<HOCSINH> GetByMaNamHoc(int malop)
+        {
+            return objHOCSINHDA.GetByMaNamHoc(malop);
         }
 		/// <summary>
 		/// Get all of HOCSINH
@@ -49,6 +53,7 @@ namespace QLTHPT1.BusinessLogic
 			return (List<HOCSINH>) ServerCache.Get(cacheName);
 		}
 
+      
 		/// <summary>
 		/// Get DataSet of HOCSINH
 		/// </summary>

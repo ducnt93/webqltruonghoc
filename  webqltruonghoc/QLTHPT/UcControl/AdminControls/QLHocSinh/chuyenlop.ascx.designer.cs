@@ -49,6 +49,15 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.Label lblErr;
         
         /// <summary>
+        /// Panel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
+        
+        /// <summary>
         /// drNamHoc control.
         /// </summary>
         /// <remarks>
@@ -56,15 +65,6 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList drNamHoc;
-        
-        /// <summary>
-        /// drKyHoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drKyHoc;
         
         /// <summary>
         /// drKhoi control.
@@ -85,15 +85,6 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.DropDownList drLop;
         
         /// <summary>
-        /// Panel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-        
-        /// <summary>
         /// drHocSinh control.
         /// </summary>
         /// <remarks>
@@ -103,22 +94,22 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.DropDownList drHocSinh;
         
         /// <summary>
-        /// txtTulop control.
+        /// drTuLop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTulop;
+        protected global::System.Web.UI.WebControls.DropDownList drTuLop;
         
         /// <summary>
-        /// txtDenlop control.
+        /// drDenLop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDenlop;
+        protected global::System.Web.UI.WebControls.DropDownList drDenLop;
         
         /// <summary>
         /// txtNgaychuyen control.
@@ -130,6 +121,15 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         protected global::System.Web.UI.WebControls.TextBox txtNgaychuyen;
         
         /// <summary>
+        /// txtNgaychuyen_CalendarExtender0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender txtNgaychuyen_CalendarExtender0;
+        
+        /// <summary>
         /// txtNgaychuyen_CalendarExtender control.
         /// </summary>
         /// <remarks>
@@ -137,6 +137,15 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.CalendarExtender txtNgaychuyen_CalendarExtender;
+        
+        /// <summary>
+        /// vldNgayChuyen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator vldNgayChuyen;
         
         /// <summary>
         /// ckChuyenDiem control.

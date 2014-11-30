@@ -13,7 +13,7 @@ namespace QLTHPT
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            //Kiểm tra nếu chưa tồn tại file thì tạo file Count_Visited.txt
+            ////Kiểm tra nếu chưa tồn tại file thì tạo file Count_Visited.txt
             if (!File.Exists(Server.MapPath("uploads/demtruycap.txt")))
                 File.WriteAllText(Server.MapPath("uploads/demtruycap.txt"), "0");
             Application["DaTruyCap"] = int.Parse(File.ReadAllText(Server.MapPath("uploads/demtruycap.txt")));
@@ -21,6 +21,7 @@ namespace QLTHPT
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            Session["MaGiaoVien"] = "GV000";
             Session["Loai_nguoi_dung"] = null;
             Session["User"] = "";
             // Tăng số đang truy cập lên 1 nếu có khách truy cập

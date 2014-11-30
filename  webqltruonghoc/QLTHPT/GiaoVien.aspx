@@ -9,7 +9,10 @@
     
         <ul>
             <li> <asp:HyperLink ID="hpGiaoVien" runat="server" NavigateUrl="~/GiaoVien.aspx?id=giaovien">Giáo viên</asp:HyperLink></li>
+            <li> <asp:HyperLink ID="hpPhanCong" runat="server" NavigateUrl="~/GiaoVien.aspx?id=phancong">Phân công giáo viên dạy</asp:HyperLink></li>
             <li><asp:HyperLink ID="hpToMon" runat="server" NavigateUrl="~/GiaoVien.aspx?id=tomon">Tổ bộ môn</asp:HyperLink></li>
+            <li>
+                <asp:HyperLink ID="hpMonHoc" runat="server" NavigateUrl="~/GiaoVien.aspx?id=monhoc">Môn học</asp:HyperLink></li>
             <li><a href="admin.aspx">Về trang quản trị</a></li>
         </ul>
 </asp:Content>

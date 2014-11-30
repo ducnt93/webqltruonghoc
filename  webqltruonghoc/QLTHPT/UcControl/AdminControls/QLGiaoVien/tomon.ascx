@@ -1,5 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tomon.ascx.cs" Inherits="QLTHPT.UcControl.AdminControls.QLGiaoVien.tomon" %>
 <style type="text/css">
+    .drop
+     {
+         width:200px;
+         height:32px;
+     }
+     .textbox
+     {
+          width:200px;
+         height:32px;
+     }
 
     .abc {
         width: 18px;
@@ -17,51 +27,53 @@
         padding:5px 60px 5px 60px;
     
     }
-    .auto-style2 {
-        width: 391px;
-    }
-    .auto-style3 {
-        width: 391px;
-        height: 23px;
-    }
     .auto-style4 {
+    }
+    .auto-style5 {
+        width: 170px;
+    }
+    .auto-style6 {
+        width: 306px;
     }
 </style>
 <div>
 
-    <h2>Danh sách năm học:</h2>
+    <h2>Danh sách tổ môn học:</h2>
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
            <ContentTemplate>
     <br />
-    <asp:ImageButton ID="imgThemMoi" runat="server" Height="32px" Width="32px" OnClick="imgThemMoi_Click" ImageUrl="~/App_Themes/admin/images/add.png" ToolTip="Thêm mới một năm học" />
+    <asp:ImageButton ID="imgThemMoi" runat="server" Height="32px" Width="32px" OnClick="imgThemMoi_Click" ImageUrl="~/App_Themes/admin/images/add.png" ToolTip="Thêm mới một tổ" />
     <asp:Label ID="lblErr" runat="server" ForeColor="#CC0000"></asp:Label>
                <br />
                <asp:Panel ID="pnAdd" runat="server">
                    <table class="auto-style1">
                        <tr>
-                           <td colspan="2">
+                           <td colspan="4">
                                <br />
                                Thêm mới 1 tổ:</td>
                        </tr>
                        <tr>
-                           <td class="auto-style4">Tên tổ:
-                               <asp:TextBox ID="txtTenTo" runat="server" Height="21px" Width="203px"></asp:TextBox>
+                           <td class="auto-style5">Tên tổ:
+                               </td>
+                           <td class="auto-style6">
+                               <asp:TextBox ID="txtTenTo" runat="server" CssClass="drop"></asp:TextBox>
+                               <br />
+                               <asp:Label ID="lblErrTenTo" runat="server" ForeColor="Red" Text="*Bạn không thể bỏ trống trường này"></asp:Label>
                            </td>
                            <td class="auto-style4" rowspan="2">Mô tả:
+                               </td>
+                           <td class="auto-style4" rowspan="2">
                                <asp:TextBox ID="txtMoTa" runat="server" Height="74px" TextMode="MultiLine" Width="201px"></asp:TextBox>
                            </td>
                        </tr>
                        <tr>
-                           <td class="auto-style2">Loại người dùng:
-                               <asp:DropDownList ID="drLoaiND" runat="server" Height="32px" Width="169px">
-                                   <asp:ListItem Value="1">Người dùng</asp:ListItem>
-                                   <asp:ListItem Value="0">Quản trị</asp:ListItem>
-                               </asp:DropDownList>
-                           </td>
+                           <td class="auto-style5">&nbsp;</td>
+                           <td class="auto-style6">
+                               &nbsp;</td>
                        </tr>
                        <tr>
-                           <td colspan="2">
+                           <td colspan="4">
                                <asp:ImageButton ID="imgSave" runat="server" CssClass="img" ImageUrl="~/App_Themes/admin/images/save_32x32.png" OnClick="imgSave_Click" ToolTip="Lưu lại" />
                                <asp:ImageButton ID="imgCancel0" runat="server" CssClass="img" ImageUrl="~/App_Themes/admin/images/Delete_32x32.png" OnClick="imgCancel_Click" ToolTip="Hủy bỏ" />
                            </td>
@@ -85,9 +97,8 @@
                     <asp:CheckBox ID="ckitem" runat="server" />
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField DataField="MaTo" HeaderText="Mã tổ" />
+            <asp:BoundField DataField="MaTo" HeaderText="Mã tổ" Visible="False" />
             <asp:BoundField DataField="TenToBoMon" HeaderText="Tên tổ" />
-            <asp:BoundField DataField="MaLoaiND" HeaderText="Mã loại ND" />
             <asp:BoundField DataField="MoTa" HeaderText="Mô tả khác" />
             <asp:TemplateField HeaderText="Thao tác">
                 <EditItemTemplate>

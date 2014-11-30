@@ -13,11 +13,14 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
         KHOILOPBL kBus = new KHOILOPBL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Panel1.Visible = false;
-            if(!IsPostBack)
+            lblErr.Text = "";
+            lblErrTenKhoi.Visible = false;
+           
+            if (!IsPostBack)
             {
+                Panel1.Visible = false;
+                Panel2.Visible = false;
                 LoadNamHoc();
-                LoadAllKhoi();
             }
         }
 
@@ -27,7 +30,7 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
             gvKhoi.DataBind();
         }
 
-        
+
 
         private void LoadNamHoc()
         {
@@ -38,61 +41,33 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
             drNamHoc.DataBind();
             drNamHoc.Items.Insert(0, "--Chọn năm học--");
         }
-
-        protected void drHocKy_SelectedIndexChanged(object sender, EventArgs e)
+        private void LoadKhoi()
         {
-            LoadKhoi();
-        }
-
-        private void LoadHocKy()
-        {
-            if(drNamHoc.SelectedIndex == 0 )
+            if (drNamHoc.SelectedIndex == 0)
             {
-                LoadKhoi();
-                drHocKy.SelectedIndex = 0;
-                LoadAllKhoi();
+
+                lblErr.Text = "Chọn năm học cụ thể";
             }
             else
             {
-                HOCKYBL hkBus = new HOCKYBL();
-                drHocKy.DataSource = hkBus.GetByMaNamHoc(int.Parse(drNamHoc.SelectedValue));
-                drHocKy.DataTextField = "TenHK";
-                drHocKy.DataValueField = "MaHK";
-                drHocKy.DataBind();
-                drHocKy.Items.Insert(0, "--Chọn học kỳ--");
-            }
-            
-        }
 
+                LoadKhoiByMaNam();
+            }
+
+        }
+        private void LoadKhoiByMaNam()
+        {
+
+            gvKhoi.DataSource = kBus.GetByMaNam(int.Parse(drNamHoc.SelectedValue));
+           // gvKhoi.DataSource = kBus.GetByMaNam(int.Parse(Session["NamHoc"].ToString()));
+            gvKhoi.DataBind();
+            lblNamHoc.Text = drNamHoc.SelectedItem.ToString();
+        }
 
         protected void drNamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadHocKy();
-        }
-
-        private void LoadKhoi()
-        {
-            try
-            {
-           if(drHocKy.SelectedIndex == 0 )
-           {
-               LoadAllKhoi();
-           }
-           else
-           {
-            gvKhoi.DataSource = kBus.GetByMaHocKy(Convert.ToInt32(drHocKy.SelectedValue));
-            gvKhoi.DataBind();
-           }
-          
-            }
-            catch (Exception ex)
-            {
-
-                lblErr.Text = ex.Message;
-            }
-            
-         
-
+            Panel2.Visible = true;
+            LoadKhoi();
         }
         KHOILOPBL khoiBus = new KHOILOPBL();
         protected void gvKhoi_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -115,29 +90,58 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
             gvKhoi.EditIndex = e.NewEditIndex;
             LoadKhoi();
         }
-
-        protected void drDShocky_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         protected void imgLuu_Click(object sender, ImageClickEventArgs e)
         {
-            KHOILOP obj = new KHOILOP();
-            obj.TenKhoi = txtTenKhoi.Text;
-            obj.MaHocKy = int.Parse(drDShocky.SelectedValue);
-            kBus.Add(obj);
-            LoadKhoi();
+           
+            try
+            {
+                if(txtTenKhoi.Text=="")
+                {
+                    lblErrTenKhoi.Visible = true;
+                }
+             
+                if (drDSNamHoc.SelectedIndex == 0)
+                {
+                    lblErr.Text = "Bạn chưa chọn năm học";
+                }
+                else
+                {
+                    
+                    KHOILOP obj = new KHOILOP();
+                    obj.TenKhoi = txtTenKhoi.Text;
+                    obj.MaNamHoc = int.Parse(drDSNamHoc.SelectedValue);
+                    kBus.Add(obj);
+                    LoadKhoi();
+                }
+            }
+            catch (Exception)
+            {
+
+                lblErr.Text = "Lỗi";
+            }
+
         }
 
         protected void imgCancel_Click(object sender, ImageClickEventArgs e)
         {
+            txtTenKhoi.Text = "";
             Panel1.Visible = false;
         }
 
         protected void imgAdd_Click(object sender, ImageClickEventArgs e)
         {
+            LoadDSNamHoc();
             Panel1.Visible = true;
+        }
+
+        private void LoadDSNamHoc()
+        {
+            NAMHOCBL nhBus = new NAMHOCBL();
+            drDSNamHoc.DataSource = nhBus.GetList();
+            drDSNamHoc.DataTextField = "TenNamHoc";
+            drDSNamHoc.DataValueField = "MaNamHoc";
+            drDSNamHoc.DataBind();
+            drDSNamHoc.Items.Insert(0, "--Chọn năm học--");
         }
 
         protected void imgDelAll_Click(object sender, ImageClickEventArgs e)
@@ -161,10 +165,10 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
             }
             catch (Exception ex)
             {
-                
+
                 lblErr.Text = ex.Message;
             }
-            
+
         }
 
         protected void imgRefresh_Click(object sender, ImageClickEventArgs e)
@@ -195,7 +199,7 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
             KHOILOP obj = new KHOILOP();
             GridViewRow row = gvKhoi.Rows[e.RowIndex];
             obj.TenKhoi = ((TextBox)row.Cells[2].Controls[0]).Text;
-            obj.MaHocKy = int.Parse(((TextBox)row.Cells[3].Controls[0]).Text);
+            obj.MaNamHoc = int.Parse(((TextBox)row.Cells[3].Controls[0]).Text);
             kBus.Update(obj);
             gvKhoi.EditIndex = -1;
             LoadKhoi();
@@ -207,6 +211,11 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
             LoadKhoi();
         }
 
-       
+        protected void drDSNamHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadAllKhoi();
+        }
+
+
     }
 }
