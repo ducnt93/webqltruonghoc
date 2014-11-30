@@ -1,0 +1,82 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68b613fd-d987-4c74-843b-54ae753797fe}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLTHPT1.BusinessLogic</RootNamespace>
+    <AssemblyName>QLTHPT1.BusinessLogic</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BANGDIEMBL.cs" />
+    <Compile Include="BANNERBL.cs" />
+    <Compile Include="CHUYENLOPBL.cs" />
+    <Compile Include="DSLOPBL.cs" />
+    <Compile Include="GIAOVIENBL.cs" />
+    <Compile Include="HANHKIEMBL.cs" />
+    <Compile Include="HOCKYBL.cs" />
+    <Compile Include="HOCSINHBL.cs" />
+    <Compile Include="KHENTHUONGBL.cs" />
+    <Compile Include="KHOILOPBL.cs" />
+    <Compile Include="KYLUATBL.cs" />
+    <Compile Include="LOAINGUOIDUNGBL.cs" />
+    <Compile Include="MONHOCBL.cs" />
+    <Compile Include="NAMHOCBL.cs" />
+    <Compile Include="NHATRUONGBL.cs" />
+    <Compile Include="PHANCONGBL.cs" />
+    <Compile Include="PHANLOPBL.cs" />
+    <Compile Include="QUANTRIBL.cs" />
+    <Compile Include="THOIKHOABIEUBL.cs" />
+    <Compile Include="TINTUCBL.cs" />
+    <Compile Include="TOBOMONBL.cs" />
+    <Compile Include="trace_xe_action_mapBL.cs" />
+    <Compile Include="trace_xe_event_mapBL.cs" />
+    <Compile Include="QLTHPT1Facade.cs" />
+    <Compile Include="ServerCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjects\QLTHPT1.BusinessObjects.csproj">
+      <Project>{F751B8D8-3C80-44A5-B7D6-D8E87D5E876F}</Project>
+      <Name>QLTHPT1.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\QLTHPT1.DataAccess.csproj">
+      <Project>{4E079525-1A9F-4112-8152-7DCCC32D6F36}</Project>
+      <Name>QLTHPT1.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
