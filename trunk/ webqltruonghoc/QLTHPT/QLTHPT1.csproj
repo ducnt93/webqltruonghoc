@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E6B6B23-395F-48D6-9396-2FE09D065FA3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLTHPT</RootNamespace>
+    <AssemblyName>QLTHPT</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>E:\Bài ví dụ ASP.NET\www\dienthoaiminhanh\dienthoaiminhanh\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\admin\images\1397257478_Login.png" />
+    <Content Include="App_Themes\admin\images\account-msn.png" />
+    <Content Include="App_Themes\admin\images\add.png" />
+    <Content Include="App_Themes\admin\images\cancel.png" />
+    <Content Include="App_Themes\admin\images\Delete.png" />
+    <Content Include="App_Themes\admin\images\Delete_32x32.png" />
+    <Content Include="App_Themes\admin\images\edit.png" />
+    <Content Include="App_Themes\admin\images\education.png" />
+    <Content Include="App_Themes\admin\images\home.png" />
+    <Content Include="App_Themes\admin\images\logout.png" />
+    <Content Include="App_Themes\admin\images\package_system.png" />
+    <Content Include="App_Themes\admin\images\Refresh.png" />
+    <Content Include="App_Themes\admin\images\Save.png" />
+    <Content Include="App_Themes\admin\images\save_32x32.png" />
+    <Content Include="App_Themes\admin\images\settings.png" />
+    <Content Include="App_Themes\admin\images\student.png" />
+    <Content Include="App_Themes\admin\images\Teacher_64.png" />
+    <Content Include="App_Themes\admin\images\trash.gif" />
+    <Content Include="App_Themes\admin\js\jquery.min.js" />
+    <Content Include="App_Themes\admin\js\jquery.tabify.js" />
+    <Content Include="App_Themes\admin\style.css" />
+    <Content Include="App_Themes\IndexPage\diapo.css" />
+    <Content Include="App_Themes\IndexPage\imagesBanner\diapo\next.png" />
+    <Content Include="App_Themes\IndexPage\imagesBanner\diapo\pause.png" />
+    <Content Include="App_Themes\IndexPage\imagesBanner\diapo\play.png" />
+    <Content Include="App_Themes\IndexPage\imagesBanner\diapo\prev.png" />
+    <Content Include="App_Themes\IndexPage\imagesBanner\slides\img1.jpg" />
+    <Content Include="App_Themes\IndexPage\imagesBanner\slides\img2.jpg" />
+    <Content Include="App_Themes\IndexPage\imagesBanner\slides\img3.jpg" />
+    <Content Include="App_Themes\IndexPage\imagesBanner\slides\Koala.jpg" />
+    <Content Include="App_Themes\IndexPage\imagesBanner\slides\Penguins.jpg" />
+    <Content Include="App_Themes\IndexPage\scripts\diapo.js" />
+    <Content Include="App_Themes\IndexPage\scripts\diapo.min.js" />
+    <Content Include="App_Themes\IndexPage\scripts\jquery.easing.1.3.js" />
+    <Content Include="App_Themes\IndexPage\scripts\jquery.hoverIntent.minified.js" />
+    <Content Include="App_Themes\IndexPage\scripts\jquery.min.js" />
+    <Content Include="App_Themes\IndexPage\scripts\jquery.mobile-1.0rc2.customized.min.js" />
+    <Content Include="App_Themes\nhatruong\images\anh.jpg" />
+    <Content Include="UcControl\AdminControls\NhaTruong\banner.ascx" />
+    <Content Include="UcControl\AdminControls\NhaTruong\tintuc.ascx" />
+    <Content Include="UcControl\AdminControls\NhaTruong\ttnhatruong.ascx" />
+    <Content Include="UcControl\AdminControls\QLGiaoVien\giaovien.ascx" />
+    <Content Include="UcControl\AdminControls\QLGiaoVien\tomon.ascx" />
+    <Content Include="UcControl\AdminControls\QLHocSinh\chuyenlop.ascx" />
+    <Content Include="UcControl\AdminControls\QLHocSinh\diem.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="UcControl\AdminControls\QLHocSinh\hanhkiem.ascx" />
+    <Content Include="IndexPage.Master" />
+    <Content Include="App_Themes\IndexPage\images\icon\icon.zip" />
+    <Content Include="Default.aspx" />
+    <Content Include="TinTuc.aspx" />
+    <Content Include="LienHe.aspx" />
+    <Content Include="ThuVienAnh.aspx" />
+    <Content Include="admin.Master" />
+    <Content Include="admin.aspx" />
+    <Content Include="TraCuuDiem.aspx" />
+    <Content Include="ThongKe.aspx" />
+    <Content Include="QuanLyHocSinh.aspx" />
+    <Content Include="GiaoVien.aspx" />
+    <Content Include="NguoiDung.aspx" />
+    <Content Include="TienIch.aspx" />
+    <Content Include="NhaTruong.aspx" />
+    <Content Include="chitiethocsinh.aspx" />
+    <Content Include="TraCuu.aspx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\IndexPage\ie6.css" />
+    <Content Include="App_Themes\IndexPage\ie7.css" />
+    <Content Include="App_Themes\IndexPage\style.css" />
+    <Content Include="App_Themes\IndexPage\images\bg-blog-sidebar.jpg" />
+    <Content Include="App_Themes\IndexPage\images\bg-body.gif" />
+    <Content Include="App_Themes\IndexPage\images\bg-footer-item.jpg" />
+    <Content Include="App_Themes\IndexPage\images\bg-footer.jpg" />
+    <Content Include="App_Themes\IndexPage\images\bg-footer2.jpg" />
+    <Content Include="App_Themes\IndexPage\images\bg-footer3.jpg" />
+    <Content Include="App_Themes\IndexPage\images\bg-heading.jpg" />
+    <Content Include="App_Themes\IndexPage\images\bg-menu-hover.gif" />
+    <Content Include="App_Themes\IndexPage\images\bg-sidebar.jpg" />
+    <Content Include="App_Themes\IndexPage\images\bg-textarea.jpg" />
+    <Content Include="App_Themes\IndexPage\images\button-submit.gif" />
+    <Content Include="App_Themes\IndexPage\images\clouds.jpg" />
+    <Content Include="App_Themes\IndexPage\images\developers.jpg" />
+    <Content Include="App_Themes\IndexPage\images\golf-court.jpg" />
+    <Content Include="App_Themes\IndexPage\images\icon.png" />
+    <Content Include="App_Themes\IndexPage\images\icon\icon-face-book.png" />
+    <Content Include="App_Themes\IndexPage\images\icon\icon-facebook-2.png" />
+    <Content Include="App_Themes\IndexPage\images\icon\icon-google-plus.png" />
+    <Content Include="App_Themes\IndexPage\images\icon\icon-heart.png" />
+    <Content Include="App_Themes\IndexPage\images\icon\icon-twitter-2.png" />
+    <Content Include="App_Themes\IndexPage\images\icon\icon-twitter.png" />
+    <Content Include="App_Themes\IndexPage\images\icon\icons.gif" />
+    <Content Include="App_Themes\IndexPage\images\input.jpg" />
+    <Content Include="App_Themes\IndexPage\images\landscape.jpg" />
+    <Content Include="App_Themes\IndexPage\images\menu-separator.gif" />
+    <Content Include="App_Themes\IndexPage\images\planting-trees.jpg" />
+    <Content Include="App_Themes\IndexPage\images\seedling.jpg" />
+    <Content Include="App_Themes\IndexPage\images\separator-long2.gif" />
+    <Content Include="App_Themes\IndexPage\images\separator.gif" />
+    <Content Include="App_Themes\IndexPage\images\tree.jpg" />
+    <Content Include="App_Themes\IndexPage\images\tree1.jpg" />
+    <Content Include="App_Themes\IndexPage\images\tree2.jpg" />
+    <Content Include="App_Themes\IndexPage\images\tree3.jpg" />
+    <Content Include="App_Themes\IndexPage\images\tree4.jpg" />
+    <Content Include="App_Themes\IndexPage\images\tree5.jpg" />
+    <Content Include="App_Themes\IndexPage\images\tree6.jpg" />
+    <Content Include="App_Themes\IndexPage\images\trees.jpg" />
+    <Content Include="UcControl\AdminControls\index.ascx" />
+    <Content Include="UcControl\AdminControls\login.ascx" />
+    <Content Include="UcControl\AdminControls\NhaTruong\dslop.ascx" />
+    <Content Include="UcControl\AdminControls\QLHocSinh\hocsinh.ascx" />
+    <Content Include="UcControl\AdminControls\QLHocSinh\khenthuong.ascx" />
+    <Content Include="UcControl\AdminControls\NhaTruong\khoihoc.ascx" />
+    <Content Include="UcControl\AdminControls\NhaTruong\kyhoc.ascx" />
+    <Content Include="UcControl\AdminControls\QLHocSinh\kyluat.ascx" />
+    <Content Include="UcControl\AdminControls\QLHocSinh\monhoc.ascx" />
+    <Content Include="UcControl\AdminControls\NhaTruong\namhoc.ascx" />
+    <Content Include="UcControl\AdminControls\QLHocSinh\thoikhoabieu.ascx" />
+    <Content Include="UcControl\AdminControls\QLNguoiDung\nguoidung.ascx" />
+    <Content Include="UcControl\AdminControls\QLNguoiDung\nhomnguoidung.ascx" />
+    <Content Include="UcControl\IndexControls\tracuu.ascx" />
+    <Content Include="uploads\demtruycap.txt" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\banner.ascx.cs">
+      <DependentUpon>banner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\banner.ascx.designer.cs">
+      <DependentUpon>banner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\tintuc.ascx.cs">
+      <DependentUpon>tintuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\tintuc.ascx.designer.cs">
+      <DependentUpon>tintuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\ttnhatruong.ascx.cs">
+      <DependentUpon>ttnhatruong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\ttnhatruong.ascx.designer.cs">
+      <DependentUpon>ttnhatruong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLGiaoVien\giaovien.ascx.cs">
+      <DependentUpon>giaovien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLGiaoVien\giaovien.ascx.designer.cs">
+      <DependentUpon>giaovien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLGiaoVien\tomon.ascx.cs">
+      <DependentUpon>tomon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLGiaoVien\tomon.ascx.designer.cs">
+      <DependentUpon>tomon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\chuyenlop.ascx.cs">
+      <DependentUpon>chuyenlop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\chuyenlop.ascx.designer.cs">
+      <DependentUpon>chuyenlop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\diem.ascx.cs">
+      <DependentUpon>diem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\diem.ascx.designer.cs">
+      <DependentUpon>diem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\hanhkiem.ascx.cs">
+      <DependentUpon>hanhkiem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\hanhkiem.ascx.designer.cs">
+      <DependentUpon>hanhkiem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexPage.Master.cs">
+      <DependentUpon>IndexPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexPage.Master.designer.cs">
+      <DependentUpon>IndexPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TinTuc.aspx.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TinTuc.aspx.designer.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LienHe.aspx.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LienHe.aspx.designer.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThuVienAnh.aspx.cs">
+      <DependentUpon>ThuVienAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVienAnh.aspx.designer.cs">
+      <DependentUpon>ThuVienAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuDiem.aspx.cs">
+      <DependentUpon>TraCuuDiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraCuuDiem.aspx.designer.cs">
+      <DependentUpon>TraCuuDiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe.aspx.cs">
+      <DependentUpon>ThongKe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongKe.aspx.designer.cs">
+      <DependentUpon>ThongKe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\index.ascx.cs">
+      <DependentUpon>index.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\index.ascx.designer.cs">
+      <DependentUpon>index.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\login.ascx.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\login.ascx.designer.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyHocSinh.aspx.cs">
+      <DependentUpon>QuanLyHocSinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLyHocSinh.aspx.designer.cs">
+      <DependentUpon>QuanLyHocSinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVien.aspx.cs">
+      <DependentUpon>GiaoVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiaoVien.aspx.designer.cs">
+      <DependentUpon>GiaoVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiDung.aspx.cs">
+      <DependentUpon>NguoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NguoiDung.aspx.designer.cs">
+      <DependentUpon>NguoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TienIch.aspx.cs">
+      <DependentUpon>TienIch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TienIch.aspx.designer.cs">
+      <DependentUpon>TienIch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\dslop.ascx.cs">
+      <DependentUpon>dslop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\dslop.ascx.designer.cs">
+      <DependentUpon>dslop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\hocsinh.ascx.cs">
+      <DependentUpon>hocsinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\hocsinh.ascx.designer.cs">
+      <DependentUpon>hocsinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\khenthuong.ascx.cs">
+      <DependentUpon>khenthuong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\khenthuong.ascx.designer.cs">
+      <DependentUpon>khenthuong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\khoihoc.ascx.cs">
+      <DependentUpon>khoihoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\khoihoc.ascx.designer.cs">
+      <DependentUpon>khoihoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\kyhoc.ascx.cs">
+      <DependentUpon>kyhoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\kyhoc.ascx.designer.cs">
+      <DependentUpon>kyhoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\kyluat.ascx.cs">
+      <DependentUpon>kyluat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\kyluat.ascx.designer.cs">
+      <DependentUpon>kyluat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\monhoc.ascx.cs">
+      <DependentUpon>monhoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\monhoc.ascx.designer.cs">
+      <DependentUpon>monhoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\namhoc.ascx.cs">
+      <DependentUpon>namhoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\NhaTruong\namhoc.ascx.designer.cs">
+      <DependentUpon>namhoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\thoikhoabieu.ascx.cs">
+      <DependentUpon>thoikhoabieu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLHocSinh\thoikhoabieu.ascx.designer.cs">
+      <DependentUpon>thoikhoabieu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLNguoiDung\nguoidung.ascx.cs">
+      <DependentUpon>nguoidung.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLNguoiDung\nguoidung.ascx.designer.cs">
+      <DependentUpon>nguoidung.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLNguoiDung\nhomnguoidung.ascx.cs">
+      <DependentUpon>nhomnguoidung.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\AdminControls\QLNguoiDung\nhomnguoidung.ascx.designer.cs">
+      <DependentUpon>nhomnguoidung.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NhaTruong.aspx.cs">
+      <DependentUpon>NhaTruong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NhaTruong.aspx.designer.cs">
+      <DependentUpon>NhaTruong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chitiethocsinh.aspx.cs">
+      <DependentUpon>chitiethocsinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chitiethocsinh.aspx.designer.cs">
+      <DependentUpon>chitiethocsinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuu.aspx.cs">
+      <DependentUpon>TraCuu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraCuu.aspx.designer.cs">
+      <DependentUpon>TraCuu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\IndexControls\tracuu.ascx.cs">
+      <DependentUpon>tracuu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcControl\IndexControls\tracuu.ascx.designer.cs">
+      <DependentUpon>tracuu.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\QLTHPT1.BusinessLogic.csproj">
+      <Project>{5303fd1b-7583-4562-acdf-9dd792b7bb02}</Project>
+      <Name>QLTHPT1.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessObjects\QLTHPT1.BusinessObjects.csproj">
+      <Project>{84993c04-aa15-4750-bed0-291ae72ee5e6}</Project>
+      <Name>QLTHPT1.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\QLTHPT1.DataAccess.csproj">
+      <Project>{d4c47818-1677-42dc-a326-8aa7f6fddfdb}</Project>
+      <Name>QLTHPT1.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admins\" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8568</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8568/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
