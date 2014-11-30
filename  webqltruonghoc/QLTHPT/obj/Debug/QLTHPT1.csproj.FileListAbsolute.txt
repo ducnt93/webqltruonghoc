@@ -1,0 +1,190 @@
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT.dll.config
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT.pdb
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessLogic.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessObjects.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.DataAccess.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessLogic.pdb
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessObjects.pdb
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.DataAccess.pdb
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT1.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.pdb
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.dll.licenses
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\DevExpress.Data.v13.2.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\DevExpress.Printing.v13.2.Core.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\DevExpress.RichEdit.v13.2.Core.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\DevExpress.Web.ASPxThemes.v13.2.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\DevExpress.Web.v13.2.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\DevExpress.Data.v13.2.xml
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\DevExpress.Printing.v13.2.Core.xml
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\DevExpress.RichEdit.v13.2.Core.xml
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\DevExpress.Web.v13.2.xml
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\DevExpress.Data.v13.2.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\DevExpress.Data.v13.2.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\DevExpress.Data.v13.2.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\DevExpress.Data.v13.2.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\DevExpress.Printing.v13.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\DevExpress.Printing.v13.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\DevExpress.Printing.v13.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\DevExpress.Printing.v13.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\DevExpress.RichEdit.v13.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\DevExpress.RichEdit.v13.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\DevExpress.RichEdit.v13.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\DevExpress.RichEdit.v13.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\DevExpress.Web.v13.2.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\DevExpress.Web.v13.2.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\DevExpress.Web.v13.2.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\DevExpress.Web.v13.2.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\AjaxControlToolkit.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\HtmlAgilityPack.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\AjaxMin.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\Microsoft.Data.OData.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\Microsoft.Data.Edm.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\System.Spatial.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\AjaxControlToolkit.pdb
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\Microsoft.WindowsAzure.Storage.xml
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\Microsoft.Data.OData.xml
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\Microsoft.Data.Edm.xml
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\System.Spatial.xml
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\pl\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\System.Spatial.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\System.Spatial.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\fr\System.Spatial.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\it\System.Spatial.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\System.Spatial.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ko\System.Spatial.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\System.Spatial.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Administrator\Desktop\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-Hant\System.Spatial.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT1.csprojResolveAssemblyReference.cache
+G:\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.dll.licenses
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT.dll.config
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT.pdb
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\AjaxControlToolkit.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\Microsoft.QualityTools.Testing.Fakes.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessLogic.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessObjects.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.DataAccess.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessLogic.pdb
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessObjects.pdb
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.DataAccess.pdb
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\AjaxControlToolkit.pdb
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\ar\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\cs\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\fr\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\he\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\hi\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\it\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\ko\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\nl\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\pt\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\tr-TR\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-CHS\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-CHT\AjaxControlToolkit.resources.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.dll
+G:\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.pdb
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT.dll.config
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT.pdb
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\AjaxControlToolkit.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\Microsoft.QualityTools.Testing.Fakes.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessLogic.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessObjects.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.DataAccess.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessLogic.pdb
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessObjects.pdb
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\QLTHPT1.DataAccess.pdb
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\AjaxControlToolkit.pdb
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\ar\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\cs\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\de\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\es\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\fr\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\he\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\hi\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\it\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\ja\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\ko\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\nl\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\pt\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\ru\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\tr-TR\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-CHS\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\bin\zh-CHT\AjaxControlToolkit.resources.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT1.csprojResolveAssemblyReference.cache
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.dll.licenses
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.dll
+E:\Project\Project QLTHPT\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.pdb
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\obj\Debug\QLTHPT1.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.dll.licenses
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\QLTHPT.dll.config
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\QLTHPT.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\QLTHPT.pdb
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\AjaxControlToolkit.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessLogic.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessObjects.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\QLTHPT1.DataAccess.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessLogic.pdb
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\QLTHPT1.BusinessObjects.pdb
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\QLTHPT1.DataAccess.pdb
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\AjaxControlToolkit.pdb
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\Administrator\Desktop\QLTHPT1\QLTHPT\obj\Debug\QLTHPT.pdb

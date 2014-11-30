@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="QLTHPT.admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Quản trị hệ thống</title>
+<link rel="stylesheet" type="text/css" href="App_Themes/admin/style.css" />
+
+<!-- jQuery file -->
+<script src="App_Themes/admin/js/jquery.min.js"></script>
+<script src="App_Themes/admin/js/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var $ = jQuery.noConflict();
+    $(function () {
+        $('#tabsmenu').tabify();
+        $(".toggle_container").hide();
+        $(".trigger").click(function () {
+            $(this).toggleClass("active").next().slideToggle("slow");
+            return false;
+        });
+    });
+</script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="panelwrap">
+  	
+	<div class="header">
+    <div class="title"><a href="admin.aspx">Quản trị trường trung học</a></div>
+    
+
+    <div class="header_right">Welcome 
+        <asp:HyperLink ID="hpLogin" runat="server">[hpLogin]</asp:HyperLink>
+        &nbsp;
+        <asp:ImageButton ID="imgButtomLogin" runat="server" Height="32px" OnClick="imgButtomLogin_Click" Width="32px" />
+        </div>
+
+    
+    <div class="menu">
+   
+    </div>
+    
+    </div>
+    
+    <div class="submenu">
+    
+<MARQUEE BEHAVIOR=slide> <h4>Chào mừng đến với hệ thống quản trị website THPT Cầu Giấy. Chúc bạn có 1 ngày làm việc vui vẻ </h4></MARQUEE> 
+    </div>          
+                    
+    <div class="center_content">  
+ 
+    <div id="right_wrap">
+    <div id="right_content">
+  
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+  
+    </div>
+     </div><!-- end of right content-->
+                     
+                    
+    <div class="sidebar" id="sidebar">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+    </div>             
+    
+    <hr />
+    <h4>   <asp:HyperLink ID="hpAdmin" runat="server" NavigateUrl="~/admin.aspx">Về trang quản trị</asp:HyperLink></h4> 
+        <hr />
+    <div class="clear"></div>
+    </div> <!--end of center_content-->
+    
+    <div class="footer">
+        Hệ Thống quản trị trường học. Trường THPT Cầu Giấy
+</div>
+
+</div>
+    </form>
+</body>
+</html>
