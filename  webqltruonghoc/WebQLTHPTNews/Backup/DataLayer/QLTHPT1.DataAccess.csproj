@@ -1,0 +1,79 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4e079525-1a9f-4112-8152-7dccc32d6f36}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLTHPT1.DataAccess</RootNamespace>
+    <AssemblyName>QLTHPT1.DataAccess</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BANGDIEMDA.cs" />
+    <Compile Include="BANNERDA.cs" />
+    <Compile Include="CHUYENLOPDA.cs" />
+    <Compile Include="DSLOPDA.cs" />
+    <Compile Include="GIAOVIENDA.cs" />
+    <Compile Include="HANHKIEMDA.cs" />
+    <Compile Include="HOCKYDA.cs" />
+    <Compile Include="HOCSINHDA.cs" />
+    <Compile Include="KHENTHUONGDA.cs" />
+    <Compile Include="KHOILOPDA.cs" />
+    <Compile Include="KYLUATDA.cs" />
+    <Compile Include="LOAINGUOIDUNGDA.cs" />
+    <Compile Include="MONHOCDA.cs" />
+    <Compile Include="NAMHOCDA.cs" />
+    <Compile Include="NHATRUONGDA.cs" />
+    <Compile Include="PHANCONGDA.cs" />
+    <Compile Include="PHANLOPDA.cs" />
+    <Compile Include="QUANTRIDA.cs" />
+    <Compile Include="THOIKHOABIEUDA.cs" />
+    <Compile Include="TINTUCDA.cs" />
+    <Compile Include="TOBOMONDA.cs" />
+    <Compile Include="trace_xe_action_mapDA.cs" />
+    <Compile Include="trace_xe_event_mapDA.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjects\QLTHPT1.BusinessObjects.csproj">
+      <Project>{F751B8D8-3C80-44A5-B7D6-D8E87D5E876F}</Project>
+      <Name>QLTHPT1.BusinessObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
