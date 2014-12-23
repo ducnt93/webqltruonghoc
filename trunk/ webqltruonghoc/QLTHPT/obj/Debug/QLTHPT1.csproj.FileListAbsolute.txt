@@ -61,3 +61,15 @@ C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\QLTHPT\bin\ru\Aj
 C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\QLTHPT\bin\tr-TR\AjaxControlToolkit.resources.dll
 C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\QLTHPT\bin\zh-CHS\AjaxControlToolkit.resources.dll
 C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\QLTHPT\bin\zh-CHT\AjaxControlToolkit.resources.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\bin\QLTHPT.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\bin\QLTHPT.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\bin\Microsoft.QualityTools.Testing.Fakes.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\bin\QLTHPT1.BusinessLogic.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\bin\QLTHPT1.BusinessObjects.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\bin\QLTHPT1.DataAccess.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\bin\QLTHPT1.BusinessLogic.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\bin\QLTHPT1.BusinessObjects.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\bin\QLTHPT1.DataAccess.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\obj\Debug\QLTHPT1.csprojResolveAssemblyReference.cache
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\obj\Debug\QLTHPT.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\QLTHPT\obj\Debug\QLTHPT.pdb

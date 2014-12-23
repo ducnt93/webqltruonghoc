@@ -108,7 +108,7 @@
                 <asp:TextBox ID="txtTim" runat="server" ToolTip="Tìm kiếm banner theo tên" CssClass="textbox"></asp:TextBox>
             </td>
             <td>
-                <asp:Button ID="btnTim" runat="server" Height="25px" Text="Tìm" Width="90px" />
+                <asp:Button ID="btnTim" runat="server" Height="25px" Text="Tìm" Width="90px" OnClick="btnTim_Click" />
             </td>
         </tr>
     </table>

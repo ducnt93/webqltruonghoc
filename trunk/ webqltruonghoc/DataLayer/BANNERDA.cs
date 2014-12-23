@@ -58,6 +58,11 @@ namespace QLTHPT1.DataAccess
 			return SqlHelper.ExecuteDataSet(Data.ConnectionString, CommandType.StoredProcedure,"sproc_BANNER_Get");
 		}
 
+        public DataSet GetFindBanner(string TenBanner)
+        {
+            return SqlHelper.ExecuteDataSet(Data.ConnectionString, CommandType.StoredProcedure, "sp_getFind_BANNER"
+                             , Data.CreateParameter("TenBanner", TenBanner));
+        }
 
 		/// <summary>
 		/// Get all of BANNER paged

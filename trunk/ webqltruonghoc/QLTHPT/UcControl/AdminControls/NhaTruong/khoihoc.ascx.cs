@@ -216,6 +216,5 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
             LoadAllKhoi();
         }
 
-
     }
 }

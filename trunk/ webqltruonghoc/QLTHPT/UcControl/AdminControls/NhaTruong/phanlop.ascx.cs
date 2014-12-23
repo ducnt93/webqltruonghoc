@@ -73,7 +73,7 @@ namespace QLTHPT.UcControl.AdminControls.NhaTruong
             foreach (var item in list)
             {
                 malop = item.MaLop;
-                txtMaHS.Text = item.MaHocSinh;
+                ddlMaHocSinh.SelectedValue = item.MaHocSinh;
             }
             drLopThemSua.SelectedValue = malop.ToString();
      
@@ -183,57 +183,58 @@ namespace QLTHPT.UcControl.AdminControls.NhaTruong
         }
         PHANLOP obj = new PHANLOP();
         PHANLOPBL plBus = new PHANLOPBL();
-        protected void imgLuu_Click(object sender, ImageClickEventArgs e)
-        {
-            try
-            {
-                if (txtMaHS.Text == "")
-                {
-                    lblErrMaHS.Text = "Bạn chưa nhập mã học sinh";
-                }
-                else
-                {
-                    obj.MaLop = int.Parse(drLop.SelectedValue);
-                    obj.MaHocSinh = txtMaHS.Text;
-                    List<PHANLOP> list = new List<PHANLOP>();
-                    list = plBus.GetHS(txtMaHS.Text);
-                    foreach (var item in list)
-                    {
-                        if(item.MaHocSinh == txtMaHS.Text)
-                        {
-                            lblErr1.Text = "Đã có học sinh này!";
-                          
-                        }
-                        else
-                        {
-                            plBus.Add(obj);
-                        }
-                    }    
-                    LoadDSPhanLop();
-                }
+        //protected void imgLuu_Click(object sender, ImageClickEventArgs e)
+        //{
+        //    //try
+        //    //{
+        //    //    if (txtMaHS.Text == "")
+        //    //    {
+        //    //        lblErrMaHS.Text = "Bạn chưa nhập mã học sinh";
+        //    //    }
+        //    //    else
+        //    //    {
+        //    obj.MaLop = int.Parse(drLop.SelectedValue);
+        //    obj.MaHocSinh = ddlMaHocSinh.SelectedValue;
+        //    List<PHANLOP> list = new List<PHANLOP>();
+        //    //list = plBus.GetHS(txtMaHS.Text);
+        //    list = plBus.GetHS(ddlMaHocSinh.SelectedValue);
+        //    foreach (var item in list)
+        //    {
+        //        if (item.MaHocSinh == ddlMaHocSinh.SelectedValue)
+        //        {
+        //            lblErr1.Text = "Đã có học sinh này!";
 
-            }
-            catch
-            {
+        //        }
+        //        else
+        //        {
+        //            plBus.Add(obj);
+        //        }
+        //    }
+        //    LoadDSPhanLop();
+        //    //    }
 
-                lblErr.Text += "Lỗi";
-            }
+        //    //}
+        //    //catch
+        //    //{
 
-        }
+        //    //    lblErr.Text += "Lỗi";
+        //    //}
+
+        //}
 
         protected void imgLuuSua_Click(object sender, ImageClickEventArgs e)
         {
-            if (txtMaHS.Text == "")
-            {
-                lblErrMaHS.Text = "Bạn chưa nhập mã học sinh";
-            }
-            else
-            {
-                obj.MaHocSinh = txtMaHS.Text;
+            //if (txtMaHS.Text == "")
+            //{
+            //    lblErrMaHS.Text = "Bạn chưa nhập mã học sinh";
+            //}
+            //else
+            //{
+                obj.MaHocSinh = ddlMaHocSinh.SelectedValue;
                 obj.MaLop = int.Parse(drLopThemSua.SelectedValue);
                 obj.STT = int.Parse(txtMaPL.Text);
                 List<PHANLOP> list = new List<PHANLOP>();
-                list = plBus.GetHS(txtMaHS.Text);
+                list = plBus.GetHS(ddlMaHocSinh.SelectedValue);
                 //foreach (var item in list)
                 //{
                 //    if (item.MaHocSinh == txtMaHS.Text)
@@ -247,12 +248,12 @@ namespace QLTHPT.UcControl.AdminControls.NhaTruong
                 //}    
                 plBus.Update(obj);
                 LoadDSPhanLop();
-            }
+            //}
         }
 
         protected void imgCancel_Click(object sender, ImageClickEventArgs e)
         {
-            txtMaHS.Text = "";
+            //txtMaHS.Text = "";
             lblErrMaHS.Text = "";
             Panel1.Visible = false;
             gvPhanlop.EditIndex = -1;
@@ -282,6 +283,25 @@ namespace QLTHPT.UcControl.AdminControls.NhaTruong
             Panel1.Visible = false;
             gvPhanlop.EditIndex = -1;
             LoadDSPhanLop();
+        }
+
+        protected void txtMaHS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void imgLuu_Click(object sender, ImageClickEventArgs e)
+        {
+            obj.MaLop = Int32.Parse(drLop.SelectedValue);
+            obj.MaHocSinh = ddlMaHocSinh.SelectedValue;
+            //if (obj.MaHocSinh != ddlMaHocSinh.SelectedValue)
+            //{
+            plBus.Add(obj);
+            //}
+            //else
+            //{
+            //    lblErr1.Text = "Đã có học sinh này!";
+            //}
         }
     }
 }

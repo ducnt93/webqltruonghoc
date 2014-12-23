@@ -81,12 +81,10 @@
                     <td class="auto-style3" colspan="3">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style22">Tìm khối:</td>
-                    <td class="auto-style10">&nbsp;<asp:TextBox ID="txtTimLop" runat="server" CssClass="textbox"></asp:TextBox>
-                    </td>
+                    <td class="auto-style22">&nbsp;</td>
+                    <td class="auto-style10">&nbsp;</td>
                     <td class="auto-style11">
-                        <asp:Button ID="btnTim" runat="server" Height="25px" Text="Tìm" Width="92px" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
             </table>
             <br />

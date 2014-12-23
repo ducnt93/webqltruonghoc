@@ -230,17 +230,8 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
         {
             try
             {
-                if ((txtMaGV0.Text == "") || (txtSDT0.Text == "") || (txtTenGV0.Text == "") || (txtNgaySinh0.Text == ""))
-                {
+               
                     KtraThem(true);
-                }
-
-                if ((drGioiTinhSua.SelectedIndex == 0) || (drToSua.SelectedIndex == 0))
-                {
-                    lblErr.Text = "Bạn không được để trống!";
-                }
-                else
-                {
                     obj.MaGiaoVien = txtMaGV0.Text;
                     obj.TenGiaoVien = txtTenGV0.Text;
                     obj.DiaChi = txtDiaChi0.Text;
@@ -257,16 +248,14 @@ namespace QLTHPT.UcControl.AdminControls.QLGiaoVien
                     obj.SoDienThoai = txtSDT0.Text.Trim();
                     obj.GioiTinh = drGioiTinhSua.SelectedValue;
                     obj.MaMon = int.Parse(drToSua.SelectedValue);
-                    gvBus.Add(obj);
+                    gvBus.Update(obj);
                     LoadGV();
-                }
             }
             catch
             {
                 lblErr.Text = "Quá trình sửa gặp lỗi. Vui lòng xem lại";
             }
         }
-
      
     }
 }
