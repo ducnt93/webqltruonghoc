@@ -104,7 +104,7 @@ namespace QLTHPT.UcControl.AdminControls.NhaTruong
         {
             try
             {
-gvBanner.DataSource = bannerBus.GetList();
+            gvBanner.DataSource = bannerBus.GetList();
             gvBanner.DataBind();
             }
             catch (Exception ex)
@@ -166,6 +166,13 @@ gvBanner.DataSource = bannerBus.GetList();
             txtTen.Text = "";
             Panel1.Visible = false;
             LoadBanner();
+        }
+
+        protected void btnTim_Click(object sender, EventArgs e)
+        {
+           
+            gvBanner.DataSource = bannerBus.GetFindBanner(txtTim.Text);
+            gvBanner.DataBind();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="hocsinh.ascx.cs" Inherits="QLTHPT.UcControl.AdminControls.QLHocSinh.hócinh" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
-<%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%--<%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>--%>
 <style type="text/css">
     .abc {
         width: 32px;

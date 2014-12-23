@@ -90,6 +90,9 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
     </p>
+    <p>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLTHPT1ConnectionString3 %>" SelectCommand="SELECT * FROM [HOCSINH]"></asp:SqlDataSource>
+    </p>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
                  <table class="auto-style1">
@@ -143,7 +146,8 @@
                     </td>
                     <td class="auto-style21">Mã học sinh:</td>
                     <td>
-                        <asp:TextBox ID="txtMaHS" runat="server" CssClass="textbox"></asp:TextBox>
+                        <asp:DropDownList ID="ddlMaHocSinh" runat="server" DataSourceID="SqlDataSource1" DataTextField="TenHocSinh" DataValueField="MaHocSinh" Height="47px" Width="150px">
+                        </asp:DropDownList>
                         <asp:Label ID="lblErrMaHS" runat="server" ForeColor="Red"></asp:Label>
                     </td>
                 </tr>

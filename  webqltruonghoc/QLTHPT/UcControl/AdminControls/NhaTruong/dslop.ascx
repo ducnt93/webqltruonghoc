@@ -40,10 +40,6 @@
     }
     .auto-style12 {
     }
-    .auto-style15 {
-        width: 262px;
-        padding:5px 5px 5px 5px;
-    }
     .auto-style16 {
         width: 128px;
         height: 23px;
@@ -107,12 +103,10 @@
                     <td class="auto-style3" colspan="2">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style30">Tìm lớp:</td>
-                    <td class="auto-style23" colspan="2">&nbsp;<asp:TextBox ID="txtTimLop" runat="server" CssClass="textbox"></asp:TextBox>
-                    </td>
+                    <td class="auto-style30">&nbsp;</td>
+                    <td class="auto-style23" colspan="2">&nbsp;</td>
                     <td class="auto-style11">
-                        <asp:Button ID="btnTim" runat="server" Height="25px" Text="Tìm" Width="92px" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
             </table>
             <br />

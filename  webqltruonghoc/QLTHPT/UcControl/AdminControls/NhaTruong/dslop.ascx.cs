@@ -29,7 +29,7 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
                 imgLuuSua.Visible = false;
                 Panel1.Visible = false;
                 LoadNamHoc();
-            }
+           }
         }
 
         private void LoadNamHoc()
@@ -424,6 +424,5 @@ namespace QLTHPT.UcControl.AdminControls.QLHocSinh
          
 
         }
-
     }
 }

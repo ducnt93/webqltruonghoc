@@ -72,7 +72,10 @@ namespace QLTHPT1.BusinessLogic
 		{
 			return objBANNERDA.GetDataSetPaged(recperpage, pageindex);
 		}
-
+        public DataSet GetFindBanner(string TenBanner)
+        {
+            return objBANNERDA.GetFindBanner(TenBanner);
+        }
 
 
 

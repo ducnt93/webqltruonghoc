@@ -7,3 +7,7 @@ C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessObjects\
 C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.csprojResolveAssemblyReference.cache
 C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.dll
 C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessObjects\bin\Debug\QLTHPT1.BusinessObjects.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessObjects\obj\Debug\QLTHPT1.BusinessObjects.pdb

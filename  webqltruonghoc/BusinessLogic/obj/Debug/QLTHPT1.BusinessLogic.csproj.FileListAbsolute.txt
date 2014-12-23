@@ -16,3 +16,12 @@ C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\bi
 C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.csprojResolveAssemblyReference.cache
 C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.dll
 C:\Users\PC-TRUNGDUC\Downloads\Compressed\QLTHPT1_KoDev\QLTHPT1\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessLogic\bin\Debug\QLTHPT1.BusinessLogic.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessLogic\bin\Debug\QLTHPT1.BusinessObjects.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessLogic\bin\Debug\QLTHPT1.DataAccess.pdb
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.csprojResolveAssemblyReference.cache
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.dll
+F:\HOC KI 7\WINDOW 2\QLTHPT3\BusinessLogic\obj\Debug\QLTHPT1.BusinessLogic.pdb

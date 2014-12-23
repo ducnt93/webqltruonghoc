@@ -160,8 +160,9 @@
                               </td>
                               <td class="auto-style2">Tổ: </td>
                               <td class="auto-style2">
-                                  <asp:DropDownList ID="drToSua" runat="server" CssClass="textbox">
+                                  <asp:DropDownList ID="drToSua" runat="server" CssClass="textbox" DataSourceID="SqlDataSource1" DataTextField="TenToBoMon" DataValueField="MaTo">
                                   </asp:DropDownList>
+                                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLTHPT1ConnectionString2 %>" SelectCommand="SELECT * FROM [TOBOMON]"></asp:SqlDataSource>
                               </td>
                           </tr>
                           <tr>
